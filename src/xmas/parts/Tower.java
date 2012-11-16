@@ -2,38 +2,32 @@ package xmas.parts;
 
 public class Tower {
 
-	private int range;
-	private int damage;
-	private int art;
-	private Position p;
+	//private Position p;
+	private int stelle;
+	private int reihe; 
 
-	public Tower(int art, Position p) {
-		this.p = p;
-		switch (this.art = art) {
-		// Kokusnuss
-		case 0:
-			this.range = 10;
-			this.damage = 30;
-			break;
-		// Lametta
-		case 1:
-			this.range = 3;
-			this.damage = 0;
-			break;
-		// Kugeln
-		case 2:
-			this.range = 20;
-			this.damage = 10;
-			break;
-		}
+	public Tower() {
+		
 	}
 	
-	public int getRange() {
-		return range;
+	public Tower( int reihe , int stelle ) {
+		this.reihe = reihe;
+		this.stelle = stelle;
 	}
-	public void setRange(int range) {
-		this.range = range;
+	
+	public int getReihe() {
+		return this.reihe;
 	}
+	
+	public int getStelle() {
+		return this.stelle;
+	}
+	
+	public String getSymbol() {
+		return null;
+		
+	}
+	
 	
 	
 	

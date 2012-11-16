@@ -3,12 +3,15 @@ package xmas.controller;
 import xmas.parts.Position;
 import xmas.parts.Spielfeld;
 import xmas.parts.Tower;
+import xmas.parts.TowerKugel;
+import xmas.parts.TowerLametta;
+import xmas.parts.TowerNuss;
 
 public class Controller {
 
 	private Spielfeld spielfeld;
 	private String StartMessage = "Willkommen bei Xmas Tower Defence !";
-	private Tower towerArr[];
+	private Tower[] towerArr = new Tower[8];
 	private int i = 0;
 	
 	public Controller() {
@@ -28,10 +31,31 @@ public class Controller {
 	public String erstelleTower(int art, int reihe, int stelle) {
 		
 		String done = "Tower wurde erstellt ! \nNächsten Tower positionieren ...";
-		Position p = berechnePosition(reihe, stelle);
-		Tower tower = new Tower( art, p);
+		// Position p = berechnePosition(reihe, stelle);
+		// Art der Towers ermitteln und erstellen
+		Tower tower = null;
+		switch (art) {
+		// Kokusnuss
+		case 0:
+			tower = new TowerNuss(reihe, stelle);
+			break;
+		// Lametta
+		case 1:
+			tower = new TowerLametta(reihe, stelle);
+			break;
+		// Kugeln
+		case 2:
+			tower = new TowerKugel(reihe, stelle);
+			break;
+		}
 		towerArr[i++] = tower;
-		update();
+		spielfeld.towerSetzen(tower);
+		System.out.println(spielfeld.toString());
+		for(int j = 0; j<i; j++){
+			Tower out = towerArr[j];
+			System.out.println(out.getSymbol());
+		}
+		
 		return done;
 		
 	}
