@@ -8,6 +8,7 @@ public class TextUI {
 	
 	private Controller controller;
 	Scanner scanner;
+	private int inputdurchlauf = 0;
 
 	//Konstruktor
 	public TextUI(Controller controller) {
@@ -22,31 +23,31 @@ public class TextUI {
 	}
 	
 
+	// WICHTIG !!!!!!!!!!
 	// Schleife die bis zum verlassen durchläuft
 	public boolean iterate() {
 		boolean quit = false;
-		quit = inputorQuit();
+		// User input and Tower set // Modus 1
+		quit = handleinput();
+		// Create and Move Mobs // Modus 2
+		if(!quit) {
+			quit = controller.startGame();
+		}
 		return quit;
 	}
 
 	// Verarbeitete Eingabe und verlässt gegenbenfalls Schleife
-	private boolean inputorQuit() {
-		String input;
-		int art;
-		int reihe;
+	private boolean handleinput() {
+		String input = "";
+		int art = 0;
+		int reihe = 0;
 		
 		System.out.println("Wählen einen Palmentower aus ... ");
-		System.out.println("Kokusnuss = k  / Lammeta = l  / Christkugeln = c | Quit = q ");
-		// Wenn Q für verlassen gerdückt wird;
+		System.out.println("Kokusnuss = n  / Lammeta = l  / Christkugeln = c | Quit = q ");
 		input = scanner.next();
-		if(input.equalsIgnoreCase("q")) {
-			System.out.println("!!! Spiel wird beendet !!!");
-			return true;
-		} else {
-			// Eingabenverarbeitung Tower oder falsche Eingabe
-			switch(input) {
-			case "k":
-			case "K": 
+		switch(input) {
+			case "N":
+			case "n": 
 				art = 0;
 				break;
 			case "l":
@@ -58,41 +59,25 @@ public class TextUI {
 				art = 2;
 				break;
 			default: 
-				System.out.println("!!! Falsche Eingabe !!!");
-				System.out.println("!!! Spiel wird beendet !!!");
-				return true;
-			}
+				return quitOrFailure(input);
 		}
 		
 		System.out.println("Wähle die Reihe aus indie die gesetz wird ... ");
 		System.out.println("Reihe1 = 1 / Reihe2 = 2 | Quit = q");
-		// Wenn Q für verlassen gerdückt wird;
 		input = scanner.next();
-		if(input.equalsIgnoreCase("q")) {
-			System.out.println("!!! Spiel wird beendet !!!");
-			return true;
+		if(input.equals("1")) {
+			reihe = 1;
+		}
+		else if (input.equals("2")){
+			reihe = 2;
 		} else {
-			if(input.equals("1")) {
-				reihe = 1;
-			}
-			else if (input.equals("2")){
-				reihe = 2;
-			} else {
-				System.out.println("!!! Falsche Eingabe !!!");
-				System.out.println("!!! Spiel wird beendet !!!");
-				return true;
-			}
+			return quitOrFailure(input);
 		}
 		
 		System.out.println("Wähle Platz für den Palmentower ... ");
 		System.out.println("P1 = p1 / P2 = p2 / P3 = p3 / P4 = p4 / P5 = p5 / P6 = p6 | Quit = q");
 		input = scanner.next();
-		// Wenn Q für verlassen gerdückt wird;
-		if(input.equalsIgnoreCase("q")) {
-			System.out.println("!!! Spiel wird beendet !!!");
-			return true;
-		} else {
-			switch(input) {
+		switch(input) {
 			case "p1":
 				System.out.println(controller.erstelleTower(art, reihe, 1));
 				break;
@@ -112,11 +97,25 @@ public class TextUI {
 				System.out.println(controller.erstelleTower(art, reihe, 6));
 				break;
 			default: 
-				System.out.println("!!! Falsche Eingabe !!!");
-				System.out.println("!!! Spiel wird beendet !!!");
-				return true;	
-			}	
+				return quitOrFailure(input);
+				
+		}
+		while(inputdurchlauf < 8) {
+			inputdurchlauf++;
+			handleinput();
 		}
 		return false;
+	}
+	
+	public boolean quitOrFailure(String input) {
+		// if Q is pressed Game quits
+		if(input.equalsIgnoreCase("q")) {
+			System.out.println("!!! Spiel wird beendet !!!");
+			return true;
+		} else {
+			System.out.println("!!! Falsche Eingabe. Bitte erneut setzen");
+			handleinput();
+			return false;	
+		}	
 	}
 }

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local-project language="java" version="3.5.1457" flavor="j2se">
+  <property name="hide-externals" value="true" />
+  <property name="show-needs-to-compile" value="false" />
+  <property name="detail-mode" value="false" />
+  <property name="project-type" value="classpath" />
+  <classpath>
+    <classpathentry kind="lib" path="Z:\git\TD\target\classes" />
+    <classpathentry kind="lib" path="Z:\git\TD\bin" />
+  </classpath>
+  <restructuring>
+    <set version="1" name="Sandbox 1" hiview="Codemap" active="true" todo="false" />
+    <set version="1" name="Flattened to classes" hiview="Codemap" active="false" todo="false">
+      <action type="flatten" active="true" description="Flatten root">
+        <params flattenLeafFolders="true">
+          <container-fqn fqn="root" type="root" path="" isroot="true" />
+        </params>
+        <composite-set />
+      </action>
+    </set>
+    <set version="1" name="Flattened to leaf packages" hiview="Codemap" active="false" todo="false">
+      <action type="flatten" active="true" description="Flatten root">
+        <params flattenLeafFolders="false">
+          <container-fqn fqn="root" type="root" path="" isroot="true" />
+        </params>
+        <composite-set />
+      </action>
+    </set>
+  </restructuring>
+  <grid-set sep="." version="3.5.1457">
+    <grid name="Diagram 1" enforce="true" strict="false">
+      <row>
+        <cell name="application" pattern="xmas.application.?" vexpanded="true" visibility="public">
+          <grid>
+            <row>
+              <cell name="Xmas" pattern="xmas.application.Xmas" vexpanded="false" visibility="public" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <row>
+        <cell name="tui" pattern="xmas.tui.?" vexpanded="true" visibility="public">
+          <grid>
+            <row>
+              <cell name="TextUI" pattern="xmas.tui.TextUI" vexpanded="false" visibility="public" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <row>
+        <cell name="controller" pattern="xmas.controller.?" vexpanded="true" visibility="public">
+          <grid>
+            <row>
+              <cell name="Controller" pattern="xmas.controller.Controller" vexpanded="false" visibility="public" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <row>
+        <cell name="parts" pattern="xmas.parts.?" vexpanded="true" visibility="public">
+          <grid>
+            <row>
+              <cell name="MobTest" pattern="xmas.parts.MobTest" vexpanded="false" visibility="public" />
+              <cell name="PlayerTest" pattern="xmas.parts.PlayerTest" vexpanded="false" visibility="public" />
+              <cell name="Spielfeld" pattern="xmas.parts.Spielfeld" vexpanded="false" visibility="public" />
+              <cell name="TowerKugel" pattern="xmas.parts.TowerKugel" vexpanded="false" visibility="public" />
+              <cell name="TowerLametta" pattern="xmas.parts.TowerLametta" vexpanded="false" visibility="public" />
+              <cell name="TowerNuss" pattern="xmas.parts.TowerNuss" vexpanded="false" visibility="public" />
+              <cell name="TowerTest" pattern="xmas.parts.TowerTest" vexpanded="false" visibility="public" />
+            </row>
+            <row>
+              <cell name="Mob" pattern="xmas.parts.Mob" vexpanded="false" visibility="public" />
+              <cell name="Player" pattern="xmas.parts.Player" vexpanded="false" visibility="public" />
+              <cell name="Position" pattern="xmas.parts.Position" vexpanded="false" visibility="public" />
+              <cell name="Tower" pattern="xmas.parts.Tower" vexpanded="false" visibility="public" />
+              <cell name="Timer" pattern="xmas.parts.Timer" vexpanded="false" visibility="public" />
+            </row>
+          </grid>
+        </cell>
+      </row>
+      <description>Top-level breakout</description>
+    </grid>
+  </grid-set>
+</local-project>
+

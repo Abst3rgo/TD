@@ -9,7 +9,7 @@ public class TowerNuss extends Tower {
 		public TowerNuss( int reihe , int stelle ) {
 			
 			super(reihe, stelle);
-			this.damage = 30;
+			this.damage = 20;
 			this.range = 10;
 			this.symbol = " N";
 		}

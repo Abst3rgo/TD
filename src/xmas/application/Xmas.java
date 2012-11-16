@@ -19,7 +19,7 @@ public class Xmas {
 		while (!quit) {
 		    quit = tui.iterate();
 		}
-		
+		System.out.println("Programm Ende");
 	}
 }
 

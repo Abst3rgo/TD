@@ -9,8 +9,8 @@ public class TowerLametta extends Tower {
 	public TowerLametta( int reihe , int stelle ) {
 		
 		super(reihe, stelle);
-		this.damage = 30;
-		this.range = 10;
+		this.damage = 10;
+		this.range = 5;
 		this.symbol = " L";
 	}
 	

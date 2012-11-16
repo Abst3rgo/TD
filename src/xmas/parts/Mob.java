@@ -2,33 +2,24 @@ package xmas.parts;
 
 public class Mob {
 
-	private String name;
-	private int health;
-	private double speed;
+
 	private int x;
 	private int y;
 	
-	public Mob(String name) {
-		this.name = name;
+	public Mob() {
+		this.x = 0;
+		this.y = 20;
 	}
-	public String getName() {
-		return name;
+	
+	public int getX() {
+		return this.x;
 	}
-	public void setName(String name) {
-		this.name = name;
+	
+	public int getY() {
+		return this.y;
 	}
-	public int getHealth() {
-		return health;
-	}
-	public void setHealth(int health) {
-		this.health = health;
-	}
-	public double getSpeed() {
-		return speed;
-	}
-	public void setSpeed(double speed) {
-		this.speed = speed;
-	}
+	
+	
 	
 	
 }

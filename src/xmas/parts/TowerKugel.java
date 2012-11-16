@@ -10,7 +10,7 @@ public class TowerKugel extends Tower {
 		
 		super(reihe, stelle);
 		this.damage = 30;
-		this.range = 10;
+		this.range = 15;
 		this.symbol = " K";
 	}
 	

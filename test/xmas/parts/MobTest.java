@@ -7,17 +7,12 @@ public class MobTest extends TestCase {
 	Mob mob;
 	
 	public void setUp() {
-		mob = new Mob("Santa");
+		mob = new Mob();
 	}
 
 	
 	public void testGetValue() {
-		mob.setName("Klaus");
-		assertEquals("Klaus", mob.getName());
-		mob.setHealth(42);
-		assertEquals(42, mob.getHealth());
-		mob.setSpeed(2.5);
-		assertEquals(2.5, mob.getSpeed());
-		
+		assertEquals(0, mob.getX());
+		assertEquals(42, mob.getY());
 	}
 }
