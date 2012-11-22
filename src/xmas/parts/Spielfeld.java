@@ -1,71 +1,123 @@
 package xmas.parts;
 
 public class Spielfeld {
-		
-
-	private String ersteZeile = " ___________________________________";
-	private String r1p1 = "P1";
-	private String r1p2 = "P2";
-	private String r1p3 = "P3"; 
-	private String r1p4 = "P4";
-	private String r2p1 = "P1";
-	private String r2p2 = "P2";
-	private String r2p3 = "P3";
-	private String r2p4 = "P4";
-
 	
-	public void towerSetzen(Tower tower) {
-		// Erstellt einen Tower an der ausgewählten Postion auf dem Spielfeld
-		if (tower.getReihe() == 1) {
-			switch(tower.getStelle()) {
-			case 1:
-				r1p1 = tower.getSymbol();
-				break;
-			case 2:
-				r1p2 = tower.getSymbol();
-				break;
-			case 3:
-				r1p3 = tower.getSymbol();
-				break;
-			case 4:
-				r1p4 = tower.getSymbol();
-				break;
+	/* Bedeutung Zahlen:
+		-1 = Rand:
+		0 = Leeres Feld;
+		1 = Tower Nuss
+		2 = Tower Lameta
+		3 = Tower Kugeln
+		5 = Mob Elfe;
+		6 = Mob Gnom;
+		7 = Mob Rentier;
+		8 = Start;
+		9 = Ende;
+	*/
+	
+	private int y = 20;
+	private int x = 25;
+	private String fieldArray[][] = new String[y][x];
+	private int startX = 2;
+	private int startY = 1;
+	private int endX = 2;
+	private int endY = y-1;
+
+	public Spielfeld() {
+		init();
+	}
+	
+	public int getStartX() {
+		return startX;
+	}
+	
+	public int getStartY() {
+		return startY;
+	}
+	
+	public int getEndY() {
+		return endY;
+	}
+	
+	public int getEndX() {
+		return endX;
+	}
+	
+	public int getX() {
+		return this.x;
+	}
+	
+	public int getY() {
+		return this.y;
+	}
+	
+	
+	public void setTower(String symbol, int y, int x) {
+		fieldArray[x][y] = symbol;
+	}
+	
+	public void setMob(String symbol, int y, int x) {
+		fieldArray[x][y] = symbol;
+	}
+	
+	public String tostring() {
+		StringBuilder field = new StringBuilder();
+		
+		for(int i = 0; i < y; i++) {
+			for(int j = 0; j < x; j++) {
+				field.append(fieldArray[i][j]);
+				field.append(" ");
 			}
-		} else {
-			switch(tower.getStelle()) {
-			case 1:
-				r2p1 = tower.getSymbol();
-				break;
-			case 2:
-				r2p2 = tower.getSymbol();
-				break;
-			case 3:
-				r2p3 = tower.getSymbol();
-				break;
-			case 4:
-				r2p4 = tower.getSymbol();
-				break;
-			}
+			field.append("\n");
 		}
 		
+		field.append("\n");
+		
+		return field.toString();
+	}
+	
+	
+	
+	private void init() {
+		// Feld init
+		for(int i = 2; i < (y-1); i++) {
+			for(int j = 2; j < (x-1); j++) {
+				fieldArray[i][j] = ".";
+			}
+		}
+		// Zahlenrand setzen
+		
+		// Ober Zahlenrand
+		for(int i = 0; i < x; i++) {
+			fieldArray[0][i] = Integer.toString(i);
+		}
+		// Seitlicher Zahlenrand
+		for(int i = 0; i < y; i++) {
+			fieldArray[i][0] = Integer.toString(i);
+		}
+		
+		// Ränder für Spielfeld felder setzen 
+		//ObererRand
+		for(int i = 1; i < x; i++) {
+			fieldArray[1][i] = "#";
+		}
+		//UntererRand
+		for(int i = 1; i < x; i++) {
+			fieldArray[(y-1)][i] = "#";
+		}
+		//LinkerRand
+		for(int i = 1; i < y; i++) {
+			fieldArray[i][1] = "#";
+		}
+		//RechterRand
+		for(int i = 1; i < y; i++) {
+			fieldArray[i][(x-1)] = "#";
+		}
+		// Start und Ende setzen 
+		fieldArray[startY][startX] = "S";
+		fieldArray[endY][endX] = "E";
+		// TODO Randomässig nicht besetzbare Blöcke erstellen
 		
 	}
-	
-	public String toString() {
-		StringBuilder feld = new StringBuilder();
-		feld.append(ersteZeile).append("\n")
-		.append("|                                   |\n")
-		.append("|    ").append(r1p1).append("     ").append(r1p2).append("      ").append(r1p3).append("     ").append(r1p4).append(" 	    |\n")
-		.append("|----><-----><------><-----><-______|:Reihe 1\n")
-		.append("| ___________________________|  __  |\n")
-		.append("<|                           | |  | |\n")
-		.append("<|___________________________| |__| |:Kamin\n")
-		.append("|                            |______|\n")
-		.append("|----><-----><------><-----><-      |:Reihe 2\n")
-		.append("|    ").append(r2p1).append("     ").append(r2p2).append("      ").append(r2p3).append("     ").append(r2p4).append(" 	    |\n")
-		.append("|___________________________________|\n");
-		return feld.toString();
-	}
-	
 
 }

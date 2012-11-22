@@ -7,13 +7,16 @@ import xmas.controller.Controller;
 public class TextUI {
 	
 	private Controller controller;
+	private int y;
+	private int x;
 	Scanner scanner;
-	private int inputdurchlauf = 0;
 
 	//Konstruktor
 	public TextUI(Controller controller) {
 		this.controller = controller;
 		scanner = new Scanner(System.in);
+		y = (controller.getSpielfeldY());
+		x = (controller.getSpielfeldX());
 	}
 
 	//Beim Start Test und Spielfeld ausgeben
@@ -27,12 +30,19 @@ public class TextUI {
 	// Schleife die bis zum verlassen durchläuft
 	public boolean iterate() {
 		boolean quit = false;
+		boolean mode1 = true;
 		// User input and Tower set // Modus 1
+		if(mode1) {
 		quit = handleinput();
+		System.out.println(controller.getSpielfeld());
+		}
+		/*
+		mode1 = false;
 		// Create and Move Mobs // Modus 2
 		if(!quit) {
 			quit = controller.startGame();
 		}
+		*/
 		return quit;
 	}
 
@@ -40,14 +50,14 @@ public class TextUI {
 	private boolean handleinput() {
 		String input = "";
 		int art = 0;
-		int reihe = 0;
+		int spalte = 0;
 		
 		System.out.println("Wählen einen Palmentower aus ... ");
-		System.out.println("Kokusnuss = n  / Lammeta = l  / Christkugeln = c | Quit = q ");
+		System.out.println("Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
 		input = scanner.next();
 		switch(input) {
-			case "N":
-			case "n": 
+			case "K":
+			case "k": 
 				art = 0;
 				break;
 			case "l":
@@ -62,50 +72,33 @@ public class TextUI {
 				return quitOrFailure(input);
 		}
 		
-		System.out.println("Wähle die Reihe aus indie die gesetz wird ... ");
-		System.out.println("Reihe1 = 1 / Reihe2 = 2 | Quit = q");
+		
+		
+		System.out.println("Wähle die Spalte für den Palmentower ... ");
+		System.out.println("Zahl von 2 bis " + (y-2) + " | Quit = q");
 		input = scanner.next();
-		if(input.equals("1")) {
-			reihe = 1;
-		}
-		else if (input.equals("2")){
-			reihe = 2;
+		// Prüfe ob richtige Eingabe
+		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < y) {
+			spalte = Integer.parseInt(input);
 		} else {
 			return quitOrFailure(input);
 		}
 		
-		System.out.println("Wähle Platz für den Palmentower ... ");
-		System.out.println("P1 = p1 / P2 = p2 / P3 = p3 / P4 = p4 / P5 = p5 / P6 = p6 | Quit = q");
+		
+		
+		System.out.println("Wähle Zeile für den Palmentower ... ");
+		System.out.println(" Zahl von 2 bis " + (x-2) + " | Quit = q");
 		input = scanner.next();
-		switch(input) {
-			case "p1":
-				System.out.println(controller.erstelleTower(art, reihe, 1));
-				break;
-			case "p2":
-				System.out.println(controller.erstelleTower(art, reihe, 2));
-				break;
-			case "p3":
-				System.out.println(controller.erstelleTower(art, reihe, 3));
-				break;
-			case "p4":
-				System.out.println(controller.erstelleTower(art, reihe, 4));
-				break;
-			case "p5":
-				System.out.println(controller.erstelleTower(art, reihe, 5));
-				break;
-			case "p6":
-				System.out.println(controller.erstelleTower(art, reihe, 6));
-				break;
-			default: 
-				return quitOrFailure(input);
-				
+		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < x) {
+			controller.erstelleTower(art, spalte, Integer.parseInt(input));
+		} else {
+			return quitOrFailure(input);
 		}
-		while(inputdurchlauf < 8) {
-			inputdurchlauf++;
-			handleinput();
-		}
+		
+		System.out.println("Tower erstellt !!!");
 		return false;
 	}
+	
 	
 	public boolean quitOrFailure(String input) {
 		// if Q is pressed Game quits

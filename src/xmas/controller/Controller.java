@@ -4,7 +4,6 @@ import xmas.parts.Mob;
 import xmas.parts.MobElfe;
 import xmas.parts.MobGnom;
 import xmas.parts.MobRentier;
-import xmas.parts.Position;
 import xmas.parts.Spielfeld;
 import xmas.parts.Tower;
 import xmas.parts.TowerKugel;
@@ -17,11 +16,19 @@ public class Controller {
 	private String StartMessage = "Willkommen bei Xmas Tower Defence !";
 	private Tower[] towerArray = new Tower[8];
 	private int numberTower = 0;
-	private Mob mobArray[] = new Mob[42];
-	private int numberMob = 0;
+	private Mob[] mobArray = new Mob[30];
+	private int mobNummer = 0;
 	
 	public Controller() {
 		this.spielfeld  = new Spielfeld();
+	}
+	
+	public int getSpielfeldX() {
+		return spielfeld.getX();
+	}
+	
+	public int getSpielfeldY() {
+		return spielfeld.getY();
 	}
 	
 	// return StartMessage
@@ -31,73 +38,49 @@ public class Controller {
 	
 	// holt Spielfeld und returnd es
 	public String getSpielfeld() {
-		return spielfeld.toString();
+		return spielfeld.tostring();
 	}
 	
 	
-	public String erstelleTower(int art, int reihe, int stelle) {
+	public void erstelleTower(int art, int x, int y) {
 		
-		StringBuffer done = new StringBuffer(); 
-		done.append("Tower wurde erstellt ! \nNächsten Tower positionieren ...\n");
 		// Art der Towers ermitteln und erstellen
 		Tower tower = null;
 		switch (art) {
 		// Kokusnuss
 		case 0:
-			tower = new TowerNuss(reihe, stelle);
+			tower = new TowerNuss(x, y);
 			break;
 		// Lametta
 		case 1:
-			tower = new TowerLametta(reihe, stelle);
+			tower = new TowerLametta(x, y);
 			break;
 		// Kugeln
 		case 2:
-			tower = new TowerKugel(reihe, stelle);
+			tower = new TowerKugel(x, y);
 			break;
 		}
 		
-		towerArray[numberTower++] = tower;
-		
-		spielfeld.towerSetzen(tower);
-		done.append(spielfeld.toString());
-		
-		return done.toString();
-		
+		// Pruefe ob Weg noch fei für Mobs
+		if(wayclear()) {
+			towerArray[numberTower++] = tower;
+			spielfeld.setTower(tower.getSymbol(), y, x);
+		}
 	}
 	
-	public Position berechnePosition(int reihe, int stelle ) {
-		Position p = new Position(0,0);
-		if(reihe == 1) {
-			p.setPositionY(20);
-		} else {
-			p.setPositionY(40);
-		}
-		switch(stelle) {
-		case 1: 
-			p.setPositionX(10);
-			break;
-		case 2: 
-			p.setPositionX(20);
-			break;
-		case 3: 
-			p.setPositionX(30);
-			break;
-		case 4: 
-			p.setPositionX(40);
-			break;
-		case 5: 
-			p.setPositionX(50);
-			break;
-		case 6: 
-			p.setPositionX(60);
-			break;
-		}
-		return p;
+	
+
+	private boolean wayclear() {
+		//if()
+		return true;
 	}
 
 	public boolean startGame() {
 		createMob();
 		// TODO mob.laufe();
+		for(Mob mob : mobArray) {
+			mob.walk(spielfeld);
+		}
 			// TODO update Spielfeld
 			// TODO Pruefe leben spieler falls Mob kamin ereicht
 		// TODO tower.schießen();
@@ -106,26 +89,35 @@ public class Controller {
 		// TODO so lang bis mobArray voll
 		// TODO Wheinachtmann Mob
 		// TODO Gewonnen verlorren
+		System.out.println(spielfeld.toString());
 		return false;
 	}
 
+
 	private void createMob() {
-		int mobType = 0; // Randomzahl für Mobart
+		
 		Mob mob = null;
+		int mobType = 0; // Randomzahl für Mobart
 		// TODO MICHI !!! Randomfunktion für mobType
+		
 		switch(mobType) {
 			case 0:
 				mob = new MobElfe();
+				mobArray[mobNummer++] = mob;
 				break;
 			case 1:
 				mob = new MobGnom();
+				mobArray[mobNummer++] = mob;
 				break;
 			case 2:
 				mob = new MobRentier();
+				mobArray[mobNummer++] = mob;
 				break;
 		}
-		
+		//spielfeld.placeMob(mob);
 	}
+	
+
 	
 
 }

@@ -6,12 +6,12 @@ public class TowerKugel extends Tower {
 	private int range;
 	private String symbol;
 	
-	public TowerKugel( int reihe , int stelle ) {
+	public TowerKugel( int y , int x ) {
 		
-		super(reihe, stelle);
-		this.damage = 30;
+		super(y, x);
+		this.damage = 20;
 		this.range = 15;
-		this.symbol = " K";
+		this.symbol = "C";
 	}
 	
 	public int getRange() {
@@ -19,7 +19,7 @@ public class TowerKugel extends Tower {
 	}
 	
 	public int getDamage() {
-		return damage;
+		return damage; //+ rand(10); Um Variablen Damage zu erzeugen
 	}
 
 	public String getSymbol() {

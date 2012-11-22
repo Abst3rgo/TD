@@ -6,12 +6,12 @@ public class TowerNuss extends Tower {
 		private int range;
 		private String symbol;
 		
-		public TowerNuss( int reihe , int stelle ) {
+		public TowerNuss( int y , int x ) {
 			
-			super(reihe, stelle);
+			super(y, x);
 			this.damage = 20;
 			this.range = 10;
-			this.symbol = " N";
+			this.symbol = "K";
 		}
 		
 		public int getRange() {

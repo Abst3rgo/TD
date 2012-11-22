@@ -12,6 +12,7 @@ public class Xmas {
 	public static void main(String[] args) {
 		
 		TextUI tui = new TextUI(new Controller());
+		
 		// StartMessage
 		tui.printMenue();
 		// Dauerschleife

@@ -2,25 +2,24 @@ package xmas.parts;
 
 public class Tower {
 
-	//private Position p;
-	private int stelle;
-	private int reihe; 
-
+	private int y;
+	private int x;
+	 
 	public Tower() {
 		
 	}
 	
-	public Tower( int reihe , int stelle ) {
-		this.reihe = reihe;
-		this.stelle = stelle;
+	public Tower( int y , int x ) {
+		this.x = x;
+		this.y = y;
 	}
 	
-	public int getReihe() {
-		return this.reihe;
+	public int getY() {
+		return this.y;
 	}
 	
-	public int getStelle() {
-		return this.stelle;
+	public int getX() {
+		return this.x;
 	}
 	
 	public String getSymbol() {

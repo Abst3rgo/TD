@@ -19,7 +19,17 @@ public class Mob {
 		return this.y;
 	}
 	
+	public String getArt() {
+		return null;
+	}
 	
+	public String getSymbol() {
+		return "";
+	}
+	
+	public void walk(Spielfeld spielfeld) {
+		
+	}
 	
 	
 }
