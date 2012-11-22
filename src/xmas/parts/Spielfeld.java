@@ -15,13 +15,15 @@ public class Spielfeld {
 		9 = Ende;
 	*/
 	
-	private int y = 20;
-	private int x = 25;
-	private String fieldArray[][] = new String[y][x];
+	
+	private int laengeY = 20;
+	private int breiteX = 25;
+	private String[][] fieldArray = new String[laengeY][breiteX];
+	
 	private int startX = 2;
 	private int startY = 1;
 	private int endX = 2;
-	private int endY = y-1;
+	private int endY = laengeY-1;
 
 	public Spielfeld() {
 		init();
@@ -44,11 +46,15 @@ public class Spielfeld {
 	}
 	
 	public int getX() {
-		return this.x;
+		return this.breiteX;
 	}
 	
 	public int getY() {
-		return this.y;
+		return this.laengeY;
+	}
+	
+	public String[][] getfieldArray() {
+		return this.fieldArray;
 	}
 	
 	
@@ -63,8 +69,8 @@ public class Spielfeld {
 	public String tostring() {
 		StringBuilder field = new StringBuilder();
 		
-		for(int i = 0; i < y; i++) {
-			for(int j = 0; j < x; j++) {
+		for(int i = 0; i < laengeY; i++) {
+			for(int j = 0; j < breiteX; j++) {
 				field.append(fieldArray[i][j]);
 				field.append(" ");
 			}
@@ -80,38 +86,38 @@ public class Spielfeld {
 	
 	private void init() {
 		// Feld init
-		for(int i = 2; i < (y-1); i++) {
-			for(int j = 2; j < (x-1); j++) {
+		for(int i = 2; i < (laengeY-1); i++) {
+			for(int j = 2; j < (breiteX-1); j++) {
 				fieldArray[i][j] = ".";
 			}
 		}
 		// Zahlenrand setzen
 		
 		// Ober Zahlenrand
-		for(int i = 0; i < x; i++) {
+		for(int i = 0; i < breiteX; i++) {
 			fieldArray[0][i] = Integer.toString(i);
 		}
 		// Seitlicher Zahlenrand
-		for(int i = 0; i < y; i++) {
+		for(int i = 0; i < laengeY; i++) {
 			fieldArray[i][0] = Integer.toString(i);
 		}
 		
 		// Ränder für Spielfeld felder setzen 
 		//ObererRand
-		for(int i = 1; i < x; i++) {
+		for(int i = 1; i < breiteX; i++) {
 			fieldArray[1][i] = "#";
 		}
 		//UntererRand
-		for(int i = 1; i < x; i++) {
-			fieldArray[(y-1)][i] = "#";
+		for(int i = 1; i < breiteX; i++) {
+			fieldArray[(laengeY-1)][i] = "#";
 		}
 		//LinkerRand
-		for(int i = 1; i < y; i++) {
+		for(int i = 1; i < laengeY; i++) {
 			fieldArray[i][1] = "#";
 		}
 		//RechterRand
-		for(int i = 1; i < y; i++) {
-			fieldArray[i][(x-1)] = "#";
+		for(int i = 1; i < laengeY; i++) {
+			fieldArray[i][(breiteX-1)] = "#";
 		}
 		// Start und Ende setzen 
 		fieldArray[startY][startX] = "S";

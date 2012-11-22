@@ -18,6 +18,7 @@ public class Controller {
 	private int numberTower = 0;
 	private Mob[] mobArray = new Mob[30];
 	private int mobNummer = 0;
+	private String fieldArray[][];
 	
 	public Controller() {
 		this.spielfeld  = new Spielfeld();
@@ -62,16 +63,36 @@ public class Controller {
 		}
 		
 		// Pruefe ob Weg noch fei für Mobs
-		if(wayclear()) {
+		fieldArray = spielfeld.getfieldArray();
+		x = spielfeld.getStartX();
+		y = spielfeld.getStartY();
+		if(wayclear(fieldArray, x , y)) {
 			towerArray[numberTower++] = tower;
 			spielfeld.setTower(tower.getSymbol(), y, x);
 		}
 	}
 	
 	
-
-	private boolean wayclear() {
-		//if()
+// Rekursive Mehtode die Prüft ob der Weg frei ist 
+	private boolean wayclear(String[][] fieldArray, int y, int x) {
+		// Nach vorn laufen ?
+		if(fieldArray[(y+1)][x] == "." ) {
+			wayclear(fieldArray, ++y, x);
+		}
+		// Nach links laufen ?
+		else if(fieldArray[y][(x-1)] == ".") {
+			wayclear(fieldArray, y, --x);	
+		}
+		// Nach rechts laufen ?
+		else if(fieldArray[y][(x+1)] == ".") {
+			wayclear(fieldArray, y, ++x);	
+		}
+		// Nach hinten laufen ?
+		else if(fieldArray[(y-1)][x] == ".") {
+			wayclear(fieldArray, y, --x);	
+		} else {
+			return false;
+		}
 		return true;
 	}
 
