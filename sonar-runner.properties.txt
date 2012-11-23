@@ -19,4 +19,4 @@ sonar.binaries=./bin
 sonar.language=java
  
 # Additional parameters
-#sonar.my.property=value
+sonar.my.property=value
