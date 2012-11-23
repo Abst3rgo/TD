@@ -27,9 +27,6 @@ public class Mob {
 		return "";
 	}
 	
-	public void walk(Spielfeld spielfeld) {
-		
-	}
 	
 	
 }

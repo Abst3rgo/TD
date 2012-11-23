@@ -13,6 +13,8 @@ public class MobTest extends TestCase {
 	
 	public void testGetValue() {
 		assertEquals(0, mob.getX());
-		assertEquals(42, mob.getY());
+		assertEquals(20, mob.getY());
+		assertEquals("", mob.getSymbol());
+		assertEquals(null, mob.getArt());
 	}
 }

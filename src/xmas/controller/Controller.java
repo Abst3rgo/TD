@@ -141,7 +141,7 @@ public class Controller {
 		createMob();
 		// TODO mob.laufe();
 		for(Mob mob : mobArray) {
-			mob.walk(spielfeld);
+			//mob.walk(spielfeld);
 		}
 			// TODO update Spielfeld
 			// TODO Pruefe leben spieler falls Mob kamin ereicht
