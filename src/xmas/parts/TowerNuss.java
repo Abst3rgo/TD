@@ -11,7 +11,7 @@ public class TowerNuss extends Tower {
 			super(y, x);
 			this.damage = 20;
 			this.range = 10;
-			this.symbol = "K";
+			this.symbol = "K|";
 		}
 		
 		public int getRange() {

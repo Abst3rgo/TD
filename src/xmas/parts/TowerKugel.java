@@ -11,7 +11,7 @@ public class TowerKugel extends Tower {
 		super(y, x);
 		this.damage = 20;
 		this.range = 15;
-		this.symbol = "C";
+		this.symbol = "C|";
 	}
 	
 	public int getRange() {

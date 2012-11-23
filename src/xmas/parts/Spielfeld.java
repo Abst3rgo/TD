@@ -2,22 +2,9 @@ package xmas.parts;
 
 public class Spielfeld {
 	
-	/* Bedeutung Zahlen:
-		-1 = Rand:
-		0 = Leeres Feld;
-		1 = Tower Nuss
-		2 = Tower Lameta
-		3 = Tower Kugeln
-		5 = Mob Elfe;
-		6 = Mob Gnom;
-		7 = Mob Rentier;
-		8 = Start;
-		9 = Ende;
-	*/
 	
-	
-	private int laengeY = 20;
-	private int breiteX = 25;
+	private int laengeY = 8;
+	private int breiteX = 8;
 	private String[][] fieldArray = new String[laengeY][breiteX];
 	
 	private int startX = 2;
@@ -88,40 +75,48 @@ public class Spielfeld {
 		// Feld init
 		for(int i = 2; i < (laengeY-1); i++) {
 			for(int j = 2; j < (breiteX-1); j++) {
-				fieldArray[i][j] = ".";
+				fieldArray[i][j] = "..";
 			}
 		}
 		// Zahlenrand setzen
 		
 		// Ober Zahlenrand
 		for(int i = 0; i < breiteX; i++) {
-			fieldArray[0][i] = Integer.toString(i);
+			if (i <= 9) {
+			fieldArray[0][i] = Integer.toString(i)+" ";
+			} else {
+				fieldArray[0][i] = Integer.toString(i);
+			}
 		}
 		// Seitlicher Zahlenrand
 		for(int i = 0; i < laengeY; i++) {
-			fieldArray[i][0] = Integer.toString(i);
+			if (i <= 9) {
+				fieldArray[i][0] = Integer.toString(i)+" ";
+			} else {
+				fieldArray[i][0] = Integer.toString(i);
+			}
 		}
 		
 		// Ränder für Spielfeld felder setzen 
 		//ObererRand
 		for(int i = 1; i < breiteX; i++) {
-			fieldArray[1][i] = "#";
+			fieldArray[1][i] = "##";
 		}
 		//UntererRand
 		for(int i = 1; i < breiteX; i++) {
-			fieldArray[(laengeY-1)][i] = "#";
+			fieldArray[(laengeY-1)][i] = "##";
 		}
 		//LinkerRand
 		for(int i = 1; i < laengeY; i++) {
-			fieldArray[i][1] = "#";
+			fieldArray[i][1] = "##";
 		}
 		//RechterRand
 		for(int i = 1; i < laengeY; i++) {
-			fieldArray[i][(breiteX-1)] = "#";
+			fieldArray[i][(breiteX-1)] = "##";
 		}
 		// Start und Ende setzen 
-		fieldArray[startY][startX] = "S";
-		fieldArray[endY][endX] = "E";
+		fieldArray[startY][startX] = "St";
+		fieldArray[endY][endX] = "En";
 		// TODO Randomässig nicht besetzbare Blöcke erstellen
 		
 	}

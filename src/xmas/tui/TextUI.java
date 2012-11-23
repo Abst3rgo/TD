@@ -48,6 +48,7 @@ public class TextUI {
 
 	// Verarbeitete Eingabe und verlässt gegenbenfalls Schleife
 	private boolean handleinput() {
+		boolean create = false;
 		String input = "";
 		int art = 0;
 		int spalte = 0;
@@ -90,13 +91,16 @@ public class TextUI {
 		System.out.println(" Zahl von 2 bis " + (x-2) + " | Quit = q");
 		input = scanner.next();
 		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < x) {
-			controller.erstelleTower(art, spalte, Integer.parseInt(input));
+			create = controller.erstelleTower(art, Integer.parseInt(input) , spalte);
 		} else {
 			return quitOrFailure(input);
 		}
-		
-		System.out.println("Tower erstellt !!!");
-		return false;
+		if(create == true) {
+			System.out.println("Tower erstellt !!!");
+			return false;
+		}
+		return true;
+
 	}
 	
 	

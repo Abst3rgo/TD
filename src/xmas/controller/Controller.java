@@ -1,5 +1,7 @@
 package xmas.controller;
 
+import java.util.Scanner;
+
 import xmas.parts.Mob;
 import xmas.parts.MobElfe;
 import xmas.parts.MobGnom;
@@ -19,6 +21,7 @@ public class Controller {
 	private Mob[] mobArray = new Mob[30];
 	private int mobNummer = 0;
 	private String fieldArray[][];
+	Scanner scanner = new Scanner(System.in);
 	
 	public Controller() {
 		this.spielfeld  = new Spielfeld();
@@ -43,7 +46,7 @@ public class Controller {
 	}
 	
 	
-	public void erstelleTower(int art, int x, int y) {
+	public boolean erstelleTower(int art, int x, int y) {
 		
 		// Art der Towers ermitteln und erstellen
 		Tower tower = null;
@@ -63,37 +66,75 @@ public class Controller {
 		}
 		
 		// Pruefe ob Weg noch fei für Mobs
-		fieldArray = spielfeld.getfieldArray();
-		x = spielfeld.getStartX();
-		y = spielfeld.getStartY();
-		if(wayclear(fieldArray, x , y)) {
+		spielfeld.setTower(tower.getSymbol(), y, x);
+		boolean temp = checkWay(spielfeld.getfieldArray(), spielfeld.getStartY(), spielfeld.getStartX());
+		System.out.println(temp);
+		if( temp == true ) {
 			towerArray[numberTower++] = tower;
-			spielfeld.setTower(tower.getSymbol(), y, x);
-		}
+			System.out.println("STOP !!! ");
+			return true;
+		} 
+		spielfeld.setTower("..", y, x);
+		return false;
 	}
+
+	// Rekursive Mehtode die Prüft ob der Weg frei ist 
+	private boolean checkWay(String[][] fieldArray, int y, int x) {
+
+		
+			// Nach unten laufen ?
+			if(fieldArray[(y+1)][x] == "..") {
+				System.out.println("Unten ");
+				System.out.println("x = " + x);
+				System.out.println("y = " + y+ "\n");
+				if(true == reachEnd(fieldArray, y, x)) {
+					return true;
+				}
+				checkWay(fieldArray, ++y, x); 
+			}
+			// Nach links laufen ?
+			else if(fieldArray[y][(x-1)] == "..") {
+				System.out.println("Links ");
+				System.out.println("x = " + x);
+				System.out.println("y = " + y+ "\n");
+				if(true == reachEnd(fieldArray, y, x)) {
+					return true;
+				}
+				checkWay(fieldArray, y, --x);	
+			}
+			// Nach rechts laufen ?
+			else if(fieldArray[y][(x+1)] == "..") {
+				System.out.println("Rechts ");
+				System.out.println("x = " + x);
+				System.out.println("y = " + y+ "\n");
+				if(true == reachEnd(fieldArray, y, x)) {
+					return true;
+				}
+				checkWay(fieldArray, y, ++x);	
+			}
+			// Nach oben laufen ?
+			else if(fieldArray[(y-1)][x] == ".." ) {
+				System.out.println("Oben ");
+				System.out.println("x = " + x);
+				System.out.println("y = " + y + "\n");
+				if(true == reachEnd(fieldArray, y, x)) {
+					return true;
+				}
+				checkWay(fieldArray, --y, x);
+			}
 	
-	
-// Rekursive Mehtode die Prüft ob der Weg frei ist 
-	private boolean wayclear(String[][] fieldArray, int y, int x) {
-		// Nach vorn laufen ?
-		if(fieldArray[(y+1)][x] == "." ) {
-			wayclear(fieldArray, ++y, x);
+				System.out.println("Out ");
+				System.out.println("x = " + x);
+				System.out.println("y = " + y + "\n");
+				return false;
+	}
+
+	private boolean reachEnd(String[][] fieldArray, int y, int x) {
+		if(fieldArray[(y+1)][x] == "En" || fieldArray[(y-1)][x] == "En" ||
+		   fieldArray[(y)][x+1] == "En" || fieldArray[(y)][x-1] == "En" ) {
+			return true;
 		}
-		// Nach links laufen ?
-		else if(fieldArray[y][(x-1)] == ".") {
-			wayclear(fieldArray, y, --x);	
-		}
-		// Nach rechts laufen ?
-		else if(fieldArray[y][(x+1)] == ".") {
-			wayclear(fieldArray, y, ++x);	
-		}
-		// Nach hinten laufen ?
-		else if(fieldArray[(y-1)][x] == ".") {
-			wayclear(fieldArray, y, --x);	
-		} else {
-			return false;
-		}
-		return true;
+		return false;
 	}
 
 	public boolean startGame() {
