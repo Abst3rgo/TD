@@ -7,7 +7,6 @@ public class TowerNuss extends Tower {
 		private String symbol;
 		
 		public TowerNuss( int y , int x ) {
-			
 			super(y, x);
 			this.damage = 20;
 			this.range = 10;

@@ -5,9 +5,6 @@ public class Tower {
 	private int y;
 	private int x;
 	 
-	public Tower() {
-		
-	}
 	
 	public Tower( int y , int x ) {
 		this.x = x;

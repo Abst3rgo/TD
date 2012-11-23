@@ -11,7 +11,7 @@ public class TowerLametta extends Tower {
 		super(y, x);
 		this.damage = 10;
 		this.range = 5;
-		this.symbol = " L|";
+		this.symbol = "L|";
 	}
 	
 	public int getRange() {
