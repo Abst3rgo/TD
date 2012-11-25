@@ -8,8 +8,8 @@ public class MobElfe extends Mob {
 	private String symbol;
 	
 	
-	public MobElfe() {
-		super();
+	public MobElfe(int y, int x) {
+		super(y,x);
 		this.art = "Elfe";
 		this.health = 15;
 		this.speed = 1.5;

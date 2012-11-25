@@ -2,12 +2,16 @@ package xmas.parts;
 
 public class Player {
 	
-	private String name;
-	private int gift;
+	private String name = "";
+	private int life = 3;
 	
-	public Player(String name, int gift) {
+	public Player(String name) {
 		this.name = name;
-		this.gift = gift;
+	}
+	
+	public Player(String name, int life) {
+		this.name = name;
+		this.life = life;
 	}
 	
 	public String getname() {
@@ -17,21 +21,25 @@ public class Player {
 	public void setname(String name) {
 		this.name = name;
 	}
+	
+	public int getLive() {
+		return this.life;
+	}
 
-	public void setgift(int gift) {
-		this.gift = gift;
+	public void setLive(int life) {
+		this.life = life;
 	}
 	
-	public int checkgifts() {
-		return this.gift;
+	public void loseLive() {
+		this.life--;
 	}
 	
-	public int gameover() {
-		if ( gift == 0) {
-			return 0;
+	public boolean gameover() {
+		if ( life == 0) {
+			return true;
 		}
 		else {
-			return 1;
+			return false;
 		}
 	}
 }

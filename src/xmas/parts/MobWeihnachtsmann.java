@@ -1,19 +1,17 @@
 package xmas.parts;
 
-public class MobRentier extends Mob {
-
-	private String art;
+public class MobWeihnachtsmann extends Mob {
+	
 	private int health;
 	private double speed;
 	private String symbol;
 	
 	
-	public MobRentier(int y, int x) {
+	public MobWeihnachtsmann(int y, int x) {
 		super(y,x);
-		this.art = "Rentier";
-		this.health = 15;
-		this.speed = 1.5;
-		this.symbol = "m";
+		this.health = 100;
+		this.speed = 1.0;
+		this.symbol = "&";
 		
 	}
 	
@@ -25,11 +23,8 @@ public class MobRentier extends Mob {
 		return this.speed;
 	}
 	
-	public String getArt() {
-		return art;
-	}
-	
 	public String getSymbol() {
-		return symbol;
+		return this.symbol;
 	}
+
 }

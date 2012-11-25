@@ -8,8 +8,8 @@ public class MobGnom extends Mob {
 	private String symbol;
 	
 	
-	public MobGnom() {
-		super();
+	public MobGnom(int y, int x) {
+		super(y,x);
 		this.art = "Gnom";
 		this.health = 15;
 		this.speed = 1.5;

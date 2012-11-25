@@ -19,7 +19,7 @@ public class Tower {
 		return this.x;
 	}
 	
-	public String getSymbol() {
+	public  String getSymbol() {
 		return null;
 		
 	}

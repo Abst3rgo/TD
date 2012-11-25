@@ -9,6 +9,7 @@ public class TextUI {
 	private Controller controller;
 	private int y;
 	private int x;
+	private boolean mode2 = false;
 	Scanner scanner;
 
 	//Konstruktor
@@ -30,14 +31,14 @@ public class TextUI {
 	// Schleife die bis zum verlassen durchläuft
 	public boolean iterate() {
 		boolean quit = false;
-		boolean mode1 = true;
 		// User input and Tower set // Modus 1
-		if(mode1) {
+		if(mode2 == false) {
 		quit = handleinput();
+		// TODO Timer Interrupt nach ... sec
 		System.out.println(controller.getSpielfeld());
 		}
 		/*
-		mode1 = false;
+		mode1 = true;
 		// Create and Move Mobs // Modus 2
 		if(!quit) {
 			quit = controller.startGame();
@@ -97,9 +98,10 @@ public class TextUI {
 		}
 		if(create == true) {
 			System.out.println("Tower erstellt !!!");
-			return false;
+		} else {
+			System.out.println("Tower nicht erstellt");
 		}
-		return true;
+		return false;
 
 	}
 	
