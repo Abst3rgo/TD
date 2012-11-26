@@ -5,10 +5,10 @@ import java.util.Scanner;
 public class Spielfeld {
 	
 	
-	private int laengeY = 5;
-	private int breiteX = 5;
+	private int laengeY = 8;
+	private int breiteX = 8;
 	private String[][] fieldArray = new String[laengeY][breiteX];
-	private int wayArray[];
+	private int wayArray[] = new int[(laengeY*breiteX)];
 	private int wayCounter = 0;
 	// wayArray inputs
 		// 8 == oben
@@ -25,6 +25,19 @@ public class Spielfeld {
 	private String border = "##";
 	Scanner scanner = new Scanner(System.in);
 	
+	private boolean[][] visitField = new boolean[laengeY][breiteX];
+	
+	private void clearArrays() {
+		// visitField set all false
+		for(int i = 2; i < (laengeY-1); i++) {
+			for(int j = 2; j < (breiteX-1); j++) {
+				visitField[i][j] = false;
+			}
+		}
+		// wayArray counter reset 
+			wayCounter = 0;
+		
+	}
 	
 	
 	public Spielfeld() {
@@ -73,12 +86,16 @@ public class Spielfeld {
 	
 	
 	public boolean setTower(String symbol, int y, int x) {
+		clearArrays();
 		fieldArray[y][x] = symbol;
 		if (checkWay(startY, startX) == false) {
 			fieldArray[y][x] = empty;
 			return false;
 		} else {
-			System.out.println("STOP 3");
+			for(int i = 0; i<= wayCounter; i++ ){
+				System.out.print(wayArray[i] + ", ");
+			}
+			
 			return true;
 		}
 		
@@ -107,6 +124,8 @@ public class Spielfeld {
 	
 	
 	private void init() {
+		
+		
 		// Feld init
 		for(int i = 2; i < (laengeY-1); i++) {
 			for(int j = 2; j < (breiteX-1); j++) {
@@ -158,6 +177,7 @@ public class Spielfeld {
 	
 	// Rekursive Mehtode die Prüft ob der Weg frei ist 
 	private boolean checkWay(int y, int x) {
+
 		
 			if(reachEnd(y, x) == true) {
 				System.out.println("Ende ereicht");
@@ -165,33 +185,36 @@ public class Spielfeld {
 				return true;
 			} else { 
 				// Nach unten laufen ?
-				if(fieldArray[(y+1)][x] == empty) {
-					System.out.println("Unten ");
+				if(fieldArray[(y+1)][x] == empty && visitField[(y+1)][x] == false) {
+					//System.out.println("Unten ");
+					visitField[(y+1)][x] = true;
 					wayArray[wayCounter++] = 2;
-					checkWay(++y, x); 
+					return checkWay(++y, x); 
 				}
 				
 				// Nach links laufen ?
-				if(fieldArray[y][(x-1)] == empty) {
-					System.out.println("Links ");
+				if(fieldArray[y][(x-1)] == empty && visitField[y][(x-1)] == false) {
+					//System.out.println("Links ");
+					visitField[y][(x-1)] = true;
 					wayArray[wayCounter++] = 4;
-					checkWay(y, --x);	
+					return checkWay(y, --x);	
 				}
 				
 				// Nach rechts laufen ?
-				if(fieldArray[y][(x+1)] == empty) {
-					System.out.println("Rechts ");
+				if(fieldArray[y][(x+1)] == empty && visitField[y][(x+1)] == false) {
+					//System.out.println("Rechts ");
+					visitField[y][(x+1)] = true;
 					wayArray[wayCounter++] = 6;
-					checkWay(y, ++x);	
+					return checkWay(y, ++x);	
 				}
 				
 				// Nach oben laufen ?
-				if(fieldArray[(y-1)][x] == empty) {
-					System.out.println("Oben ");
+				if(fieldArray[(y-1)][x] == empty && visitField[(y-1)][x] == false) {
+					//System.out.println("Oben ");
+					visitField[(y-1)][x] = true;
 					wayArray[wayCounter++] = 8;
-					checkWay(--y, x);
+					return checkWay(--y, x);
 				}
-				
 				System.out.println("Out ");
 				ausgabe(y,x);
 				return false;
@@ -207,9 +230,9 @@ public class Spielfeld {
 	
 
 	private boolean reachEnd(int y, int x) {
-		y= y+1;
-		System.out.println(fieldArray[y][x]);
-		if(fieldArray[y][x] == "En") {
+		//System.out.println(fieldArray[y][x]);
+		if(fieldArray[y+1][x] == "En" || fieldArray[y-1][x] == "En" || 
+				fieldArray[y][x+1] == "En" || fieldArray[y][x-1] == "En") {
 			return true;
 		}
 		return false;
