@@ -13,7 +13,7 @@ public class MobRentier extends Mob {
 		this.art = "Rentier";
 		this.health = 15;
 		this.speed = 1.5;
-		this.symbol = "m";
+		this.symbol = "mt";
 		
 	}
 	

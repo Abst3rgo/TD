@@ -1,5 +1,7 @@
 package xmas.controller;
 
+import java.util.Random;
+
 import xmas.parts.Mob;
 import xmas.parts.MobElfe;
 import xmas.parts.MobGnom;
@@ -19,10 +21,9 @@ public class Controller {
 	private String StartMessage = "Willkommen bei Xmas Tower Defence !";
 	private Tower[] towerArray = new Tower[8];
 	private int numberTower = 0;
-	private int anzahlMobs = 30;
+	private int anzahlMobs = 5;
 	private Mob[] mobArray = new Mob[anzahlMobs];
 	private int mobNummer = 0;
-	
 	
 	public Controller() {
 		this.spielfeld  = new Spielfeld();
@@ -80,20 +81,28 @@ public class Controller {
 
 	public boolean startGame() {
 		
+		// Delay für Mobspwan
+		try {
+		    Thread.currentThread();
+			Thread.sleep(1000);
+		} catch(Exception e){}
+		
+		// TODO Überarbeiten
 		// Mob erstellen und laufen lassen 
-		if (mobArray.length != anzahlMobs-1) {
-			createMob();
-		} else {
-			// Welle komplett Endgegner spawn
-			boss();
-		}
+			if(mobNummer < anzahlMobs-1) {
+				createMob();
+			}
+			else if (mobNummer == anzahlMobs-1) {
+				// Welle komplett Endgegner spawn
+				boss();
+			}
+		
 		for(Mob mob : mobArray) {
+			// Mob besiegt 
 			if(mob != null) {
-				if(!mob.walk(spielfeld.getWayArray(), spielfeld.getWayCount())) {
-					spielfeld.setMob(mob.getSymbol(), mob.getY(), mob.getX());
-				} else {
+				spielfeld.setMob(mob.getSymbol(), mob.getY(), mob.getX());
+				if(mob.walk(spielfeld.getWayArray(), spielfeld.getWayCount())) {
 					player.loseLive();
-					spielfeld.setMob(spielfeld.getEmpty(), mob.getY(), mob.getX());
 					mob = null;
 				}
 			}
@@ -115,28 +124,34 @@ public class Controller {
 	private void createMob() {
 		
 		Mob mob = null;
-		int mobType = 0; // Randomzahl für Mobart
-		// TODO MICHI !!! Randomfunktion für mobType
-		
+		int mobType = new Random().nextInt(11); // Randomzahl für Mobart
 		switch(mobType) {
 			case 0:
-				mob = new MobElfe(spielfeld.getStartY()+1, spielfeld.getStartX());
-				mobArray[mobNummer++] = mob;
-				break;
 			case 1:
-				mob = new MobGnom(spielfeld.getStartY()+1, spielfeld.getStartX());
+			case 2:
+			case 3:
+				mob = new MobElfe(spielfeld.getStartY(), spielfeld.getStartX());
 				mobArray[mobNummer++] = mob;
 				break;
-			case 2:
-				mob = new MobRentier(spielfeld.getStartY()+1, spielfeld.getStartX());
+			case 4:
+			case 5:
+			case 6:
+				mob = new MobGnom(spielfeld.getStartY(), spielfeld.getStartX());
 				mobArray[mobNummer++] = mob;
+				break;
+			case 7:
+			case 8:
+				mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
+				mobArray[mobNummer++] = mob;
+				break;
+			case 9:
+			case 10:
 				break;
 		}
-		//spielfeld.placeMob(mob);
 	}
 	
 	private void boss() {
-		Mob mob = new MobWeihnachtsmann(spielfeld.getStartY()+1, spielfeld.getStartX());
+		Mob mob = new MobWeihnachtsmann(spielfeld.getStartY(), spielfeld.getStartX());
 		mobArray[mobNummer++] = mob;
 	}
 	

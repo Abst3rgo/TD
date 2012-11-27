@@ -11,7 +11,7 @@ public class MobWeihnachtsmann extends Mob {
 		super(y,x);
 		this.health = 100;
 		this.speed = 1.0;
-		this.symbol = "&";
+		this.symbol = "&&";
 		
 	}
 	

@@ -31,6 +31,12 @@ public class Mob {
 	
 	public boolean walk(int[] wayArray, int wayCounter) {
 		if(wayCounter != route) {
+			// wayArray inputs
+			// 8 == oben
+			// 4 == links
+			// 2 == unten
+			// 6 == rechts
+			
 			switch(wayArray[route]) {
 				case 0:
 					return true;
@@ -42,6 +48,7 @@ public class Mob {
 					break;
 				case 6:
 					x++;
+					break;
 				case 8:
 					y--;
 					break;

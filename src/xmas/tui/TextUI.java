@@ -4,13 +4,39 @@ import java.util.Scanner;
 
 import xmas.controller.Controller;
 
+
+
 public class TextUI {
 	
+	boolean timeOver = false;
 	private Controller controller;
 	private int y;
 	private int x;
 	private boolean mode2 = false;
+	private Thread timer = new Thread(new Timer());
 	Scanner scanner;
+	
+	
+	public class Timer extends Thread {
+		
+		int time = 10;
+		
+		public void run() {
+			try {
+				while(true) {
+					sleep(100);
+					if(time != 0) {
+						time--;
+					} else {
+						timeOver = true;
+					}
+				}
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
 
 	//Konstruktor
 	public TextUI(Controller controller) {
@@ -18,6 +44,7 @@ public class TextUI {
 		scanner = new Scanner(System.in);
 		y = (controller.getSpielfeldY());
 		x = (controller.getSpielfeldX());
+		timer.start();
 	}
 
 	//Beim Start Test und Spielfeld ausgeben
@@ -29,21 +56,25 @@ public class TextUI {
 
 	// WICHTIG !!!!!!!!!!
 	// Schleife die bis zum verlassen durchläuft
+	@SuppressWarnings("deprecation")
 	public boolean iterate() {
 		boolean quit = false;
 		// User input and Tower set // Modus 1
-		if(mode2 == false) {
-		quit = handleinput();
-		// TODO Timer Interrupt nach ... sec
-		System.out.println(controller.getSpielfeld());
+		if(!mode2) {
+			quit = handleinput();
+			System.out.println(controller.getSpielfeld());
+			if(timeOver == true) {
+				mode2 = true;
+				System.out.println("Thread Tod");
+				timer.stop();
+			}
 		}
-		/*
-		mode1 = true;
 		// Create and Move Mobs // Modus 2
-		if(!quit) {
+		if(!quit && mode2) {
+			System.out.println("Mob laufen los ");
 			quit = controller.startGame();
+			System.out.println(controller.getSpielfeld());
 		}
-		*/
 		return quit;
 	}
 

@@ -13,7 +13,7 @@ public class MobElfe extends Mob {
 		this.art = "Elfe";
 		this.health = 15;
 		this.speed = 1.5;
-		this.symbol = "*";
+		this.symbol = "**";
 	}
 	
 	public int getHealth() {
