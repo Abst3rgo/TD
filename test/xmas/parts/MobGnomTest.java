@@ -1,5 +1,6 @@
 package xmas.parts;
 
+import xmas.parts.impl.MobGnom;
 import junit.framework.TestCase;
 
 public class MobGnomTest extends TestCase {

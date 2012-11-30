@@ -1,6 +1,6 @@
 package xmas.parts;
 
-import xmas.controller.Controller;
+import xmas.controller.impl.Controller;
 import xmas.tui.TextUI;
 import junit.framework.TestCase;
 

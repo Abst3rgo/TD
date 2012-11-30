@@ -1,5 +1,6 @@
 package xmas.parts;
 
+import xmas.parts.impl.Player;
 import junit.framework.TestCase;
 
 public class PlayerTest extends TestCase {

@@ -1,5 +1,6 @@
 package xmas.parts;
 
+import xmas.parts.impl.MobWeihnachtsmann;
 import junit.framework.TestCase;
 
 public class MobWeihnachtsmannTest extends TestCase {

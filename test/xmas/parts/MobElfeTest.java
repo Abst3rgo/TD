@@ -1,5 +1,6 @@
 package xmas.parts;
 
+import xmas.parts.impl.MobElfe;
 import junit.framework.TestCase;
 
 public class MobElfeTest extends TestCase {

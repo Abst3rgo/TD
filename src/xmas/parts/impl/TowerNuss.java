@@ -1,4 +1,4 @@
-package xmas.parts;
+package xmas.parts.impl;
 
 public class TowerNuss extends Tower {
 		

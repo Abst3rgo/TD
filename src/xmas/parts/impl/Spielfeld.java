@@ -1,8 +1,10 @@
-package xmas.parts;
+package xmas.parts.impl;
 
 import java.util.Scanner;
 
-public class Spielfeld {
+import xmas.parts.ISpielfeld;
+
+public class Spielfeld implements ISpielfeld {
 	
 	
 	private int laengeY = 8;

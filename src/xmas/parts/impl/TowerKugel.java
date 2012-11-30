@@ -1,17 +1,17 @@
-package xmas.parts;
+package xmas.parts.impl;
 
-public class TowerLametta extends Tower {
-
+public class TowerKugel extends Tower {
+	
 	private int damage;
 	private int range;
 	private String symbol;
 	
-	public TowerLametta( int y , int x ) {
+	public TowerKugel( int y , int x ) {
 		
 		super(y, x);
-		this.damage = 10;
-		this.range = 5;
-		this.symbol = "L|";
+		this.damage = 20;
+		this.range = 15;
+		this.symbol = "C|";
 	}
 	
 	public int getRange() {
@@ -19,10 +19,11 @@ public class TowerLametta extends Tower {
 	}
 	
 	public int getDamage() {
-		return damage;
+		return damage; //+ rand(10); Um Variablen Damage zu erzeugen
 	}
-	
+
 	public String getSymbol() {
 		return this.symbol;
 	}
+
 }

@@ -1,10 +1,12 @@
 package xmas.application;
 
-import xmas.controller.Controller;
+import xmas.controller.impl.Controller;
 import xmas.tui.TextUI;
 
 public class Xmas {
-
+	
+	
+	
 	/**
 	 * @param args
 	 */
@@ -13,6 +15,13 @@ public class Xmas {
 		
 		TextUI tui = new TextUI(new Controller());
 		
+		tui.Testschieﬂen();
+		
+		
+		
+		
+		
+		/*
 		// StartMessage
 		tui.printMenue();
 		// Dauerschleife
@@ -22,6 +31,7 @@ public class Xmas {
 		}
 		
 		System.out.println("Programm Ende");
+	*/
 	}
 }
 

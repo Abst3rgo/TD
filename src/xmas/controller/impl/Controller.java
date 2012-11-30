@@ -1,23 +1,25 @@
-package xmas.controller;
+package xmas.controller.impl;
 
 import java.util.Random;
 
-import xmas.parts.Mob;
-import xmas.parts.MobElfe;
-import xmas.parts.MobGnom;
-import xmas.parts.MobRentier;
-import xmas.parts.MobWeihnachtsmann;
-import xmas.parts.Player;
-import xmas.parts.Spielfeld;
-import xmas.parts.Tower;
-import xmas.parts.TowerKugel;
-import xmas.parts.TowerLametta;
-import xmas.parts.TowerNuss;
+import xmas.controller.IController;
+import xmas.parts.impl.Mob;
+import xmas.parts.impl.MobElfe;
+import xmas.parts.impl.MobGnom;
+import xmas.parts.impl.MobRentier;
+import xmas.parts.impl.MobWeihnachtsmann;
+import xmas.parts.impl.Player;
+import xmas.parts.impl.Spielfeld;
+import xmas.parts.ISpielfeld;
+import xmas.parts.impl.Tower;
+import xmas.parts.impl.TowerKugel;
+import xmas.parts.impl.TowerLametta;
+import xmas.parts.impl.TowerNuss;
 
-public class Controller {
+public class Controller implements IController {
 
 	private Player player;
-	private Spielfeld spielfeld;
+	private ISpielfeld spielfeld;
 	private String StartMessage = "Willkommen bei Xmas Tower Defence !";
 	private Tower[] towerArray = new Tower[64];
 	private int numberTower = 0;

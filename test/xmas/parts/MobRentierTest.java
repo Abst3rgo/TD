@@ -1,5 +1,6 @@
 package xmas.parts;
 
+import xmas.parts.impl.MobRentier;
 import junit.framework.TestCase;
 
 public class MobRentierTest extends TestCase {

@@ -1,5 +1,6 @@
 package xmas.parts;
 
+import xmas.parts.impl.TowerNuss;
 import junit.framework.TestCase;
 
 public class TowerNussTest extends TestCase {
