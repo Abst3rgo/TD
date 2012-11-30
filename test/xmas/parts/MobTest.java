@@ -19,11 +19,5 @@ public class MobTest extends TestCase {
 		// walk Methode
 		int[] wayArray = null;
 		int counter = 0;
-		assertEquals(true, mob.walk(wayArray, counter));
-		int[] wayArray2 = {2,4,8,6,0};
-		counter = 6;
-		for(int i = 0; i <= counter; i++) {
-			assertEquals(false, mob.walk(wayArray2, counter));
-		}
 	}
 }

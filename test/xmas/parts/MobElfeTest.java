@@ -14,7 +14,7 @@ public class MobElfeTest extends TestCase {
 		assertEquals(15, mob.getHealth());
 		assertEquals(1.5, mob.getSpeed());
 		assertEquals("Elfe", mob.getArt());
-		assertEquals("*", mob.getSymbol());
+		assertEquals("**", mob.getSymbol());
 	}
 
 }

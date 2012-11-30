@@ -89,30 +89,32 @@ public class Controller {
 		
 		// TODO Überarbeiten
 		// Mob erstellen und laufen lassen 
-			if(mobNummer < anzahlMobs-1) {
+			//if(mobNummer < anzahlMobs-1) {
 				createMob();
-			}
-			else if (mobNummer == anzahlMobs-1) {
+			//}
+			//else if (mobNummer == anzahlMobs-1) {
 				// Welle komplett Endgegner spawn
-				boss();
-			}
+			//	boss();
+			//}
 		
 		for(Mob mob : mobArray) {
-			// Mob besiegt 
 			if(mob != null) {
-				spielfeld.setMob(mob.getSymbol(), mob.getY(), mob.getX());
-				if(mob.walk(spielfeld.getWayArray(), spielfeld.getWayCount())) {
+				System.out.println(mob.getSymbol());
+				if(mob.walk(spielfeld.getfieldArray(), spielfeld.getEmpty())) {
+					System.out.println("mobWalk == true");
 					player.loseLive();
-					mob = null;
+					spielfeld.setFieldEmpty(mob.getY(), mob.getX());
+				} else {
+					//spielfeld.updateMob(mob.getSymbol(), mob.getY(), mob.getX(), mob.getOldY(), mob.getOldX());
+					spielfeld.updateMob(mob.getSymbol(), mob.getY(), mob.getX(), mob.getOldY(), mob.getOldX());
 				}
 			}
+		}
+		System.out.println(spielfeld.tostring());
 			// Leben Spieler prüfen
 			if(player.gameover() == true) {
 				return true;
 			}
-			
-			
-		}
 		// TODO tower.schießen();
 			// TODO berechen Leben mob neu und entferne enventuell
 		// TODO warte timer.wait();
@@ -143,9 +145,6 @@ public class Controller {
 			case 8:
 				mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
 				mobArray[mobNummer++] = mob;
-				break;
-			case 9:
-			case 10:
 				break;
 		}
 	}

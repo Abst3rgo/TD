@@ -73,7 +73,7 @@ public class TextUI {
 		if(!quit && mode2) {
 			System.out.println("Mob laufen los ");
 			quit = controller.startGame();
-			System.out.println(controller.getSpielfeld());
+			//System.out.println(controller.getSpielfeld());
 		}
 		return quit;
 	}

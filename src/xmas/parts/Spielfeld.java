@@ -8,14 +8,6 @@ public class Spielfeld {
 	private int laengeY = 8;
 	private int breiteX = 8;
 	private String[][] fieldArray = new String[laengeY][breiteX];
-	private int wayArray[] = new int[(laengeY*breiteX)];
-	private int wayCounter = 0;
-	// wayArray inputs
-		// 8 == oben
-		// 4 == links
-		// 2 == unten
-		// 6 == rechts
-		
 	
 	private int startX = 2;
 	private int startY = 1;
@@ -34,9 +26,6 @@ public class Spielfeld {
 				visitField[i][j] = false;
 			}
 		}
-		// wayArray counter reset 
-			wayCounter = 0;
-		
 	}
 	
 	
@@ -72,16 +61,12 @@ public class Spielfeld {
 		return this.fieldArray;
 	}
 	
-	public int[] getWayArray() {
-		return this.wayArray;
-	}
-	
-	public int getWayCount() {
-		return this.wayCounter;
-	}
-	
 	public String getEmpty() {
 		return empty;
+	}
+	
+	public void setFieldEmpty(int y, int x) {
+		fieldArray[y][x] = empty;
 	}
 	
 	
@@ -92,10 +77,6 @@ public class Spielfeld {
 			fieldArray[y][x] = empty;
 			return false;
 		} else {
-			for(int i = 0; i<= wayCounter; i++ ){
-				System.out.print(wayArray[i] + ", ");
-			}
-			
 			return true;
 		}
 		
@@ -103,6 +84,15 @@ public class Spielfeld {
 	
 	public void setMob(String symbol, int y, int x) {
 		fieldArray[y][x] = symbol;
+	}
+	
+	public void updateMob(String symbol, int y, int x, int oldY, int oldX) {
+		System.out.println("Y = " + y);
+		System.out.println("X = " + x);
+		System.out.println("OldY = " + oldY);
+		System.out.println("OldX = " + oldX);
+		fieldArray[y][x] = symbol;
+		fieldArray[oldY][oldX] = empty;
 	}
 	
 	public String tostring() {
@@ -181,14 +171,12 @@ public class Spielfeld {
 		
 			if(reachEnd(y, x) == true) {
 				System.out.println("Ende ereicht");
-				wayArray[wayCounter++] = 0;
 				return true;
 			} else { 
 				// Nach unten laufen ?
 				if(fieldArray[(y+1)][x] == empty && visitField[(y+1)][x] == false) {
 					//System.out.println("Unten ");
 					visitField[(y+1)][x] = true;
-					wayArray[wayCounter++] = 2;
 					return checkWay(++y, x); 
 				}
 				
@@ -196,7 +184,6 @@ public class Spielfeld {
 				if(fieldArray[y][(x-1)] == empty && visitField[y][(x-1)] == false) {
 					//System.out.println("Links ");
 					visitField[y][(x-1)] = true;
-					wayArray[wayCounter++] = 4;
 					return checkWay(y, --x);	
 				}
 				
@@ -204,7 +191,6 @@ public class Spielfeld {
 				if(fieldArray[y][(x+1)] == empty && visitField[y][(x+1)] == false) {
 					//System.out.println("Rechts ");
 					visitField[y][(x+1)] = true;
-					wayArray[wayCounter++] = 6;
 					return checkWay(y, ++x);	
 				}
 				
@@ -212,7 +198,6 @@ public class Spielfeld {
 				if(fieldArray[(y-1)][x] == empty && visitField[(y-1)][x] == false) {
 					//System.out.println("Oben ");
 					visitField[(y-1)][x] = true;
-					wayArray[wayCounter++] = 8;
 					return checkWay(--y, x);
 				}
 				System.out.println("Out ");
