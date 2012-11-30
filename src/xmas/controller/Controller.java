@@ -151,8 +151,4 @@ public class Controller {
 		Mob mob = new MobWeihnachtsmann(spielfeld.getStartY(), spielfeld.getStartX());
 		mobArray[mobNummer++] = mob;
 	}
-	
-
-	
-
 }

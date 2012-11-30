@@ -24,7 +24,7 @@ public class TextUI {
 		public void run() {
 			try {
 				while(true) {
-					sleep(100);
+					sleep(1000);
 					if(time != 0) {
 						time--;
 					} else {
@@ -88,6 +88,18 @@ public class TextUI {
 		System.out.println("Wählen einen Palmentower aus ... ");
 		System.out.println("Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
 		input = scanner.next();
+		if(input.equals("K") || input.equals("k")) {
+			art = 0;
+		}
+		else if(input.equals("L") || input.equals("l")) {
+			art = 1;
+		}
+		else if(input.equals("C") || input.equals("C")) {
+			art = 2;
+		} else {
+			return quitOrFailure(input);
+		}
+		/*
 		switch(input) {
 			case "K":
 			case "k": 
@@ -104,6 +116,8 @@ public class TextUI {
 			default: 
 				return quitOrFailure(input);
 		}
+		
+		*/
 		
 		
 		
