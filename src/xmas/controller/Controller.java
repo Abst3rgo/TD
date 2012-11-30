@@ -19,9 +19,9 @@ public class Controller {
 	private Player player;
 	private Spielfeld spielfeld;
 	private String StartMessage = "Willkommen bei Xmas Tower Defence !";
-	private Tower[] towerArray = new Tower[8];
+	private Tower[] towerArray = new Tower[64];
 	private int numberTower = 0;
-	private int anzahlMobs = 5;
+	private int anzahlMobs = 30;
 	private Mob[] mobArray = new Mob[anzahlMobs];
 	private int mobNummer = 0;
 	
@@ -99,13 +99,11 @@ public class Controller {
 		
 		for(Mob mob : mobArray) {
 			if(mob != null) {
-				System.out.println(mob.getSymbol());
 				if(mob.walk(spielfeld.getfieldArray(), spielfeld.getEmpty())) {
 					System.out.println("mobWalk == true");
 					player.loseLive();
 					spielfeld.setFieldEmpty(mob.getY(), mob.getX());
 				} else {
-					//spielfeld.updateMob(mob.getSymbol(), mob.getY(), mob.getX(), mob.getOldY(), mob.getOldX());
 					spielfeld.updateMob(mob.getSymbol(), mob.getY(), mob.getX(), mob.getOldY(), mob.getOldX());
 				}
 			}
