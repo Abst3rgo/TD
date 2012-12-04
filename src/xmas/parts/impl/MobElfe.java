@@ -32,5 +32,10 @@ public class MobElfe extends Mob {
 		return symbol;
 	}
 	
+	public int setHealth(int health) {
+		this.health = health;
+		return this.health;
+	}
+	
 
 }

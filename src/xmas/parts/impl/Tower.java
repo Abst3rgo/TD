@@ -24,6 +24,14 @@ public class Tower {
 		
 	}
 	
+	public int getDamage() {
+		return 0; 
+	}
+	
+	public int getRange() {
+		return 1;
+	}
+	
 	
 	
 	

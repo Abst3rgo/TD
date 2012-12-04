@@ -14,15 +14,7 @@ public class TextUI {
 	private boolean mode2 = false;
 	private Thread timer = new Thread(new Timer());
 	Scanner scanner;
-	
-	
-	// TEST VARIABELN !!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	int tY = 3;
-	int tX = 5;
-	int range = 2;
-	int mY = 4;
-	int mX = 6;
-	// TEST VARIABELN !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 	
 	public class Timer extends Thread {
 		
@@ -53,58 +45,6 @@ public class TextUI {
 		x = (controller.getSpielfeldX());
 		timer.start();
 	}
-	
-	
-	// TEST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-	
-		public void Testschießen() {
-			// Test für schießen
-					
-					// schießen start
-			
-					// Oberehälfte
-					tY -= range;
-					mobonField(tY, tX);
-					for(int i = range; i > 0; i--) { // bie range 2 geht 3 mal durch
-						tY++;
-						tX--;
-						int zahler = 3;
-						for(int j = zahler; j > 0; j-- ) { // geht so oft durch wie zähler
-							mobonField(tY, tX);
-							tX++;
-						}
-						zahler += 2;
-					}
-					
-					// Unterehälfte
-					tY += range;
-					mobonField(tY, tX);
-					for(int i = range; i > 0; i--) { // bie range 2 geht 2 mal durch
-						tY--;
-						tX--;
-						int zahler = 2;
-						for(int j = zahler; j > 0; j-- ) { // geht so oft durch wie zähler
-							mobonField(tY, tX);
-							tX++;
-						}
-						zahler += 2;
-					}
-		}
-
-		public void mobonField(int y, int x) {
-			System.out.println("Y = " + y);
-			System.out.println("X = " + x);
-			if(mY == y && mX == x){
-				System.out.println("Getroffen");
-			}
-			System.out.println("-------------------------");
-		}
-		
-		// TEST !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		
-	
-	
-	
 	
 
 	//Beim Start Test und Spielfeld ausgeben

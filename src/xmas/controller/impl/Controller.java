@@ -83,7 +83,7 @@ public class Controller implements IController {
 
 	public boolean startGame() {
 		
-		// Delay für Mobspwan
+		// Delay for Mobspawn
 		try {
 		    Thread.currentThread();
 			Thread.sleep(1000);
@@ -111,17 +111,82 @@ public class Controller implements IController {
 			}
 		}
 		System.out.println(spielfeld.tostring());
-			// Leben Spieler prüfen
-			if(player.gameover() == true) {
-				return true;
-			}
-		// TODO tower.schießen();
-			// TODO berechen Leben mob neu und entferne enventuell
-		// TODO warte timer.wait();
+		// Leben Spieler prüfen
+		if(player.gameover() == true) {
+			return true;
+		}
 		
+		// Gehe jeden Tower durch der schießen kann
+		for(Tower tower : towerArray) {
+			if(tower != null) {
+				// Gehe jeden Mob durch ob er von dem speziellen Tower getroffen werden kann
+				for(Mob mob : mobArray) {
+					if(mob != null) {
+						
+						// Oberes Feld
+						int tY = tower.getY();
+						int tX = tower.getX();
+						
+						tY -= tower.getRange(); 
+						mobonFlild(mob, tower, tY, tX);
+						
+						int durchgang = 2;
+						for(int i = 0; i < tower.getRange(); i++) {
+							if(i==0) { // erster durchlauf
+								tY++;
+								tX++;
+							} else {
+								tY++;
+								tX = tX + durchgang;
+							}
+							for(int j = 0; j <= durchgang; j++) {
+								mobonFlild(mob, tower, tY, tX);
+								tX--;
+							}
+							durchgang += 2;
+						}
+						
+						
+						// Prüfe unteres Feld
+						
+						tY = tower.getY();
+						tX = tower.getX();
+						
+						tY += tower.getRange(); 
+						mobonFlild(mob, tower, tY, tX);
+
+						durchgang = 2;
+						for(int i = 0; i < (tower.getRange()-1); i++) {
+							if(i==0) { // erster durchlauf
+								tY--;
+								tX--;
+							} else {
+								tY--;
+								tX = tX - durchgang;
+							}
+							for(int j = 0; j <= durchgang; j++) {
+								mobonFlild(mob, tower, tY, tX);
+								tX++;
+							}
+							durchgang += 2;
+						}
+					}
+				}
+			}
+		}
 		return false;
 	}
 
+
+	private void mobonFlild(Mob mob, Tower tower, int tY, int tX) {
+		if(mob.mobHit(tY, tX)) {
+			System.out.println("GETROFFEN !!!!");
+			mob.setHealth(mob.getHealth() - tower.getDamage());
+			if(mob.getHealth() <= 0) {
+				mob = null;
+			}
+		}
+	}
 
 	private void createMob() {
 		

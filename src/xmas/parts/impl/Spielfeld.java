@@ -89,10 +89,6 @@ public class Spielfeld implements ISpielfeld {
 	}
 	
 	public void updateMob(String symbol, int y, int x, int oldY, int oldX) {
-		System.out.println("Y = " + y);
-		System.out.println("X = " + x);
-		System.out.println("OldY = " + oldY);
-		System.out.println("OldX = " + oldX);
 		fieldArray[y][x] = symbol;
 		fieldArray[oldY][oldX] = empty;
 	}

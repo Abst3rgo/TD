@@ -36,6 +36,21 @@ public class Mob {
 	public String getSymbol() {
 		return null;
 	}
+	
+	public boolean mobHit(int tY, int tX) {
+		if(this.y == tY && this.x == tX) {
+			return true;
+		}
+		return false;
+	}
+	
+	public int getHealth() {
+		return 0;
+	}
+	
+	public int setHealth(int health) {
+		return 1;
+	}
 
 	public boolean walk(String[][] fieldArray, String empty) {
 
@@ -86,13 +101,5 @@ public class Mob {
 		}
 		
 	}
-	
-	private void printCode() {
-		System.out.println("Y = " + y);
-		System.out.println("X = " + x);
-		System.out.println("OldY = " + oldY);
-		System.out.println("OldX = " + oldX);
-	}
-	
 	
 } // End Class

@@ -15,13 +15,6 @@ public class Xmas {
 		
 		TextUI tui = new TextUI(new Controller());
 		
-		tui.Testschieﬂen();
-		
-		
-		
-		
-		
-		/*
 		// StartMessage
 		tui.printMenue();
 		// Dauerschleife
@@ -31,7 +24,6 @@ public class Xmas {
 		}
 		
 		System.out.println("Programm Ende");
-	*/
 	}
 }
 
