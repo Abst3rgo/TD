@@ -23,7 +23,7 @@ public class Controller implements IController {
 	private String StartMessage = "Willkommen bei Xmas Tower Defence !";
 	private Tower[] towerArray = new Tower[64];
 	private int numberTower = 0;
-	private int anzahlMobs = 30;
+	private int anzahlMobs = 10;
 	private Mob[] mobArray = new Mob[anzahlMobs];
 	private int mobNummer = 0;
 	
@@ -96,14 +96,15 @@ public class Controller implements IController {
 		} catch(Exception e){}
 		
 		// TODO Überarbeiten
+		
 		// Mob erstellen und laufen lassen 
-			//if(mobNummer < anzahlMobs-1) {
+			if(mobNummer < anzahlMobs-1) {
 				createMob();
-			//}
-			//else if (mobNummer == anzahlMobs-1) {
+			}
+			else if (mobNummer == anzahlMobs-1) {
 				// Welle komplett Endgegner spawn
-			//	boss();
-			//}
+				boss();
+			}
 		
 		for(Mob mob : mobArray) {
 			if(mob != null) {
