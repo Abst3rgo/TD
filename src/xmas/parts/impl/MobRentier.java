@@ -32,4 +32,9 @@ public class MobRentier extends Mob {
 	public String getSymbol() {
 		return symbol;
 	}
+	
+	public void setHealth(int health) {
+		this.health = health;
+	}
+	
 }

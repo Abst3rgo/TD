@@ -48,8 +48,8 @@ public class Mob {
 		return 0;
 	}
 	
-	public int setHealth(int health) {
-		return 1;
+	public void setHealth(int health) {
+		
 	}
 
 	public boolean walk(String[][] fieldArray, String empty) {

@@ -31,5 +31,10 @@ public class MobGnom extends Mob {
 	public String getSymbol() {
 		return symbol;
 	}
+	
+	public void setHealth(int health) {
+		this.health = health;
+	}
+	
 
 }

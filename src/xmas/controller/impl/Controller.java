@@ -27,6 +27,11 @@ public class Controller implements IController {
 	private Mob[] mobArray = new Mob[anzahlMobs];
 	private int mobNummer = 0;
 	
+	
+	// TODO Variabeln für Test 
+	int mobnummer = 0;
+	int towernummer = 0;
+	
 	public Controller() {
 		this.spielfeld  = new Spielfeld();
 		this.player = new Player("Player1");
@@ -102,7 +107,6 @@ public class Controller implements IController {
 		for(Mob mob : mobArray) {
 			if(mob != null) {
 				if(mob.walk(spielfeld.getfieldArray(), spielfeld.getEmpty())) {
-					System.out.println("mobWalk == true");
 					player.loseLive();
 					spielfeld.setFieldEmpty(mob.getY(), mob.getX());
 				} else {
@@ -110,19 +114,25 @@ public class Controller implements IController {
 				}
 			}
 		}
-		System.out.println(spielfeld.tostring());
 		// Leben Spieler prüfen
 		if(player.gameover() == true) {
 			return true;
 		}
 		
 		// Gehe jeden Tower durch der schießen kann
+		towernummer = 0;
+		mobnummer = 0;
 		for(Tower tower : towerArray) {
 			if(tower != null) {
+				// TODO Fehlerüberprüfung per print
+				towernummer++;
+				System.out.println("Gewälter Tower " + towernummer + " = " + tower.getSymbol());
 				// Gehe jeden Mob durch ob er von dem speziellen Tower getroffen werden kann
 				for(Mob mob : mobArray) {
 					if(mob != null) {
-						
+						// TODO Fehlerüberprüfung per print
+						mobnummer++;
+						System.out.println("Gewälter mob " + mobnummer + " = " + mob.getSymbol());
 						// Oberes Feld
 						int tY = tower.getY();
 						int tX = tower.getX();
@@ -170,9 +180,18 @@ public class Controller implements IController {
 							}
 							durchgang += 2;
 						}
+						// Mob null setzen 
+						if(mob.getHealth() <= 0) {
+							System.out.println(mobnummer + "ter Mob " + mob.getSymbol() + "Tod !!!!!");
+							spielfeld.setFieldEmpty(mob.getY(), mob.getX());
+							mob = null;
+						}
 					}
 				}
 			}
+		}
+		for(int i = 0; i < 10; i++) {
+			System.out.print(mobArray[i]+", ");
 		}
 		return false;
 	}
@@ -180,11 +199,10 @@ public class Controller implements IController {
 
 	private void mobonFlild(Mob mob, Tower tower, int tY, int tX) {
 		if(mob.mobHit(tY, tX)) {
-			System.out.println("GETROFFEN !!!!");
-			mob.setHealth(mob.getHealth() - tower.getDamage());
-			if(mob.getHealth() <= 0) {
-				mob = null;
-			}
+			System.out.println(mobnummer + "ter Mob " + mob.getSymbol() + "Getroffen !!");
+			System.out.println("Leben vor dem Treffer = " + mob.getHealth());
+			mob.setHealth((mob.getHealth() - tower.getDamage()));
+			System.out.println("Leben nach dem Treffer = " + mob.getHealth());
 		}
 	}
 

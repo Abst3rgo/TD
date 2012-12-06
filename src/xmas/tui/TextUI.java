@@ -23,7 +23,7 @@ public class TextUI {
 		public void run() {
 			try {
 				while(true) {
-					sleep(1000);
+					sleep(100);
 					if(time != 0) {
 						time--;
 					} else {
@@ -73,7 +73,8 @@ public class TextUI {
 		if(!quit && mode2) {
 			System.out.println("Mob laufen los ");
 			quit = controller.startGame();
-			//System.out.println(controller.getSpielfeld());
+			System.out.println(controller.getSpielfeld());
+			scanner.next();
 		}
 		return quit;
 	}
@@ -99,25 +100,6 @@ public class TextUI {
 		} else {
 			return quitOrFailure(input);
 		}
-		/*
-		switch(input) {
-			case "K":
-			case "k": 
-				art = 0;
-				break;
-			case "l":
-			case "L": 
-				art = 1;
-				break;
-			case "c":
-			case "C": 
-				art = 2;
-				break;
-			default: 
-				return quitOrFailure(input);
-		}
-		
-		*/
 		
 		
 		
