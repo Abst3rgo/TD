@@ -74,7 +74,7 @@ public class TextUI {
 			System.out.println("Mob laufen los ");
 			quit = controller.startGame();
 			System.out.println(controller.getSpielfeld());
-			scanner.next();
+			//scanner.next();
 		}
 		return quit;
 	}
@@ -84,7 +84,7 @@ public class TextUI {
 		boolean create = false;
 		String input = "";
 		int art = 0;
-		int spalte = 0;
+		int zeile = 0;
 		
 		System.out.println("Wählen einen Palmentower aus ... ");
 		System.out.println("Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
@@ -103,23 +103,23 @@ public class TextUI {
 		
 		
 		
-		System.out.println("Wähle die Spalte für den Palmentower ... ");
+		System.out.println("Wähle die Zeile für den Palmentower ... ");
 		System.out.println("Zahl von 2 bis " + (y-2) + " | Quit = q");
 		input = scanner.next();
 		// Prüfe ob richtige Eingabe
 		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < y) {
-			spalte = Integer.parseInt(input);
+			zeile = Integer.parseInt(input);
 		} else {
 			return quitOrFailure(input);
 		}
 		
 		
 		
-		System.out.println("Wähle Zeile für den Palmentower ... ");
+		System.out.println("Wähle Spalte für den Palmentower ... ");
 		System.out.println(" Zahl von 2 bis " + (x-2) + " | Quit = q");
 		input = scanner.next();
 		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < x) {
-			create = controller.erstelleTower(art, Integer.parseInt(input) , spalte);
+			create = controller.erstelleTower(art, Integer.parseInt(input), zeile);
 		} else {
 			return quitOrFailure(input);
 		}

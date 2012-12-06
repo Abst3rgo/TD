@@ -8,8 +8,8 @@ public class TowerNuss extends Tower {
 		
 		public TowerNuss( int y , int x ) {
 			super(y, x);
-			this.damage = 200;
-			this.range = 2;
+			this.damage = 10;
+			this.range = 1;
 			this.symbol = "K|";
 		}
 		

@@ -31,6 +31,7 @@ public class Controller implements IController {
 	// TODO Variabeln für Test 
 	int mobnummer = 0;
 	int towernummer = 0;
+	int durchgang;
 	
 	public Controller() {
 		this.spielfeld  = new Spielfeld();
@@ -64,15 +65,15 @@ public class Controller implements IController {
 		switch (art) {
 		// Kokusnuss
 		case 0:
-			tower = new TowerNuss(x, y);
+			tower = new TowerNuss(y, x);
 			break;
 		// Lametta
 		case 1:
-			tower = new TowerLametta(x, y);
+			tower = new TowerLametta(y, x);
 			break;
 		// Kugeln
 		case 2:
-			tower = new TowerKugel(x, y);
+			tower = new TowerKugel(y, x);
 			break;
 		}
 		
@@ -131,16 +132,21 @@ public class Controller implements IController {
 				for(Mob mob : mobArray) {
 					if(mob != null) {
 						// TODO Fehlerüberprüfung per print
-						mobnummer++;
 						System.out.println("Gewälter mob " + mobnummer + " = " + mob.getSymbol());
+						
+						
+						
 						// Oberes Feld
 						int tY = tower.getY();
 						int tX = tower.getX();
 						
-						tY -= tower.getRange(); 
+						tY -= tower.getRange();
+						System.out.println("Y = " + tY);
+						System.out.println("X = " + tX);
 						mobonFlild(mob, tower, tY, tX);
+						System.out.println("---------------------------------");
 						
-						int durchgang = 2;
+						durchgang = 2;
 						for(int i = 0; i < tower.getRange(); i++) {
 							if(i==0) { // erster durchlauf
 								tY++;
@@ -150,7 +156,10 @@ public class Controller implements IController {
 								tX = tX + durchgang;
 							}
 							for(int j = 0; j <= durchgang; j++) {
+								System.out.println("Y = " + tY);
+								System.out.println("X = " + tX);
 								mobonFlild(mob, tower, tY, tX);
+								System.out.println("---------------------------------");
 								tX--;
 							}
 							durchgang += 2;
@@ -163,7 +172,10 @@ public class Controller implements IController {
 						tX = tower.getX();
 						
 						tY += tower.getRange(); 
+						System.out.println("Y = " + tY);
+						System.out.println("X = " + tX);
 						mobonFlild(mob, tower, tY, tX);
+						System.out.println("---------------------------------");
 
 						durchgang = 2;
 						for(int i = 0; i < (tower.getRange()-1); i++) {
@@ -175,7 +187,10 @@ public class Controller implements IController {
 								tX = tX - durchgang;
 							}
 							for(int j = 0; j <= durchgang; j++) {
+								System.out.println("Y = " + tY);
+								System.out.println("X = " + tX);
 								mobonFlild(mob, tower, tY, tX);
+								System.out.println("---------------------------------");
 								tX++;
 							}
 							durchgang += 2;
@@ -184,9 +199,10 @@ public class Controller implements IController {
 						if(mob.getHealth() <= 0) {
 							System.out.println(mobnummer + "ter Mob " + mob.getSymbol() + "Tod !!!!!");
 							spielfeld.setFieldEmpty(mob.getY(), mob.getX());
-							mob = null;
+							mobArray[mobnummer] = null;
 						}
 					}
+					mobnummer++;
 				}
 			}
 		}
