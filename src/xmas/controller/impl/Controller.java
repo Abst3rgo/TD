@@ -89,22 +89,84 @@ public class Controller implements IController {
 
 	public boolean startGame() {
 		
-		// Delay for Mobspawn
-		try {
-		    Thread.currentThread();
-			Thread.sleep(1000);
-		} catch(Exception e){}
-		
-		// TODO Überarbeiten
+		// Zeit vertreichen lassen 
+		delay();
 		
 		// Mob erstellen und laufen lassen 
-			if(mobNummer < anzahlMobs-1) {
-				createMob();
+		createMob();
+			
+		// Mob bewegen sich in Richtung Ende
+		mobwalk();
+		
+		
+		// Leben Spieler prüfen
+		if(player.gameover() == true) {
+			return true;
+		}
+		
+		
+		// Gehe jeden Tower durch der schießen kann
+		towershot();
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.print(mobArray[i]+", ");
+		}
+		return false;
+	}
+	
+	
+	//--------------------------Methoden zum erstellen die ausgelagert werden können ------------------------
+	
+	
+	private void delay() {
+		
+		// Delay for Mobspawn
+				try {
+				    Thread.currentThread();
+					Thread.sleep(1000);
+				} catch(Exception e){}
+		
+	}
+	
+	private void createMob() {
+		
+		// Mob erstellen und laufen lassen 
+		if(mobNummer < anzahlMobs-1) {
+			
+			Mob mob = null;
+			int mobType = new Random().nextInt(11); // Randomzahl für Mobart
+			switch(mobType) {
+				case 0:
+				case 1:
+				case 2:
+				case 3:
+					mob = new MobElfe(spielfeld.getStartY(), spielfeld.getStartX());
+					mobArray[mobNummer++] = mob;
+					break;
+				case 4:
+				case 5:
+				case 6:
+					mob = new MobGnom(spielfeld.getStartY(), spielfeld.getStartX());
+					mobArray[mobNummer++] = mob;
+					break;
+				case 7:
+				case 8:
+					mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
+					mobArray[mobNummer++] = mob;
+					break;
 			}
-			else if (mobNummer == anzahlMobs-1) {
-				// Welle komplett Endgegner spawn
-				boss();
-			}
+			
+		}
+		else if (mobNummer == anzahlMobs-1) {
+		// Welle komplett Endgegner spawn
+			Mob mob = new MobWeihnachtsmann(spielfeld.getStartY(), spielfeld.getStartX());
+			mobArray[mobNummer++] = mob;		
+		}
+	}
+	
+	
+	// TODO In Clean Code umschreiben
+	private void mobwalk() {
 		
 		for(Mob mob : mobArray) {
 			if(mob != null) {
@@ -116,17 +178,14 @@ public class Controller implements IController {
 				}
 			}
 		}
-		// Leben Spieler prüfen
-		if(player.gameover() == true) {
-			return true;
-		}
-		
-		// Gehe jeden Tower durch der schießen kann
+	}
+
+
+	private void towershot() {
 		towernummer = 0;
 		mobnummer = 0;
 		for(Tower tower : towerArray) {
 			if(tower != null) {
-				// TODO Fehlerüberprüfung per print
 				towernummer++;
 				System.out.println("Gewälter Tower " + towernummer + " = " + tower.getSymbol());
 				// Gehe jeden Mob durch ob er von dem speziellen Tower getroffen werden kann
@@ -207,12 +266,8 @@ public class Controller implements IController {
 				}
 			}
 		}
-		for(int i = 0; i < 10; i++) {
-			System.out.print(mobArray[i]+", ");
-		}
-		return false;
+		
 	}
-
 
 	private void mobonFlild(Mob mob, Tower tower, int tY, int tX) {
 		if(mob.mobHit(tY, tX)) {
@@ -223,34 +278,5 @@ public class Controller implements IController {
 		}
 	}
 
-	private void createMob() {
-		
-		Mob mob = null;
-		int mobType = new Random().nextInt(11); // Randomzahl für Mobart
-		switch(mobType) {
-			case 0:
-			case 1:
-			case 2:
-			case 3:
-				mob = new MobElfe(spielfeld.getStartY(), spielfeld.getStartX());
-				mobArray[mobNummer++] = mob;
-				break;
-			case 4:
-			case 5:
-			case 6:
-				mob = new MobGnom(spielfeld.getStartY(), spielfeld.getStartX());
-				mobArray[mobNummer++] = mob;
-				break;
-			case 7:
-			case 8:
-				mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
-				mobArray[mobNummer++] = mob;
-				break;
-		}
-	}
 	
-	private void boss() {
-		Mob mob = new MobWeihnachtsmann(spielfeld.getStartY(), spielfeld.getStartX());
-		mobArray[mobNummer++] = mob;
-	}
 }

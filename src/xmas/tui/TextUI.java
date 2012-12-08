@@ -7,28 +7,22 @@ import xmas.controller.IController;
 
 public class TextUI {
 	
-	boolean timeOver = false;
 	private IController controller;
 	private int y;
 	private int x;
 	private boolean mode2 = false;
 	private Thread timer = new Thread(new Timer());
 	Scanner scanner;
+	int time = 10;
 
 	
 	public class Timer extends Thread {
 		
-		int time = 10;
-		
 		public void run() {
 			try {
-				while(true) {
+				while(time != 0) {
 					sleep(100);
-					if(time != 0) {
 						time--;
-					} else {
-						timeOver = true;
-					}
 				}
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -56,17 +50,15 @@ public class TextUI {
 
 	// WICHTIG !!!!!!!!!!
 	// Schleife die bis zum verlassen durchläuft
-	@SuppressWarnings("deprecation")
 	public boolean iterate() {
 		boolean quit = false;
 		// User input and Tower set // Modus 1
 		if(!mode2) {
 			quit = handleinput();
 			System.out.println(controller.getSpielfeld());
-			if(timeOver == true) {
+			if(time == 0) {
 				mode2 = true;
 				System.out.println("Thread Tod");
-				timer.stop();
 			}
 		}
 		// Create and Move Mobs // Modus 2
