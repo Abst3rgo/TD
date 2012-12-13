@@ -11,7 +11,7 @@ public class MobRentier extends Mob {
 	public MobRentier(int y, int x) {
 		super(y,x);
 		this.art = "Rentier";
-		this.health = 15;
+		this.health = 30;
 		this.speed = 1.5;
 		this.symbol = "mt";
 		

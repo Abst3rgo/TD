@@ -11,7 +11,7 @@ public class MobGnom extends Mob {
 	public MobGnom(int y, int x) {
 		super(y,x);
 		this.art = "Gnom";
-		this.health = 15;
+		this.health = 20;
 		this.speed = 1.5;
 		this.symbol = "^^";
 	}

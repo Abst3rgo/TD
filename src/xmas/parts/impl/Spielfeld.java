@@ -30,8 +30,22 @@ public class Spielfeld implements ISpielfeld {
 		}
 	}
 	
-	
-	public Spielfeld() {
+	public Spielfeld(String groese) {
+		
+		if(groese == "3") {
+			this.laengeY = 24;
+			this.breiteX = 24;
+		}
+		else if (groese == "2") {
+			this.laengeY = 10;
+			this.breiteX = 10;
+		}
+		else {
+			this.laengeY = 8;
+			this.breiteX = 8;
+		}
+		
+		// Spielfeld Init ! 
 		init();
 	}
 	
@@ -112,7 +126,6 @@ public class Spielfeld implements ISpielfeld {
 	
 	
 	private void init() {
-		
 		
 		// Feld init
 		for(int i = 2; i < (laengeY-1); i++) {

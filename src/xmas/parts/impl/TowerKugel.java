@@ -3,19 +3,14 @@ package xmas.parts.impl;
 public class TowerKugel extends Tower {
 	
 	private int damage;
-	private int range;
 	private String symbol;
+	private static int range = 1;
 	
 	public TowerKugel( int y , int x ) {
-		
-		super(y, x);
+		super(y, x, range);
 		this.damage = 20;
-		this.range = 15;
 		this.symbol = "C|";
-	}
-	
-	public int getRange() {
-		return range;
+
 	}
 	
 	public int getDamage() {
@@ -25,5 +20,6 @@ public class TowerKugel extends Tower {
 	public String getSymbol() {
 		return this.symbol;
 	}
+	
 
 }

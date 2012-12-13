@@ -3,7 +3,7 @@ package xmas.parts.impl;
 public class MobElfe extends Mob {
 
 	private String art;
-	private int health;
+	private int health = 15;
 	private double speed;
 	private String symbol;
 	
@@ -11,7 +11,6 @@ public class MobElfe extends Mob {
 	public MobElfe(int y, int x) {
 		super(y,x);
 		this.art = "Elfe";
-		this.health = 15;
 		this.speed = 1.5;
 		this.symbol = "**";
 	}
@@ -35,6 +34,5 @@ public class MobElfe extends Mob {
 	public void setHealth(int health) {
 		this.health = health;
 	}
-	
 
 }

@@ -3,19 +3,15 @@ package xmas.parts.impl;
 public class TowerLametta extends Tower {
 
 	private int damage;
-	private int range;
 	private String symbol;
+	private static int range = 1;
+	
 	
 	public TowerLametta( int y , int x ) {
 		
-		super(y, x);
+		super(y, x, range);
 		this.damage = 10;
-		this.range = 5;
 		this.symbol = "L|";
-	}
-	
-	public int getRange() {
-		return range;
 	}
 	
 	public int getDamage() {

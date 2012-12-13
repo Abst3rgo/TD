@@ -23,20 +23,20 @@ public class Controller implements IController {
 	private String StartMessage = "Willkommen bei Xmas Tower Defence !";
 	private Tower[] towerArray = new Tower[64];
 	private int numberTower = 0;
-	private int anzahlMobs = 10;
-	private Mob[] mobArray = new Mob[anzahlMobs];
+	private int anzahlMobs = 2;
+	private Mob[] mobArray;
 	private int mobNummer = 0;
+	int indexMob = 0;
 	
-	
-	// TODO Variabeln für Test 
-	int mobnummer = 0;
-	int towernummer = 0;
-	int durchgang;
+	//--------------------------Getter und Setter Methoden ------------------------
 	
 	public Controller() {
-		this.spielfeld  = new Spielfeld();
 		this.player = new Player("Player1");
-		
+		mobArray = new Mob[anzahlMobs];
+	}
+	
+	public void setSpielfeld(String groese) {
+		this.spielfeld  = new Spielfeld(groese);
 	}
 	
 	public int getSpielfeldX() {
@@ -87,7 +87,16 @@ public class Controller implements IController {
 		}
 	}
 
-	public boolean startGame() {
+	
+	// Return: -1 = SpielerTod / 0 = Spiel geht weiter / 1 = Welle vorüber
+	public int startGame() {
+		
+		
+		// Wenn Welle vorüber ?
+		if(waveOver()){
+			return 1;
+		}
+		
 		
 		// Zeit vertreichen lassen 
 		delay();
@@ -101,20 +110,23 @@ public class Controller implements IController {
 		
 		// Leben Spieler prüfen
 		if(player.gameover() == true) {
-			return true;
+			return -1;
 		}
 		
 		
 		// Gehe jeden Tower durch der schießen kann
 		towershot();
 		
-		for(int i = 0; i < 10; i++) {
+		// Test Ausgabe zum Überprüfen
+		for(int i = 0; i < anzahlMobs; i++) {
 			System.out.print(mobArray[i]+", ");
 		}
-		return false;
+		System.out.print("\n");
+		
+		return 0;
 	}
 	
-	
+
 	//--------------------------Methoden zum erstellen die ausgelagert werden können ------------------------
 	
 	
@@ -127,6 +139,23 @@ public class Controller implements IController {
 				} catch(Exception e){}
 		
 	}
+	
+	
+	
+	private boolean waveOver() {
+		if(mobNummer == anzahlMobs && mobArray[anzahlMobs-1] == null) {
+			mobNummer = 0;
+			// MobAnzahl verdoppelt sich
+			// TODO Funktion die Mobs um einen gewissen Faktor erhöht 
+			anzahlMobs *= 2;
+			mobArray = new Mob[anzahlMobs];
+			// TODO Mobs werden stärker
+			return true;
+		}
+		return false;
+	}
+	
+	
 	
 	private void createMob() {
 		
@@ -167,111 +196,58 @@ public class Controller implements IController {
 	
 	// TODO In Clean Code umschreiben
 	private void mobwalk() {
-		
+		indexMob = 0;
 		for(Mob mob : mobArray) {
 			if(mob != null) {
 				if(mob.walk(spielfeld.getfieldArray(), spielfeld.getEmpty())) {
+					System.out.print("ist Mob " + mob.getSymbol() + "\n");
 					player.loseLive();
 					spielfeld.setFieldEmpty(mob.getY(), mob.getX());
+					mobArray[indexMob] = null;
 				} else {
 					spielfeld.updateMob(mob.getSymbol(), mob.getY(), mob.getX(), mob.getOldY(), mob.getOldX());
 				}
 			}
+			indexMob++;
 		}
 	}
 
 
 	private void towershot() {
-		towernummer = 0;
-		mobnummer = 0;
+		
+		// gehen jeden Tower durch
 		for(Tower tower : towerArray) {
 			if(tower != null) {
-				towernummer++;
-				System.out.println("Gewälter Tower " + towernummer + " = " + tower.getSymbol());
-				// Gehe jeden Mob durch ob er von dem speziellen Tower getroffen werden kann
+				
+				indexMob = 0;
+				// Gehe jeden Mob durch und schaue ob er auf Feld liegt.
 				for(Mob mob : mobArray) {
 					if(mob != null) {
-						// TODO Fehlerüberprüfung per print
-						System.out.println("Gewälter mob " + mobnummer + " = " + mob.getSymbol());
 						
-						
-						
-						// Oberes Feld
-						int tY = tower.getY();
-						int tX = tower.getX();
-						
-						tY -= tower.getRange();
-						System.out.println("Y = " + tY);
-						System.out.println("X = " + tX);
-						mobonFlild(mob, tower, tY, tX);
-						System.out.println("---------------------------------");
-						
-						durchgang = 2;
-						for(int i = 0; i < tower.getRange(); i++) {
-							if(i==0) { // erster durchlauf
-								tY++;
-								tX++;
-							} else {
-								tY++;
-								tX = tX + durchgang;
-							}
-							for(int j = 0; j <= durchgang; j++) {
-								System.out.println("Y = " + tY);
-								System.out.println("X = " + tX);
-								mobonFlild(mob, tower, tY, tX);
-								System.out.println("---------------------------------");
-								tX--;
-							}
-							durchgang += 2;
+						for(int i = 0; i < tower.getTowerRadiusLength(); i++) {
+							mobonField(mob, tower, tower.getRangeFieldY()[i] , tower.getRangeFieldX()[i] );
 						}
 						
 						
-						// Prüfe unteres Feld
-						
-						tY = tower.getY();
-						tX = tower.getX();
-						
-						tY += tower.getRange(); 
-						System.out.println("Y = " + tY);
-						System.out.println("X = " + tX);
-						mobonFlild(mob, tower, tY, tX);
-						System.out.println("---------------------------------");
-
-						durchgang = 2;
-						for(int i = 0; i < (tower.getRange()-1); i++) {
-							if(i==0) { // erster durchlauf
-								tY--;
-								tX--;
-							} else {
-								tY--;
-								tX = tX - durchgang;
-							}
-							for(int j = 0; j <= durchgang; j++) {
-								System.out.println("Y = " + tY);
-								System.out.println("X = " + tX);
-								mobonFlild(mob, tower, tY, tX);
-								System.out.println("---------------------------------");
-								tX++;
-							}
-							durchgang += 2;
-						}
 						// Mob null setzen 
 						if(mob.getHealth() <= 0) {
-							System.out.println(mobnummer + "ter Mob " + mob.getSymbol() + "Tod !!!!!");
+							System.out.println(indexMob + "ter Mob " + mob.getSymbol() + "Tod !!!!!");
 							spielfeld.setFieldEmpty(mob.getY(), mob.getX());
-							mobArray[mobnummer] = null;
+							mobArray[indexMob] = null;
 						}
 					}
-					mobnummer++;
-				}
+					indexMob++;
+				}	
 			}
 		}
-		
 	}
+			
+			
 
-	private void mobonFlild(Mob mob, Tower tower, int tY, int tX) {
+	// TODO In Clean Code umschreiben
+	private void mobonField(Mob mob, Tower tower, int tY, int tX) {
 		if(mob.mobHit(tY, tX)) {
-			System.out.println(mobnummer + "ter Mob " + mob.getSymbol() + "Getroffen !!");
+			System.out.println("Mob " + mob.getSymbol() + "G etroffen !!");
 			System.out.println("Leben vor dem Treffer = " + mob.getHealth());
 			mob.setHealth((mob.getHealth() - tower.getDamage()));
 			System.out.println("Leben nach dem Treffer = " + mob.getHealth());

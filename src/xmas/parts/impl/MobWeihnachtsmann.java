@@ -26,5 +26,9 @@ public class MobWeihnachtsmann extends Mob {
 	public String getSymbol() {
 		return this.symbol;
 	}
+	
+	public void setHealth(int health) {
+		this.health = health;
+	}
 
 }

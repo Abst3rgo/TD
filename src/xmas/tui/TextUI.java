@@ -13,6 +13,7 @@ public class TextUI {
 	private boolean mode2 = false;
 	private Thread timer = new Thread(new Timer());
 	Scanner scanner;
+	String input = "";
 	int time = 10;
 
 	
@@ -35,8 +36,6 @@ public class TextUI {
 	public TextUI(IController controller) {
 		this.controller = controller;
 		scanner = new Scanner(System.in);
-		y = (controller.getSpielfeldY());
-		x = (controller.getSpielfeldX());
 		timer.start();
 	}
 	
@@ -44,7 +43,19 @@ public class TextUI {
 	//Beim Start Test und Spielfeld ausgeben
 	public void printMenue() {
 		System.out.println(controller.getStartMessage());
+		// Spielfeld einstellen
+		System.out.println("Spielfeldgröße wählen : ");
+		System.out.println("1 = klein ");
+		System.out.println("2 = mittel");
+		System.out.println("3 = groß");
+		input = scanner.next();
+		// TODO Fehlerbehandlung
+		controller.setSpielfeld(input);
+		y = (controller.getSpielfeldY());
+		x = (controller.getSpielfeldX());
 		System.out.println(controller.getSpielfeld());
+		
+		
 	}
 	
 
@@ -64,8 +75,16 @@ public class TextUI {
 		// Create and Move Mobs // Modus 2
 		if(!quit && mode2) {
 			System.out.println("Mob laufen los ");
-			quit = controller.startGame();
+			// Wenn Welle vorüber gehe zu Modus 1 zurück
+			int erg = controller.startGame();
 			System.out.println(controller.getSpielfeld());
+			if(erg == 1) {
+				mode2 = false;
+			}
+			else if( erg == -1) {
+				quit = true;
+				System.out.println("VERLOREN NOOB NOOB NOOB !!!!");
+			}
 			//scanner.next();
 		}
 		return quit;
@@ -74,7 +93,6 @@ public class TextUI {
 	// Verarbeitete Eingabe und verlässt gegenbenfalls Schleife
 	private boolean handleinput() {
 		boolean create = false;
-		String input = "";
 		int art = 0;
 		int zeile = 0;
 		

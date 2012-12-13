@@ -7,7 +7,7 @@ public class TowerTest extends TestCase {
 	Tower tower;
 
 	protected void setUp() {
-		tower = new Tower(1,2);
+		tower = new Tower(1,2,1);
 	}
 	
 	public void testGetValue() {

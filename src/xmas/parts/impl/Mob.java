@@ -56,7 +56,7 @@ public class Mob {
 
 		if(fieldArray[y+1][x] == "En" || fieldArray[y-1][x] == "En" || 
 				fieldArray[y][x+1] == "En" || fieldArray[y][x-1] == "En") {
-			System.out.println("Im Ziel ");
+			System.out.print("Im Ziel ");
 			// Ende ereicht
 			return true;
 		}
@@ -96,6 +96,7 @@ public class Mob {
 		}	
 		// unötig da Mob IMMER laufen kann
 		else {
+			// TODO FEHLER NACHEM MOBS LANGE GELAUFEN SIND ???????????
 			System.out.println("FEHLER !!!!!!!!!!!!!!!!!!");
 			return true;
 		}

@@ -10,8 +10,10 @@ public interface IController {
 
 	String getSpielfeld();
 
-	boolean startGame();
+	int startGame();
 
 	boolean erstelleTower(int art, int parseInt, int spalte);
+	 
+	void setSpielfeld(String input);
 
 }

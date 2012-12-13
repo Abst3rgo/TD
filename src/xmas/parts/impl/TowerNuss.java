@@ -3,18 +3,13 @@ package xmas.parts.impl;
 public class TowerNuss extends Tower {
 		
 		private int damage;
-		private int range;
 		private String symbol;
+		private static int range = 1;
 		
 		public TowerNuss( int y , int x ) {
-			super(y, x);
-			this.damage = 10;
-			this.range = 1;
+			super(y, x, range);
+			this.damage = 5;
 			this.symbol = "K|";
-		}
-		
-		public int getRange() {
-			return range;
 		}
 		
 		public int getDamage() {
