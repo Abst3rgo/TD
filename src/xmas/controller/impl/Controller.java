@@ -197,6 +197,7 @@ public class Controller implements IController {
 		}
 	}
 	
+
 	
 	// TODO In Clean Code umschreiben
 	private void mobwalk() {

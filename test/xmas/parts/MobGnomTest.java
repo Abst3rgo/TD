@@ -13,9 +13,14 @@ public class MobGnomTest extends TestCase {
 
 	
 	public void testGetValue() {
-		assertEquals(15, mob.getHealth());
+		// GetMethode
+		assertEquals(20, mob.getHealth());
 		assertEquals(1.5, mob.getSpeed());
 		assertEquals("Gnom", mob.getArt());
-		assertEquals("^", mob.getSymbol());
+		assertEquals("^^", mob.getSymbol());
+		
+		// SetMehtode
+		mob.setHealth(15);
+		assertEquals(15, mob.getHealth());
 	}
 }

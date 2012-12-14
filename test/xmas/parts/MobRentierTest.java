@@ -13,10 +13,14 @@ public class MobRentierTest extends TestCase {
 
 	
 	public void testGetValue() {
-		assertEquals(15, mob.getHealth());
+		// getMehtode
+		assertEquals(30, mob.getHealth());
 		assertEquals(1.5, mob.getSpeed());
 		assertEquals("Rentier", mob.getArt());
-		assertEquals("m", mob.getSymbol());
+		assertEquals("mt", mob.getSymbol());
+		// SetMehtode
+		mob.setHealth(25);
+		assertEquals(25, mob.getHealth());
 	}
 
 }

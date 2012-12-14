@@ -3,7 +3,7 @@ package xmas.parts.impl;
 public class MobGnom extends Mob {
 
 	private String art;
-	private int health;
+	private int health = 20;
 	private double speed;
 	private String symbol;
 	
@@ -11,7 +11,6 @@ public class MobGnom extends Mob {
 	public MobGnom(int y, int x) {
 		super(y,x);
 		this.art = "Gnom";
-		this.health = 20;
 		this.speed = 1.5;
 		this.symbol = "^^";
 	}

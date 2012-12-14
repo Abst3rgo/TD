@@ -37,6 +37,10 @@ public class Mob {
 		return null;
 	}
 	
+	public int getHealth() {
+		return 0;
+	}
+	
 	public boolean mobHit(int tY, int tX) {
 		if(this.y == tY && this.x == tX) {
 			return true;
@@ -44,9 +48,6 @@ public class Mob {
 		return false;
 	}
 	
-	public int getHealth() {
-		return 0;
-	}
 	
 	public void setHealth(int health) {
 		

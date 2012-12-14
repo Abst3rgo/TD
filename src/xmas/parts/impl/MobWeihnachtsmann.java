@@ -2,14 +2,13 @@ package xmas.parts.impl;
 
 public class MobWeihnachtsmann extends Mob {
 	
-	private int health;
+	private int health = 100;
 	private double speed;
 	private String symbol;
 	
 	
 	public MobWeihnachtsmann(int y, int x) {
 		super(y,x);
-		this.health = 100;
 		this.speed = 1.0;
 		this.symbol = "&&";
 		
