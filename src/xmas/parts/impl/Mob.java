@@ -54,23 +54,23 @@ public class Mob {
 
 	public boolean walk(String[][] fieldArray, String empty) {
 
-		if(fieldArray[y+1][x] == "En" || fieldArray[y-1][x] == "En" || 
-				fieldArray[y][x+1] == "En" || fieldArray[y][x-1] == "En") {
+		if(fieldArray[y+1][x].equals("En") || fieldArray[y-1][x].equals("En") || 
+				fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")) {
 			System.out.print("Im Ziel ");
 			// Ende ereicht
 			return true;
 		}
-			// Nach unten laufen ?
+		
+		// Nach unten laufen ?
 		 else if(fieldArray[(y+1)][x] == empty && oldY != (y+1)) {
-			//System.out.println("Unten ");
 			 oldY = y;
 			 oldX = x;
 			 ++y;
 			return false; 
 		}
+		
 		// Nach links laufen ?
 		else if(fieldArray[y][(x-1)] == empty && oldX != x-1) {
-			//System.out.println("Links ");
 			oldY = y;
 			oldX = x;
 			x--;
@@ -79,7 +79,6 @@ public class Mob {
 					
 		// Nach rechts laufen ?
 		else if(fieldArray[y][(x+1)] == empty && oldX != x+1) {
-			//System.out.println("Rechts ");
 			oldY = y;
 			oldX = x;
 			x++;
@@ -88,7 +87,6 @@ public class Mob {
 					
 		// Nach oben laufen ?
 		else if(fieldArray[y-1][(x)] == empty && oldY != y-1) {
-			//System.out.println("Oben ");
 			oldY = y;
 			oldX = x;
 			y--;

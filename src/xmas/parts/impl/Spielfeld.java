@@ -1,6 +1,5 @@
 package xmas.parts.impl;
 
-import java.util.Scanner;
 
 import xmas.parts.ISpielfeld;
 
@@ -17,7 +16,6 @@ public class Spielfeld implements ISpielfeld {
 	private int endY;
 	private String empty = "..";
 	private String border = "##";
-	Scanner scanner = new Scanner(System.in);
 	
 	private boolean[][] visitField;
 	
@@ -97,7 +95,7 @@ public class Spielfeld implements ISpielfeld {
 	public boolean setTower(String symbol, int y, int x) {
 		clearArrays();
 		fieldArray[y][x] = symbol;
-		if (checkWay(startY, startX) == false) {
+		if (!checkWay(startY, startX)) {
 			fieldArray[y][x] = empty;
 			return false;
 		} else {
@@ -188,36 +186,36 @@ public class Spielfeld implements ISpielfeld {
 	private boolean checkWay(int y, int x) {
 
 		
-			if(reachEnd(y, x) == true) {
+			if(reachEnd(y, x)) {
 				System.out.println("Ende ereicht");
 				return true;
 			} else { 
 				// Nach unten laufen ?
-				if(fieldArray[(y+1)][x] == empty && visitField[(y+1)][x] == false) {
-					//System.out.println("Unten ");
+				if(fieldArray[(y+1)][x] == empty && !visitField[(y+1)][x]) {
 					visitField[(y+1)][x] = true;
-					return checkWay(++y, x); 
+					y++;
+					return checkWay(y, x); 
 				}
 				
 				// Nach links laufen ?
-				else if(fieldArray[y][(x-1)] == empty && visitField[y][(x-1)] == false) {
-					//System.out.println("Links ");
+				else if(fieldArray[y][(x-1)] == empty && !visitField[y][(x-1)]) {
 					visitField[y][(x-1)] = true;
-					return checkWay(y, --x);	
+					x--;
+					return checkWay(y, x);	
 				}
 				
 				// Nach rechts laufen ?
-				else if(fieldArray[y][(x+1)] == empty && visitField[y][(x+1)] == false) {
-					//System.out.println("Rechts ");
+				else if(fieldArray[y][(x+1)] == empty && !visitField[y][(x+1)]) {
 					visitField[y][(x+1)] = true;
-					return checkWay(y, ++x);	
+					x++;
+					return checkWay(y, x);	
 				}
 				
 				// Nach oben laufen ?
-				else if(fieldArray[(y-1)][x] == empty && visitField[(y-1)][x] == false) {
-					//System.out.println("Oben ");
+				else if(fieldArray[(y-1)][x] == empty && !visitField[(y-1)][x]) {
 					visitField[(y-1)][x] = true;
-					return checkWay(--y, x);
+					y--;
+					return checkWay(y, x);
 				}
 				System.out.println("Out ");
 				ausgabe(y,x);
@@ -234,9 +232,8 @@ public class Spielfeld implements ISpielfeld {
 	
 
 	private boolean reachEnd(int y, int x) {
-		//System.out.println(fieldArray[y][x]);
-		if(fieldArray[y+1][x] == "En" || fieldArray[y-1][x] == "En" || 
-				fieldArray[y][x+1] == "En" || fieldArray[y][x-1] == "En") {
+		if(fieldArray[y+1][x].equals("En") || fieldArray[y-1][x].equals("En") || 
+				fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")) {
 			return true;
 		}
 		return false;

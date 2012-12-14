@@ -3,9 +3,11 @@ package xmas.application;
 import xmas.controller.impl.Controller;
 import xmas.tui.TextUI;
 
-class Xmas {
+public class Xmas {
 	
-	
+	private Xmas() {
+		
+	}
 	
 	/**
 	 * @param args

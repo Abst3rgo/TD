@@ -1,5 +1,5 @@
 package xmas.gui;
 
-public class gui {
+public class Gui {
 
 }
