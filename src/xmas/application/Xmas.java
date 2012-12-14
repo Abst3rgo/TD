@@ -3,7 +3,7 @@ package xmas.application;
 import xmas.controller.impl.Controller;
 import xmas.tui.TextUI;
 
-public class Xmas {
+public final class Xmas {
 	
 	private Xmas() {
 		

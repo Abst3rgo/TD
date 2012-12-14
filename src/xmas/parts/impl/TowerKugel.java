@@ -14,7 +14,8 @@ public class TowerKugel extends Tower {
 	}
 	
 	public int getDamage() {
-		return damage; //+ rand(10); Um Variablen Damage zu erzeugen
+		//+ rand(10); Um Variablen Damage zu erzeugen
+		return damage; 
 	}
 
 	public String getSymbol() {

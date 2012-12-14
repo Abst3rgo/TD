@@ -64,7 +64,7 @@ public class Tower {
 				
 				int durchgang = 2;
 				for(int i = 0; i < range; i++) {
-					if(i==0) { // erster durchlauf
+					if(i==0) {
 						tY++;
 						tX++;
 					} else {
@@ -92,7 +92,7 @@ public class Tower {
 
 				durchgang = 2;
 				for(int i = 0; i < (range-1); i++) {
-					if(i==0) { // erster durchlauf
+					if(i==0) {
 						tY--;
 						tX--;
 					} else {

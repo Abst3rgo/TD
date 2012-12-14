@@ -15,7 +15,7 @@ public class TextUI {
 	private Scanner scanner;
 	private String input = "";
 	private int time = 10;
-	private int sleepTimeMS = 1000;
+	private final int sleepTimeMS = 1000;
 	
 	
 	public class Timer extends Thread {
@@ -28,7 +28,6 @@ public class TextUI {
 				}
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
 			}
 		}
 	}

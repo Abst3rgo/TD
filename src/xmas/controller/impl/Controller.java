@@ -27,7 +27,7 @@ public class Controller implements IController {
 	private Mob[] mobArray;
 	private int mobNummer = 0;
 	private int indexMob = 0;
-	private int delayTimeMS = 1000;
+	private final int delayTimeMS = 1000;
 	
 	//--------------------------Getter und Setter Methoden ------------------------
 	
