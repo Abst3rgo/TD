@@ -7,19 +7,19 @@ import xmas.parts.ISpielfeld;
 public class Spielfeld implements ISpielfeld {
 	
 	
-	private int laengeY = 8;
-	private int breiteX = 8;
-	private String[][] fieldArray = new String[laengeY][breiteX];
+	private int laengeY;
+	private int breiteX;
+	private String[][] fieldArray;
 	
-	private int startX = 2;
-	private int startY = 1;
-	private int endX = 2;
-	private int endY = laengeY-1;
+	private int startX;
+	private int startY;
+	private int endX;
+	private int endY;
 	private String empty = "..";
 	private String border = "##";
 	Scanner scanner = new Scanner(System.in);
 	
-	private boolean[][] visitField = new boolean[laengeY][breiteX];
+	private boolean[][] visitField;
 	
 	private void clearArrays() {
 		// visitField set all false
@@ -32,18 +32,26 @@ public class Spielfeld implements ISpielfeld {
 	
 	public Spielfeld(String groese) {
 		
-		if(groese == "3") {
+		if(groese.equals("3")) {
 			this.laengeY = 24;
 			this.breiteX = 24;
 		}
-		else if (groese == "2") {
+		else if (groese.equals("2")) {
 			this.laengeY = 10;
 			this.breiteX = 10;
 		}
 		else {
 			this.laengeY = 8;
 			this.breiteX = 8;
+			
 		}
+		// Init Felder
+		fieldArray = new String[laengeY][breiteX];
+		startX = 2;
+		startY = 1;
+		endX = 2;
+		endY = laengeY-1;
+		visitField = new boolean[laengeY][breiteX];
 		
 		// Spielfeld Init ! 
 		init();
@@ -192,21 +200,21 @@ public class Spielfeld implements ISpielfeld {
 				}
 				
 				// Nach links laufen ?
-				if(fieldArray[y][(x-1)] == empty && visitField[y][(x-1)] == false) {
+				else if(fieldArray[y][(x-1)] == empty && visitField[y][(x-1)] == false) {
 					//System.out.println("Links ");
 					visitField[y][(x-1)] = true;
 					return checkWay(y, --x);	
 				}
 				
 				// Nach rechts laufen ?
-				if(fieldArray[y][(x+1)] == empty && visitField[y][(x+1)] == false) {
+				else if(fieldArray[y][(x+1)] == empty && visitField[y][(x+1)] == false) {
 					//System.out.println("Rechts ");
 					visitField[y][(x+1)] = true;
 					return checkWay(y, ++x);	
 				}
 				
 				// Nach oben laufen ?
-				if(fieldArray[(y-1)][x] == empty && visitField[(y-1)][x] == false) {
+				else if(fieldArray[(y-1)][x] == empty && visitField[(y-1)][x] == false) {
 					//System.out.println("Oben ");
 					visitField[(y-1)][x] = true;
 					return checkWay(--y, x);

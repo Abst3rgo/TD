@@ -3,7 +3,7 @@ package xmas.parts.impl;
 public class Player {
 	
 	private String name = "";
-	private int life = 30;
+	private int life = 2;
 	
 	public Player(String name) {
 		this.name = name;

@@ -20,13 +20,14 @@ public class Controller implements IController {
 
 	private Player player;
 	private ISpielfeld spielfeld;
-	private String StartMessage = "Willkommen bei Xmas Tower Defence !";
-	private Tower[] towerArray = new Tower[64];
+	private String startMessage = "Willkommen bei Xmas Tower Defence !";
+	private Tower[] towerArray;
 	private int numberTower = 0;
 	private int anzahlMobs = 2;
 	private Mob[] mobArray;
 	private int mobNummer = 0;
-	int indexMob = 0;
+	private int indexMob = 0;
+	private int delayTimeMS = 1000;
 	
 	//--------------------------Getter und Setter Methoden ------------------------
 	
@@ -37,6 +38,7 @@ public class Controller implements IController {
 	
 	public void setSpielfeld(String groese) {
 		this.spielfeld  = new Spielfeld(groese);
+		towerArray = new Tower[(spielfeld.getY()-3)*(spielfeld.getX()-3)];
 	}
 	
 	public int getSpielfeldX() {
@@ -49,7 +51,7 @@ public class Controller implements IController {
 	
 	// return StartMessage
 	public String getStartMessage() {
-		return StartMessage;
+		return startMessage;
 	}
 	
 	// holt Spielfeld und returnd es
@@ -78,7 +80,7 @@ public class Controller implements IController {
 		}
 		
 		// Pruefe ob Weg noch fei für Mobs
-		if(spielfeld.setTower(tower.getSymbol(), y, x) == true) {
+		if(spielfeld.setTower(tower.getSymbol(), y, x)) {
 			towerArray[numberTower++] = tower;
 			System.out.println("Tower Set ");
 			return true;
@@ -109,7 +111,7 @@ public class Controller implements IController {
 		
 		
 		// Leben Spieler prüfen
-		if(player.gameover() == true) {
+		if(player.gameover()) {
 			return -1;
 		}
 		
@@ -135,7 +137,7 @@ public class Controller implements IController {
 		// Delay for Mobspawn
 				try {
 				    Thread.currentThread();
-					Thread.sleep(1000);
+					Thread.sleep(delayTimeMS);
 				} catch(Exception e){}
 		
 	}
@@ -163,7 +165,9 @@ public class Controller implements IController {
 		if(mobNummer < anzahlMobs-1) {
 			
 			Mob mob = null;
-			int mobType = new Random().nextInt(11); // Randomzahl für Mobart
+			// Randomzahl für Mobart
+			int mobType = new Random().nextInt(11);
+			
 			switch(mobType) {
 				case 0:
 				case 1:

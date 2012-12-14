@@ -18,7 +18,7 @@ public class MobTest extends TestCase {
 		assertEquals(null, mob.getSymbol());
 		assertEquals(null, mob.getArt());
 		// walk Methode
-		int[] wayArray = null;
-		int counter = 0;
+		//int[] wayArray = null;
+		//int counter = 0;
 	}
 }

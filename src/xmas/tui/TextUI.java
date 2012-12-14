@@ -12,17 +12,18 @@ public class TextUI {
 	private int x;
 	private boolean mode2 = false;
 	private Thread timer = new Thread(new Timer());
-	Scanner scanner;
-	String input = "";
-	int time = 10;
-
+	private Scanner scanner;
+	private String input = "";
+	private int time = 10;
+	private int sleepTimeMS = 1000;
+	
 	
 	public class Timer extends Thread {
 		
 		public void run() {
 			try {
 				while(time != 0) {
-					sleep(100);
+					sleep(sleepTimeMS);
 						time--;
 				}
 			} catch (InterruptedException e) {
@@ -85,7 +86,6 @@ public class TextUI {
 				quit = true;
 				System.out.println("VERLOREN NOOB NOOB NOOB !!!!");
 			}
-			//scanner.next();
 		}
 		return quit;
 	}
@@ -133,7 +133,7 @@ public class TextUI {
 		} else {
 			return quitOrFailure(input);
 		}
-		if(create == true) {
+		if(create) {
 			System.out.println("Tower erstellt !!!");
 		} else {
 			System.out.println("Tower nicht erstellt");
