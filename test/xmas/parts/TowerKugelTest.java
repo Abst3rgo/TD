@@ -13,7 +13,7 @@ public class TowerKugelTest extends TestCase {
 	}
 		
 	public void testGetValue() {
-		assertEquals(15, kugel.getRange());
+		assertEquals(1, kugel.getRange());
 		assertEquals(20, kugel.getDamage());
 		assertEquals("C|", kugel.getSymbol());
 	}

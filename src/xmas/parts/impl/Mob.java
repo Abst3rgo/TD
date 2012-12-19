@@ -57,11 +57,8 @@ public class Mob {
 	}
 
 	public boolean walk(String[][] fieldArray, String empty) {
-
-		if(fieldArray[y+1][x].equals("En") || fieldArray[y-1][x].equals("En") || 
-				fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")) {
-			System.out.print("Im Ziel ");
-			// Ende ereicht
+		
+		if(zielEreicht(fieldArray)) {
 			return true;
 		}
 		
@@ -107,6 +104,15 @@ public class Mob {
 			return true;
 		}
 		
+	}
+
+	public boolean zielEreicht(String[][] fieldArray) {
+		if(fieldArray[y+1][x].equals("En") || fieldArray[y-1][x].equals("En") || 
+				fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")) {
+			// Ende ereicht
+			return true;
+		}
+		return false;
 	}
 	
 } // End Class

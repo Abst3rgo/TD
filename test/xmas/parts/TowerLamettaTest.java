@@ -13,7 +13,7 @@ public class TowerLamettaTest extends TestCase {
 	}
 		
 	public void testGetValue() {
-		assertEquals(5, lametta.getRange());
+		assertEquals(1, lametta.getRange());
 		assertEquals(10, lametta.getDamage());
 		assertEquals("L|", lametta.getSymbol());
 	}

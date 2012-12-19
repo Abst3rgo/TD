@@ -13,8 +13,8 @@ public class TowerNussTest extends TestCase {
 	}
 		
 	public void testGetValue() {
-		assertEquals(10, nuss.getRange());
-		assertEquals(20, nuss.getDamage());
+		assertEquals(1, nuss.getRange());
+		assertEquals(5, nuss.getDamage());
 		assertEquals("K|", nuss.getSymbol());
 	}
 

@@ -42,6 +42,16 @@ public class Tower {
 		return towerRadiusLength;
 	}
 	
+	public int[] getRangeFieldY() {
+		return towerRadiusY;
+		
+	}
+	
+	public int[] getRangeFieldX() {
+		return towerRadiusX;
+		
+	}
+	
 	private void createRangeField() {
 		
 		// Lege Feld von Stellen an die der Tower treffen kann
@@ -110,20 +120,6 @@ public class Tower {
 				
 			}
 	
-	public int[] getRangeFieldY() {
-		return towerRadiusY;
-		
-	}
-	
-	public int[] getRangeFieldX() {
-		return towerRadiusX;
-		
-	}
-		
-		
-		
-		
-	
-	
+
 	
 }
