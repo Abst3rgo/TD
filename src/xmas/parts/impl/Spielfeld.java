@@ -19,15 +19,6 @@ public class Spielfeld implements ISpielfeld {
 	
 	private boolean[][] visitField;
 	
-	private void clearArrays() {
-		// visitField set all false
-		for(int i = 2; i < (laengeY-1); i++) {
-			for(int j = 2; j < (breiteX-1); j++) {
-				visitField[i][j] = false;
-			}
-		}
-	}
-	
 	public Spielfeld(String groese) {
 		
 		if(groese.equals("3")) {
@@ -53,6 +44,15 @@ public class Spielfeld implements ISpielfeld {
 		
 		// Spielfeld Init ! 
 		init();
+	}
+	
+	private void clearArrays() {
+		// visitField set all false
+		for(int i = 2; i < (laengeY-1); i++) {
+			for(int j = 2; j < (breiteX-1); j++) {
+				visitField[i][j] = false;
+			}
+		}
 	}
 	
 	public int getStartX() {
@@ -81,6 +81,10 @@ public class Spielfeld implements ISpielfeld {
 	
 	public String[][] getfieldArray() {
 		return this.fieldArray;
+	}
+	
+	public boolean[][] getVisitField() {
+		return this.visitField;
 	}
 	
 	public String getEmpty() {
@@ -187,7 +191,6 @@ public class Spielfeld implements ISpielfeld {
 
 		
 			if(reachEnd(y, x)) {
-				System.out.println("Ende ereicht");
 				return true;
 			} else { 
 				// Nach unten laufen ?
@@ -217,17 +220,8 @@ public class Spielfeld implements ISpielfeld {
 					y--;
 					return checkWay(y, x);
 				}
-				System.out.println("Out ");
-				ausgabe(y,x);
 				return false;
 			}
-	}
-	
-	
-	
-	private void ausgabe(int y, int x) {
-		System.out.println("x = " + x);
-		System.out.println("y = " + y + "\n");
 	}
 	
 

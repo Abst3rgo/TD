@@ -7,10 +7,13 @@ public class Mob {
 	private int y;
 	private int oldX = 0;
 	private int oldY = 0;
+	private boolean[][] visitField;
+
 	
 	public Mob(int y, int x) {
 		this.x = x;
 		this.y = y;
+		visitField = new boolean[8][8];
 	}
 	
 	public int getX() {
@@ -63,7 +66,8 @@ public class Mob {
 		}
 		
 		// Nach unten laufen ?
-		 else if(fieldArray[(y+1)][x] == empty && oldY != (y+1)) {
+		 else if(fieldArray[(y+1)][x] == empty && !visitField[(y+1)][x]) {
+			 visitField[(y+1)][x] = true;
 			 oldY = y;
 			 oldX = x;
 			 ++y;
@@ -71,7 +75,8 @@ public class Mob {
 		}
 		
 		// Nach links laufen ?
-		else if(fieldArray[y][(x-1)] == empty && oldX != x-1) {
+		else if(fieldArray[y][(x-1)] == empty && !visitField[(y)][x-1]) {
+			visitField[(y)][x-1] = true;
 			oldY = y;
 			oldX = x;
 			x--;
@@ -79,7 +84,8 @@ public class Mob {
 		}
 					
 		// Nach rechts laufen ?
-		else if(fieldArray[y][(x+1)] == empty && oldX != x+1) {
+		else if(fieldArray[y][(x+1)] == empty && !visitField[(y)][x+1]) {
+			visitField[(y)][x+1] = true;
 			oldY = y;
 			oldX = x;
 			x++;
@@ -87,7 +93,8 @@ public class Mob {
 		}
 					
 		// Nach oben laufen ?
-		else if(fieldArray[y-1][(x)] == empty && oldY != y-1) {
+		else if(fieldArray[y-1][(x)] == empty && !visitField[(y-1)][x]) {
+			visitField[(y-1)][x] = true;
 			oldY = y;
 			oldX = x;
 			y--;

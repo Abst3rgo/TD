@@ -16,15 +16,19 @@ public class TextUI {
 	private String input = "";
 	private int time = 10;
 	private final int sleepTimeMS = 1000;
-	
+	private boolean timeOut;
 	
 	public class Timer extends Thread {
 		
 		public void run() {
 			try {
-				while(time != 0) {
-					sleep(sleepTimeMS);
+				while(true) {
+					if(time != 0) {
+						sleep(sleepTimeMS);
 						time--;
+					} else {
+						timeOut = true;
+					}
 				}
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -36,19 +40,20 @@ public class TextUI {
 	public TextUI(IController controller) {
 		this.controller = controller;
 		scanner = new Scanner(System.in);
-		timer.start();
 	}
 	
 
 	//Beim Start Test und Spielfeld ausgeben
 	public void printMenue() {
 		System.out.println(controller.getStartMessage());
+		
 		// Spielfeld einstellen
 		System.out.println("Spielfeldgröße wählen : ");
 		System.out.println("1 = klein ");
 		System.out.println("2 = mittel");
 		System.out.println("3 = groß");
 		input = scanner.next();
+		timer.start();
 		// TODO Fehlerbehandlung
 		controller.setSpielfeld(input);
 		y = (controller.getSpielfeldY());
@@ -67,14 +72,15 @@ public class TextUI {
 		if(!mode2) {
 			quit = handleinput();
 			System.out.println(controller.getSpielfeld());
-			if(time == 0) {
+			if(timeOut) {
 				mode2 = true;
-				System.out.println("Thread Tod");
 			}
 		}
 		// Create and Move Mobs // Modus 2
 		if(!quit && mode2) {
-			System.out.println("Mob laufen los ");
+			time = 10;
+			timeOut = false;
+			
 			// Wenn Welle vorüber gehe zu Modus 1 zurück
 			int erg = controller.startGame();
 			System.out.println(controller.getSpielfeld());
@@ -83,7 +89,7 @@ public class TextUI {
 			}
 			else if( erg == -1) {
 				quit = true;
-				System.out.println("VERLOREN NOOB NOOB NOOB !!!!");
+				System.out.println("VERLOREN !!!!");
 			}
 		}
 		return quit;

@@ -21,5 +21,7 @@ public interface ISpielfeld {
 	int getStartY();
 
 	int getStartX();
+	
+	boolean[][] getVisitField();
 
 }

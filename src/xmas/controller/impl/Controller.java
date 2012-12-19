@@ -82,7 +82,6 @@ public class Controller implements IController {
 		// Pruefe ob Weg noch fei für Mobs
 		if(spielfeld.setTower(tower.getSymbol(), y, x)) {
 			towerArray[numberTower++] = tower;
-			System.out.println("Tower Set ");
 			return true;
 		} else {
 			return false;
