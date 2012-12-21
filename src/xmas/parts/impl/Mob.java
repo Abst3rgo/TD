@@ -13,7 +13,8 @@ public class Mob {
 	public Mob(int y, int x) {
 		this.x = x;
 		this.y = y;
-		visitField = new boolean[8][8];
+		// dynamisch
+		visitField = new boolean[24][24];
 	}
 	
 	public int getX() {

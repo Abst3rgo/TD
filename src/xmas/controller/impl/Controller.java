@@ -122,7 +122,7 @@ public class Controller implements IController {
 		for(int i = 0; i < anzahlMobs; i++) {
 			System.out.print(mobArray[i]+", ");
 		}
-		System.out.print("\n");
+		System.out.print("\n\n");
 		
 		return 0;
 	}

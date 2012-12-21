@@ -14,7 +14,7 @@ public class TextUI {
 	private Thread timer = new Thread(new Timer());
 	private Scanner scanner;
 	private String input = "";
-	private int time = 10;
+	private int time = 330;
 	private final int sleepTimeMS = 1000;
 	private boolean timeOut;
 	
@@ -110,7 +110,7 @@ public class TextUI {
 		else if(input.equals("L") || input.equals("l")) {
 			art = 1;
 		}
-		else if(input.equals("C") || input.equals("C")) {
+		else if(input.equals("c") || input.equals("C")) {
 			art = 2;
 		} else {
 			return quitOrFailure(input);
@@ -134,6 +134,7 @@ public class TextUI {
 		System.out.println(" Zahl von 2 bis " + (x-2) + " | Quit = q");
 		input = scanner.next();
 		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < x) {
+			
 			create = controller.erstelleTower(art, Integer.parseInt(input), zeile);
 		} else {
 			return quitOrFailure(input);
