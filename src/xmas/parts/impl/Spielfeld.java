@@ -215,7 +215,7 @@ public class Spielfeld implements ISpielfeld {
 				}
 				
 				// Nach oben laufen ?
-				else if(fieldArray[(y-1)][x] == empty && !visitField[(y-1)][x]) {
+				else if(fieldArray[(y-1)][x] == empty) {
 					visitField[(y-1)][x] = true;
 					y--;
 					return checkWay(y, x);
@@ -226,8 +226,9 @@ public class Spielfeld implements ISpielfeld {
 	
 
 	private boolean reachEnd(int y, int x) {
-		if(fieldArray[y+1][x].equals("En") || fieldArray[y-1][x].equals("En") || 
-				fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")) {
+		if(fieldArray[y+1][x].equals("En") 
+				/*|| fieldArray[y-1][x].equals("En") || fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")*/
+				) {
 			return true;
 		}
 		return false;

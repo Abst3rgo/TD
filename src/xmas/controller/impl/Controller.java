@@ -1,5 +1,6 @@
 package xmas.controller.impl;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import xmas.controller.IController;
@@ -59,6 +60,15 @@ public class Controller implements IController {
 		return spielfeld.tostring();
 	}
 	
+	public void setPlayerLive(int life) {
+		player.setLive(life);
+	}
+	
+	public void clearArrays() {
+		Arrays.fill(mobArray,null);
+		Arrays.fill(towerArray,null);
+		
+	}
 	
 	public boolean erstelleTower(int art, int x, int y) {
 		
@@ -76,7 +86,9 @@ public class Controller implements IController {
 		// Kugeln
 		case 2:
 			tower = new TowerKugel(y, x);
-			break;
+			break;	
+		default:
+			return false;
 		}
 		
 		// Pruefe ob Weg noch fei für Mobs

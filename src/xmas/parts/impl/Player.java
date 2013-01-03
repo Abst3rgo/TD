@@ -35,7 +35,7 @@ public class Player {
 	}
 	
 	public boolean gameover() {
-		if (life == 0) {
+		if (life <= 0) {
 			return true;
 		}
 		return false;
