@@ -1,5 +1,7 @@
 package xmas.parts.impl;
 
+import org.apache.log4j.Logger;
+
 public class Mob {
 
 
@@ -8,6 +10,8 @@ public class Mob {
 	private int oldX = 0;
 	private int oldY = 0;
 	private boolean[][] visitField;
+	
+	private Logger logger = Logger.getLogger("xmas.parts.impl.Mob");
 
 	
 	public Mob(int y, int x) {
@@ -101,7 +105,7 @@ public class Mob {
 		// unötig da Mob IMMER laufen kann
 		else {
 			// TODO FEHLER NACHEM MOBS LANGE GELAUFEN SIND ???????????
-			System.out.println("FEHLER !!!!!!!!!!!!!!!!!!");
+			logger.error("\n FEHLER !!!!!!!!!!!!!!!!!!");
 			return true;
 		}
 		

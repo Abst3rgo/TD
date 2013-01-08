@@ -21,7 +21,9 @@ public class Controller implements IController {
 
 	private Player player;
 	private ISpielfeld spielfeld;
-	private String startMessage = "Willkommen bei Xmas Tower Defence !";
+	
+	private String message = "";
+	
 	private Tower[] towerArray;
 	private int numberTower = 0;
 	private int anzahlMobs = 2;
@@ -29,6 +31,7 @@ public class Controller implements IController {
 	private int mobNummer = 0;
 	private int indexMob = 0;
 	private final int delayTimeMS = 1000;
+	
 	
 	//--------------------------Getter und Setter Methoden ------------------------
 	
@@ -52,8 +55,12 @@ public class Controller implements IController {
 	
 	// return StartMessage
 	public String getStartMessage() {
-		return startMessage;
+			return "Willkommen bei Xmas Tower Defence !";
 	}
+	
+	public String getGameMessage() {
+		return message;
+}
 	
 	// holt Spielfeld und returnd es
 	public String getSpielfeld() {
@@ -63,6 +70,7 @@ public class Controller implements IController {
 	public void setPlayerLive(int life) {
 		player.setLive(life);
 	}
+	
 	
 	public void clearArrays() {
 		Arrays.fill(mobArray,null);
@@ -128,7 +136,7 @@ public class Controller implements IController {
 		
 		
 		// Gehe jeden Tower durch der schießen kann
-		towershot();
+		message = towershot();
 		
 		// Test Ausgabe zum Überprüfen
 		for(int i = 0; i < anzahlMobs; i++) {
@@ -216,7 +224,6 @@ public class Controller implements IController {
 		for(Mob mob : mobArray) {
 			if(mob != null) {
 				if(mob.walk(spielfeld.getfieldArray(), spielfeld.getEmpty())) {
-					System.out.print("ist Mob " + mob.getSymbol() + "\n");
 					player.loseLive();
 					spielfeld.setFieldEmpty(mob.getY(), mob.getX());
 					mobArray[indexMob] = null;
@@ -229,7 +236,9 @@ public class Controller implements IController {
 	}
 
 
-	private void towershot() {
+	private String towershot() {
+		
+		StringBuffer s = new StringBuffer();
 		
 		// gehen jeden Tower durch
 		for(Tower tower : towerArray) {
@@ -241,13 +250,13 @@ public class Controller implements IController {
 					if(mob != null) {
 						
 						for(int i = 0; i < tower.getTowerRadiusLength(); i++) {
-							mobonField(mob, tower, tower.getRangeFieldY()[i] , tower.getRangeFieldX()[i] );
+							mobonField(mob, tower, tower.getRangeFieldY()[i] , tower.getRangeFieldX()[i], s );
 						}
 						
 						
 						// Mob null setzen 
 						if(mob.getHealth() <= 0) {
-							System.out.println(indexMob + "ter Mob " + mob.getSymbol() + "Tod !!!!!");
+							s.append(indexMob + "ter Mob " + mob.getSymbol() + "Tod !!!!!" + "\n");
 							spielfeld.setFieldEmpty(mob.getY(), mob.getX());
 							mobArray[indexMob] = null;
 						}
@@ -256,17 +265,18 @@ public class Controller implements IController {
 				}	
 			}
 		}
+		return s.toString();
 	}
 			
 			
 
 	// TODO In Clean Code umschreiben
-	private void mobonField(Mob mob, Tower tower, int tY, int tX) {
+	private void mobonField(Mob mob, Tower tower, int tY, int tX, StringBuffer s) {
 		if(mob.mobHit(tY, tX)) {
-			System.out.println("Mob " + mob.getSymbol() + "G etroffen !!");
-			System.out.println("Leben vor dem Treffer = " + mob.getHealth());
+			s.append("Mob " + mob.getSymbol() + "Getroffen !!" + "\n")
+			.append("Leben vor dem Treffer = " + mob.getHealth() + "\n");
 			mob.setHealth((mob.getHealth() - tower.getDamage()));
-			System.out.println("Leben nach dem Treffer = " + mob.getHealth());
+			s.append("Leben nach dem Treffer = " + mob.getHealth() + "\n");
 		}
 	}
 

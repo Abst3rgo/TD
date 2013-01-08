@@ -24,7 +24,7 @@ public class TextUI {
 	private String newLine = System.getProperty("line.separator");
 	private Logger logger = Logger.getLogger("xmas.tui");
 	
-	private int time = 30;
+	private int time = 3;
 	private final int sleepTimeMS = 1000;
 	private boolean timeOut;
 	
@@ -96,6 +96,7 @@ public class TextUI {
 			
 			// Wenn Welle vorüber gehe zu Modus 1 zurück
 			int erg = controller.startGame();
+			logger.info( newLine + controller.getGameMessage());
 			logger.info( newLine + controller.getSpielfeld());
 			if(erg == 1) {
 				mode2 = false;
