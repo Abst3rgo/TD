@@ -1,21 +1,17 @@
 package xmas.application;
 
-import xmas.controller.impl.Controller;
 import xmas.tui.TextUI;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
 
 public final class Xmas {
 	
-	private Xmas() {
-		
-	}
-	
-	/**
-	 * @param args
-	 */
-	
 	public static void main(String[] args) {
 		
-		TextUI tui = new TextUI(new Controller());
+		Injector injector = Guice.createInjector(new XmasModule());
+		
+		TextUI tui = injector.getInstance(TextUI.class);
 		
 		// StartMessage
 		tui.printMenue();

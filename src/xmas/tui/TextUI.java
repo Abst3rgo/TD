@@ -1,6 +1,9 @@
 package xmas.tui;
 
 import java.util.Scanner;
+
+import com.google.inject.Inject;
+
 import xmas.controller.IController;
 
 
@@ -37,6 +40,7 @@ public class TextUI {
 	}
 
 	//Konstruktor
+	@Inject
 	public TextUI(IController controller) {
 		this.controller = controller;
 		scanner = new Scanner(System.in);

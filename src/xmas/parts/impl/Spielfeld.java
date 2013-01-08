@@ -1,6 +1,8 @@
 package xmas.parts.impl;
 
 
+import com.google.inject.Inject;
+
 import xmas.parts.ISpielfeld;
 
 public class Spielfeld implements ISpielfeld {
@@ -19,6 +21,7 @@ public class Spielfeld implements ISpielfeld {
 	
 	private boolean[][] visitField;
 	
+	@Inject
 	public Spielfeld(String groese) {
 		
 		if(groese.equals("3")) {
