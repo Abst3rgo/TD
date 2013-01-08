@@ -2,6 +2,8 @@ package xmas.tui;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import com.google.inject.Inject;
 
 import xmas.controller.IController;
@@ -17,7 +19,12 @@ public class TextUI {
 	private Thread timer = new Thread(new Timer());
 	private Scanner scanner;
 	private String input = "";
-	private int time = 330;
+	
+	
+	private String newLine = System.getProperty("line.separator");
+	private Logger logger = Logger.getLogger("xmas.tui");
+	
+	private int time = 30;
 	private final int sleepTimeMS = 1000;
 	private boolean timeOut;
 	
@@ -49,20 +56,20 @@ public class TextUI {
 
 	//Beim Start Test und Spielfeld ausgeben
 	public void printMenue() {
-		System.out.println(controller.getStartMessage());
-		
+		logger.info(newLine + controller.getStartMessage() + 
+				
 		// Spielfeld einstellen
-		System.out.println("Spielfeldgröße wählen : ");
-		System.out.println("1 = klein ");
-		System.out.println("2 = mittel");
-		System.out.println("3 = groß");
+				newLine + "Spielfeldgröße wählen : " +
+				newLine + "1 = klein " +
+				newLine + "2 = mittel" +
+				newLine + "3 = groß");
 		input = scanner.next();
 		timer.start();
 		// TODO Fehlerbehandlung
 		controller.setSpielfeld(input);
 		y = (controller.getSpielfeldY());
 		x = (controller.getSpielfeldX());
-		System.out.println(controller.getSpielfeld());
+		logger.info( newLine + controller.getSpielfeld());
 		
 		
 	}
@@ -75,7 +82,9 @@ public class TextUI {
 		// User input and Tower set // Modus 1
 		if(!mode2) {
 			quit = handleinput();
-			System.out.println(controller.getSpielfeld());
+			if(!quit) {
+				logger.info( newLine + controller.getSpielfeld());
+			}
 			if(timeOut) {
 				mode2 = true;
 			}
@@ -87,13 +96,13 @@ public class TextUI {
 			
 			// Wenn Welle vorüber gehe zu Modus 1 zurück
 			int erg = controller.startGame();
-			System.out.println(controller.getSpielfeld());
+			logger.info( newLine + controller.getSpielfeld());
 			if(erg == 1) {
 				mode2 = false;
 			}
 			else if( erg == -1) {
 				quit = true;
-				System.out.println("VERLOREN !!!!");
+				logger.info( newLine + "VERLOREN !!!!");
 			}
 		}
 		return quit;
@@ -105,8 +114,8 @@ public class TextUI {
 		int art = 0;
 		int zeile = 0;
 		
-		System.out.println("Wählen einen Palmentower aus ... ");
-		System.out.println("Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
+		logger.info( newLine + "Wählen einen Palmentower aus ... " +
+				newLine + "Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
 		input = scanner.next();
 		if(input.equals("K") || input.equals("k")) {
 			art = 0;
@@ -122,8 +131,8 @@ public class TextUI {
 		
 		
 		
-		System.out.println("Wähle die Zeile für den Palmentower ... ");
-		System.out.println("Zahl von 2 bis " + (y-2) + " | Quit = q");
+		logger.info( newLine + "Wähle die Zeile für den Palmentower ... " +
+				newLine + "Zahl von 2 bis " + (y-2) + " | Quit = q");
 		input = scanner.next();
 		// Prüfe ob richtige Eingabe
 		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < y) {
@@ -134,8 +143,8 @@ public class TextUI {
 		
 		
 		
-		System.out.println("Wähle Spalte für den Palmentower ... ");
-		System.out.println(" Zahl von 2 bis " + (x-2) + " | Quit = q");
+		logger.info( newLine + "Wähle Spalte für den Palmentower ... " +
+				newLine + " Zahl von 2 bis " + (x-2) + " | Quit = q");
 		input = scanner.next();
 		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < x) {
 			
@@ -144,9 +153,9 @@ public class TextUI {
 			return quitOrFailure(input);
 		}
 		if(create) {
-			System.out.println("Tower erstellt !!!");
+			logger.info( newLine + "Tower erstellt !!!");
 		} else {
-			System.out.println("Tower nicht erstellt");
+			logger.info( newLine + "Tower nicht erstellt");
 		}
 		return false;
 
@@ -156,10 +165,10 @@ public class TextUI {
 	public boolean quitOrFailure(String input) {
 		// if Q is pressed Game quits
 		if(input.equalsIgnoreCase("q")) {
-			System.out.println("!!! Spiel wird beendet !!!");
+			logger.info( newLine + "!!! Spiel wird beendet !!!");
 			return true;
 		} else {
-			System.out.println("!!! Falsche Eingabe. Bitte erneut setzen");
+			logger.info( newLine + "!!! Falsche Eingabe. Bitte erneut setzen");
 			handleinput();
 			return false;	
 		}	

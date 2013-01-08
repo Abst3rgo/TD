@@ -1,0 +1,194 @@
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+INFO main xmas.tui - 
+Spielfeldgröße wählen : 
+INFO main xmas.tui - 
+1 = klein 
+INFO main xmas.tui - 
+2 = mittel
+INFO main xmas.tui - 
+3 = groß
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+INFO main xmas.tui - Spielfeldgröße wählen : 
+INFO main xmas.tui - 
+1 = klein 
+INFO main xmas.tui - 
+2 = mittel
+INFO main xmas.tui - 
+3 = groß
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+INFO main xmas.tui - 
+Spielfeldgröße wählen : 
+INFO main xmas.tui - 
+1 = klein 
+INFO main xmas.tui - 
+2 = mittel
+INFO main xmas.tui - 
+3 = groß
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+ Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  8  9  
+1  ## St ## ## ## ## ## ## ## 
+2  ## .. .. .. .. .. .. .. ## 
+3  ## .. .. .. .. .. .. .. ## 
+4  ## .. .. .. .. .. .. .. ## 
+5  ## .. .. .. .. .. .. .. ## 
+6  ## .. .. .. .. .. .. .. ## 
+7  ## .. .. .. .. .. .. .. ## 
+8  ## .. .. .. .. .. .. .. ## 
+9  ## En ## ## ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+ Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  8  9  
+1  ## St ## ## ## ## ## ## ## 
+2  ## .. .. .. .. .. .. .. ## 
+3  ## .. .. .. .. .. .. .. ## 
+4  ## .. .. .. .. .. .. .. ## 
+5  ## .. .. .. .. .. .. .. ## 
+6  ## .. .. .. .. .. .. .. ## 
+7  ## .. .. .. .. .. .. .. ## 
+8  ## .. .. .. .. .. .. .. ## 
+9  ## En ## ## ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 8 | Quit = q
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 8 | Quit = q
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  8  9  
+1  ## St ## ## ## ## ## ## ## 
+2  ## .. .. .. .. .. .. .. ## 
+3  ## .. K| .. .. .. .. .. ## 
+4  ## .. .. .. .. .. .. .. ## 
+5  ## .. .. .. .. .. .. .. ## 
+6  ## .. .. .. .. .. .. .. ## 
+7  ## .. .. .. .. .. .. .. ## 
+8  ## .. .. .. .. .. .. .. ## 
+9  ## En ## ## ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 8 | Quit = q
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 8 | Quit = q
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  8  9  
+1  ## St ## ## ## ## ## ## ## 
+2  ## .. .. .. .. .. .. .. ## 
+3  ## .. .. .. .. .. .. .. ## 
+4  ## .. .. .. .. .. .. .. ## 
+5  ## .. .. .. .. .. .. .. ## 
+6  ## .. .. .. .. .. .. .. ## 
+7  ## .. .. .. .. .. .. .. ## 
+8  ## .. .. .. .. .. .. .. ## 
+9  ## En ## ## ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+!!! Spiel wird beendet !!!
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  8  9  
+1  ## St ## ## ## ## ## ## ## 
+2  ## .. .. .. .. .. .. .. ## 
+3  ## .. .. .. .. .. .. .. ## 
+4  ## .. .. .. .. .. .. .. ## 
+5  ## .. .. .. .. .. .. .. ## 
+6  ## .. .. .. .. .. .. .. ## 
+7  ## .. .. .. .. .. .. .. ## 
+8  ## .. .. .. .. .. .. .. ## 
+9  ## En ## ## ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+!!! Spiel wird beendet !!!
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  8  9  
+1  ## St ## ## ## ## ## ## ## 
+2  ## .. .. .. .. .. .. .. ## 
+3  ## .. .. .. .. .. .. .. ## 
+4  ## .. .. .. .. .. .. .. ## 
+5  ## .. .. .. .. .. .. .. ## 
+6  ## .. .. .. .. .. .. .. ## 
+7  ## .. .. .. .. .. .. .. ## 
+8  ## .. .. .. .. .. .. .. ## 
+9  ## En ## ## ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+!!! Spiel wird beendet !!!
