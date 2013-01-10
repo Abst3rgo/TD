@@ -30,7 +30,7 @@ public class Controller implements IController {
 	private Mob[] mobArray;
 	private int mobNummer = 0;
 	private int indexMob = 0;
-	private final int delayTimeMS = 1000;
+	private static final int delayTimeMS = 1000;
 	
 	
 	//--------------------------Getter und Setter Methoden ------------------------
@@ -177,11 +177,11 @@ public class Controller implements IController {
 		// Mob erstellen und laufen lassen 
 		if(mobNummer < anzahlMobs-1) {
 			
-			Mob mob = null;
+			
 			// Randomzahl für Mobart
 			int mobType = new Random().nextInt(11);
 			
-			createSpezMob(mobType, mob);
+			createSpezMob(mobType);
 			
 		}
 		else if (mobNummer == anzahlMobs-1) {
@@ -191,7 +191,9 @@ public class Controller implements IController {
 		}
 	}
 	
-	private void createSpezMob(int mobType , Mob mob) {
+	private void createSpezMob(int mobType) {
+		
+		Mob mob = null;
 		
 		switch(mobType) {
 		case 0:

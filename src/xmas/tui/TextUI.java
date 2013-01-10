@@ -25,7 +25,7 @@ public class TextUI {
 	private Logger logger = Logger.getLogger("xmas.tui");
 	
 	private int time = 3;
-	private final int sleepTimeMS = 1000;
+	private static final int sleepTimeMS = 1000;
 	private boolean timeOut;
 	
 	public class Timer extends Thread {
@@ -111,18 +111,8 @@ public class TextUI {
 
 	// Verarbeitete Eingabe und verlässt gegenbenfalls Schleife
 	public boolean handleinput() {
-		boolean create = false;
+		
 		int art = 0;
-		int zeile = 0;
-		
-		if(picTower(art) || picPosition(art, zeile, create)) {
-			return true;
-		}
-		return false;
-		
-	}
-	
-	private boolean picTower(int art) {
 		
 		logger.info( newLine + "Wählen einen Palmentower aus ... " +
 				newLine + "Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
@@ -138,12 +128,19 @@ public class TextUI {
 		} else {
 			return quitOrFailure(input);
 		}
+
+		if(picPosition(art)) {
+			return true;
+		}
 		
 		return false;
-		
 	}
+
 		
-	private boolean picPosition(int art, int zeile, boolean create) {
+	private boolean picPosition(int art) {
+		
+		boolean create = false;
+		int zeile = 0;
 		
 		logger.info( newLine + "Wähle die Zeile für den Palmentower ... " +
 				newLine + "Zahl von 2 bis " + (y-2) + " | Quit = q");
