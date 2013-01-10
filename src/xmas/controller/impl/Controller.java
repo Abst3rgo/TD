@@ -271,7 +271,7 @@ public class Controller implements IController {
 			
 
 	// TODO In Clean Code umschreiben
-	private void mobonField(Mob mob, Tower tower, int tY, int tX, StringBuffer s) {
+	public void mobonField(Mob mob, Tower tower, int tY, int tX, StringBuffer s) {
 		if(mob.mobHit(tY, tX)) {
 			s.append("Mob " + mob.getSymbol() + "Getroffen !!" + "\n")
 			.append("Leben vor dem Treffer = " + mob.getHealth() + "\n");

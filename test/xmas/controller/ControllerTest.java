@@ -4,17 +4,21 @@ import xmas.controller.impl.Controller;
 import xmas.parts.impl.Mob;
 import xmas.parts.impl.MobElfe;
 import xmas.parts.impl.Spielfeld;
+import xmas.parts.impl.Tower;
+import xmas.parts.impl.TowerNuss;
 import junit.framework.TestCase;
 
 public class ControllerTest extends TestCase {
 	Controller controller;
 	Spielfeld spielfeld;
 	Mob mob;
+	Tower tower;
 	
 	protected void setUp() throws Exception {
 		controller = new Controller();
 		spielfeld = new Spielfeld("1");
 		mob = new MobElfe(3,2);
+		tower = new TowerNuss(3, 3);
 	}
 	
 	public void testGetValue() {
@@ -39,6 +43,8 @@ public class ControllerTest extends TestCase {
 		}
 		controller.clearArrays();
 		assertEquals(1,controller.startGame());
+		StringBuffer s = null;
+		controller.mobonField(mob, tower, 3, 3, s);
 
 		
 		
