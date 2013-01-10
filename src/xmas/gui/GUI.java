@@ -67,7 +67,7 @@ public class GUI extends JFrame {
 		
 //		Gamepanel
 		gamepanel = new JPanel();
-		gamepanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		gamepanel.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
 		gamepanel.setSize(800, 600);
 		gametext = new JTextArea(8, 40);
 		gamepanel.add(gametext);
