@@ -2,8 +2,9 @@ package xmas.parts.impl;
 
 public class Player {
 	
+	private int anzleben = 30;
 	private String name = "";
-	private int life = 30;
+	private int life = anzleben;
 	
 	public Player(String name) {
 		this.name = name;
