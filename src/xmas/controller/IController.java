@@ -7,6 +7,8 @@ public interface IController {
 	int getSpielfeldX();
 
 	String getStartMessage();
+	
+	String getGameMessage();
 
 	String getSpielfeld();
 

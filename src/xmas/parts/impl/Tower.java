@@ -8,6 +8,7 @@ public class Tower {
 	private int towerRadiusY[];
 	private int towerRadiusX[];
 	private int towerRadiusLength = 1;
+	private static int fakMulti = 4;
 	private int number = 0;
 	
 	public Tower( int y , int x, int range ) {
@@ -56,7 +57,7 @@ public class Tower {
 		
 		// Lege Feld von Stellen an die der Tower treffen kann
 				for(int fak = 1; fak <= range; fak++) {
-					towerRadiusLength += fak * 4;
+					towerRadiusLength += fak * fakMulti;
 				}
 				
 				towerRadiusY = new int[towerRadiusLength];

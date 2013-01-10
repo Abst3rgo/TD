@@ -1,6 +1,8 @@
 package xmas.parts.impl;
 
 
+import com.google.inject.Inject;
+
 import xmas.parts.ISpielfeld;
 
 public class Spielfeld implements ISpielfeld {
@@ -19,6 +21,7 @@ public class Spielfeld implements ISpielfeld {
 	
 	private boolean[][] visitField;
 	
+	@Inject
 	public Spielfeld(String groese) {
 		
 		if(groese.equals("3")) {
@@ -44,6 +47,7 @@ public class Spielfeld implements ISpielfeld {
 		
 		// Spielfeld Init ! 
 		init();
+		setBorder();
 	}
 	
 	private void clearArrays() {
@@ -161,6 +165,9 @@ public class Spielfeld implements ISpielfeld {
 				fieldArray[i][0] = Integer.toString(i);
 			}
 		}
+	}
+	
+	private void setBorder() {
 		
 		// Ränder für Spielfeld felder setzen 
 		//ObererRand
@@ -196,29 +203,29 @@ public class Spielfeld implements ISpielfeld {
 				// Nach unten laufen ?
 				if(fieldArray[(y+1)][x] == empty && !visitField[(y+1)][x]) {
 					visitField[(y+1)][x] = true;
-					y++;
-					return checkWay(y, x); 
+					int newY = y + 1;
+					return checkWay(newY, x); 
 				}
 				
 				// Nach links laufen ?
 				else if(fieldArray[y][(x-1)] == empty && !visitField[y][(x-1)]) {
 					visitField[y][(x-1)] = true;
-					x--;
-					return checkWay(y, x);	
+					int newX = x - 1;
+					return checkWay(y, newX);	
 				}
 				
 				// Nach rechts laufen ?
 				else if(fieldArray[y][(x+1)] == empty && !visitField[y][(x+1)]) {
 					visitField[y][(x+1)] = true;
-					x++;
-					return checkWay(y, x);	
+					int newX = x + 1;
+					return checkWay(y, newX);	
 				}
 				
 				// Nach oben laufen ?
-				else if(fieldArray[(y-1)][x] == empty && !visitField[(y-1)][x]) {
+				else if(fieldArray[(y-1)][x] == empty) {
 					visitField[(y-1)][x] = true;
-					y--;
-					return checkWay(y, x);
+					int newY = y - 1;
+					return checkWay(newY, x);
 				}
 				return false;
 			}
@@ -226,8 +233,9 @@ public class Spielfeld implements ISpielfeld {
 	
 
 	private boolean reachEnd(int y, int x) {
-		if(fieldArray[y+1][x].equals("En") || fieldArray[y-1][x].equals("En") || 
-				fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")) {
+		if(fieldArray[y+1][x].equals("En") 
+				/*|| fieldArray[y-1][x].equals("En") || fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")*/
+				) {
 			return true;
 		}
 		return false;

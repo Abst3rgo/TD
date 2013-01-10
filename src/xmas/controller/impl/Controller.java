@@ -1,5 +1,6 @@
 package xmas.controller.impl;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import xmas.controller.IController;
@@ -20,14 +21,17 @@ public class Controller implements IController {
 
 	private Player player;
 	private ISpielfeld spielfeld;
-	private String startMessage = "Willkommen bei Xmas Tower Defence !";
+	
+	private String message = "";
+	
 	private Tower[] towerArray;
 	private int numberTower = 0;
 	private int anzahlMobs = 2;
 	private Mob[] mobArray;
 	private int mobNummer = 0;
 	private int indexMob = 0;
-	private final int delayTimeMS = 1000;
+	private static final int delayTimeMS = 1000;
+	
 	
 	//--------------------------Getter und Setter Methoden ------------------------
 	
@@ -51,14 +55,28 @@ public class Controller implements IController {
 	
 	// return StartMessage
 	public String getStartMessage() {
-		return startMessage;
+			return "Willkommen bei Xmas Tower Defence !";
 	}
+	
+	public String getGameMessage() {
+		return message;
+}
 	
 	// holt Spielfeld und returnd es
 	public String getSpielfeld() {
 		return spielfeld.tostring();
 	}
 	
+	public void setPlayerLive(int life) {
+		player.setLive(life);
+	}
+	
+	
+	public void clearArrays() {
+		Arrays.fill(mobArray,null);
+		Arrays.fill(towerArray,null);
+		
+	}
 	
 	public boolean erstelleTower(int art, int x, int y) {
 		
@@ -76,7 +94,9 @@ public class Controller implements IController {
 		// Kugeln
 		case 2:
 			tower = new TowerKugel(y, x);
-			break;
+			break;	
+		default:
+			return false;
 		}
 		
 		// Pruefe ob Weg noch fei für Mobs
@@ -116,14 +136,8 @@ public class Controller implements IController {
 		
 		
 		// Gehe jeden Tower durch der schießen kann
-		towershot();
-		
-		// Test Ausgabe zum Überprüfen
-		for(int i = 0; i < anzahlMobs; i++) {
-			System.out.print(mobArray[i]+", ");
-		}
-		System.out.print("\n\n");
-		
+		message = towershot();
+
 		return 0;
 	}
 	
@@ -163,30 +177,11 @@ public class Controller implements IController {
 		// Mob erstellen und laufen lassen 
 		if(mobNummer < anzahlMobs-1) {
 			
-			Mob mob = null;
+			
 			// Randomzahl für Mobart
 			int mobType = new Random().nextInt(11);
 			
-			switch(mobType) {
-				case 0:
-				case 1:
-				case 2:
-				case 3:
-					mob = new MobElfe(spielfeld.getStartY(), spielfeld.getStartX());
-					mobArray[mobNummer++] = mob;
-					break;
-				case 4:
-				case 5:
-				case 6:
-					mob = new MobGnom(spielfeld.getStartY(), spielfeld.getStartX());
-					mobArray[mobNummer++] = mob;
-					break;
-				case 7:
-				case 8:
-					mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
-					mobArray[mobNummer++] = mob;
-					break;
-			}
+			createSpezMob(mobType);
 			
 		}
 		else if (mobNummer == anzahlMobs-1) {
@@ -196,15 +191,39 @@ public class Controller implements IController {
 		}
 	}
 	
+	private void createSpezMob(int mobType) {
+		
+		Mob mob = null;
+		
+		switch(mobType) {
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+			mob = new MobElfe(spielfeld.getStartY(), spielfeld.getStartX());
+			mobArray[mobNummer++] = mob;
+			break;
+		case 4:
+		case 5:
+		case 6:
+			mob = new MobGnom(spielfeld.getStartY(), spielfeld.getStartX());
+			mobArray[mobNummer++] = mob;
+			break;
+		case 7:
+		case 8:
+			mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
+			mobArray[mobNummer++] = mob;
+			break;
+	}
+		
+	}
 
-	
 	// TODO In Clean Code umschreiben
 	private void mobwalk() {
 		indexMob = 0;
 		for(Mob mob : mobArray) {
 			if(mob != null) {
 				if(mob.walk(spielfeld.getfieldArray(), spielfeld.getEmpty())) {
-					System.out.print("ist Mob " + mob.getSymbol() + "\n");
 					player.loseLive();
 					spielfeld.setFieldEmpty(mob.getY(), mob.getX());
 					mobArray[indexMob] = null;
@@ -217,7 +236,9 @@ public class Controller implements IController {
 	}
 
 
-	private void towershot() {
+	private String towershot() {
+		
+		StringBuffer s = new StringBuffer();
 		
 		// gehen jeden Tower durch
 		for(Tower tower : towerArray) {
@@ -229,13 +250,13 @@ public class Controller implements IController {
 					if(mob != null) {
 						
 						for(int i = 0; i < tower.getTowerRadiusLength(); i++) {
-							mobonField(mob, tower, tower.getRangeFieldY()[i] , tower.getRangeFieldX()[i] );
+							mobonField(mob, tower, tower.getRangeFieldY()[i] , tower.getRangeFieldX()[i], s );
 						}
 						
 						
 						// Mob null setzen 
 						if(mob.getHealth() <= 0) {
-							System.out.println(indexMob + "ter Mob " + mob.getSymbol() + "Tod !!!!!");
+							s.append(indexMob + "ter Mob " + mob.getSymbol() + "Tod !!!!!" + "\n");
 							spielfeld.setFieldEmpty(mob.getY(), mob.getX());
 							mobArray[indexMob] = null;
 						}
@@ -244,17 +265,18 @@ public class Controller implements IController {
 				}	
 			}
 		}
+		return s.toString();
 	}
 			
 			
 
 	// TODO In Clean Code umschreiben
-	private void mobonField(Mob mob, Tower tower, int tY, int tX) {
+	public void mobonField(Mob mob, Tower tower, int tY, int tX, StringBuffer s) {
 		if(mob.mobHit(tY, tX)) {
-			System.out.println("Mob " + mob.getSymbol() + "G etroffen !!");
-			System.out.println("Leben vor dem Treffer = " + mob.getHealth());
+			s.append("Mob " + mob.getSymbol() + "Getroffen !!" + "\n")
+			.append("Leben vor dem Treffer = " + mob.getHealth() + "\n");
 			mob.setHealth((mob.getHealth() - tower.getDamage()));
-			System.out.println("Leben nach dem Treffer = " + mob.getHealth());
+			s.append("Leben nach dem Treffer = " + mob.getHealth() + "\n");
 		}
 	}
 
