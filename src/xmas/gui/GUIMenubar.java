@@ -10,30 +10,34 @@ import javax.swing.JMenuItem;
 
 public class GUIMenubar extends JMenuBar implements ActionListener {
 	
-	private JMenu close, submenuSize;
-	private JMenuItem closeItem;
+	private JMenu game, submenuSize;
+	private JMenuItem closeItem, newGameItem;
 	
 	public GUIMenubar() {
 		
 //		Menuelements
-		close = new JMenu("Game");
-		close.setMnemonic(KeyEvent.VK_G);
-		add(close);
+		game = new JMenu("Game");
+		game.setMnemonic(KeyEvent.VK_G);
+		add(game);
 		
 		
 //		In-Menuelements
 		closeItem = new JMenuItem("Close");
 		closeItem.addActionListener(this);
 		closeItem.setMnemonic(KeyEvent.VK_C);
+		newGameItem = new JMenuItem("new Game");
+		newGameItem.addActionListener(this);
+		newGameItem.setMnemonic(KeyEvent.VK_N);
 		
 //		SubMenu Size
 		submenuSize = new JMenu("Select Size");
 		submenuSize.setMnemonic(KeyEvent.VK_S);
 		
 //		add In-Menuelements
-		close.add(submenuSize);
-		close.addSeparator();
-		close.add(closeItem);
+//		close.add(submenuSize);
+		game.add(newGameItem);
+		game.addSeparator();
+		game.add(closeItem);
 	}
 	
 	@Override
