@@ -137,13 +137,7 @@ public class Controller implements IController {
 		
 		// Gehe jeden Tower durch der schießen kann
 		message = towershot();
-		
-		// Test Ausgabe zum Überprüfen
-		for(int i = 0; i < anzahlMobs; i++) {
-			System.out.print(mobArray[i]+", ");
-		}
-		System.out.print("\n\n");
-		
+
 		return 0;
 	}
 	
@@ -187,26 +181,7 @@ public class Controller implements IController {
 			// Randomzahl für Mobart
 			int mobType = new Random().nextInt(11);
 			
-			switch(mobType) {
-				case 0:
-				case 1:
-				case 2:
-				case 3:
-					mob = new MobElfe(spielfeld.getStartY(), spielfeld.getStartX());
-					mobArray[mobNummer++] = mob;
-					break;
-				case 4:
-				case 5:
-				case 6:
-					mob = new MobGnom(spielfeld.getStartY(), spielfeld.getStartX());
-					mobArray[mobNummer++] = mob;
-					break;
-				case 7:
-				case 8:
-					mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
-					mobArray[mobNummer++] = mob;
-					break;
-			}
+			createSpezMob(mobType, mob);
 			
 		}
 		else if (mobNummer == anzahlMobs-1) {
@@ -216,8 +191,31 @@ public class Controller implements IController {
 		}
 	}
 	
+	private void createSpezMob(int mobType , Mob mob) {
+		
+		switch(mobType) {
+		case 0:
+		case 1:
+		case 2:
+		case 3:
+			mob = new MobElfe(spielfeld.getStartY(), spielfeld.getStartX());
+			mobArray[mobNummer++] = mob;
+			break;
+		case 4:
+		case 5:
+		case 6:
+			mob = new MobGnom(spielfeld.getStartY(), spielfeld.getStartX());
+			mobArray[mobNummer++] = mob;
+			break;
+		case 7:
+		case 8:
+			mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
+			mobArray[mobNummer++] = mob;
+			break;
+	}
+		
+	}
 
-	
 	// TODO In Clean Code umschreiben
 	private void mobwalk() {
 		indexMob = 0;

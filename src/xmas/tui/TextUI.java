@@ -110,10 +110,19 @@ public class TextUI {
 	}
 
 	// Verarbeitete Eingabe und verlässt gegenbenfalls Schleife
-	private boolean handleinput() {
+	public boolean handleinput() {
 		boolean create = false;
 		int art = 0;
 		int zeile = 0;
+		
+		if(picTower(art) || picPosition(art, zeile, create)) {
+			return true;
+		}
+		return false;
+		
+	}
+	
+	private boolean picTower(int art) {
 		
 		logger.info( newLine + "Wählen einen Palmentower aus ... " +
 				newLine + "Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
@@ -130,7 +139,11 @@ public class TextUI {
 			return quitOrFailure(input);
 		}
 		
+		return false;
 		
+	}
+		
+	private boolean picPosition(int art, int zeile, boolean create) {
 		
 		logger.info( newLine + "Wähle die Zeile für den Palmentower ... " +
 				newLine + "Zahl von 2 bis " + (y-2) + " | Quit = q");

@@ -9,6 +9,10 @@ import com.google.inject.Injector;
 
 public final class Xmas {
 	
+	private Xmas() {
+		
+	}
+	
 	public static void main(String[] args) {
 		
 		PropertyConfigurator.configure("log4j.properties");
