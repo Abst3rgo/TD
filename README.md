@@ -30,6 +30,16 @@ Sollte es jedoch ein Mob in Ziel schaffen wird dem Spieler eines seiner Leben ab
 Wenn alle Mobs im Ziel angekommen sind oder zerstört wurden beginnt eine neue Runde.
 In dieser kann der Spieler eneut einen neuen Tower setzen woraufhin die Mobs die nun in größer Anzahl erscheinen wieder loslaufen.  
 
+### Structur
+Das Spiel besteht aus mehren Schichten
+* Oberflächen
+  * Tui
+  * Gui
+* Controller
+* Model
+  * Spielfeld
+  * Mobs
+  * Tower
 
 
 
