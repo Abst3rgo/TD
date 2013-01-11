@@ -2,23 +2,29 @@ package xmas.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
+import javax.swing.JRadioButton;
 
-public class GUI extends JFrame {
+public class GUI extends JFrame implements MouseListener, ActionListener {
 	
 	private GUIMenubar menu;
 	private JPanel mainpanel, playerpanel, towerpanel, gamepanel, intowerpanel,
 		lowpanel;
 	private JButton nuss, lametta, kugel;
 	private JLabel towerlabel, playerlife, gametime;
-	private JTextArea gametext;
+	private JRadioButton nuttower, balltower, tinseltower;
 	
 	public GUI() {
 		
@@ -50,12 +56,29 @@ public class GUI extends JFrame {
 		towerpanel = new JPanel();
 		towerpanel.setLayout(new GridLayout(1, 3));
 //		towerpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		nuss = new JButton("Nut");
+	/*	nuss = new JButton("Nut");
+		nuss.addActionListener(this);
 		towerpanel.add(nuss);
 		lametta = new JButton("Tinsel");
+		lametta.addActionListener(this);
 		towerpanel.add(lametta);
 		kugel = new JButton("Ball");
-		towerpanel.add(kugel);
+		kugel.addActionListener(this);
+		towerpanel.add(kugel); */
+		
+		nuttower = new JRadioButton("Nut");
+		balltower = new JRadioButton("Ball");
+		tinseltower = new JRadioButton("Tinsel");
+		ButtonGroup towerselect = new ButtonGroup();
+		
+		towerselect.add(nuttower);
+		towerselect.add(balltower);
+		towerselect.add(tinseltower);
+		
+		towerpanel.add(nuttower);
+		towerpanel.add(balltower);
+		towerpanel.add(tinseltower);
+		
 		
 //		Lowpanel
 		lowpanel = new JPanel();
@@ -69,9 +92,10 @@ public class GUI extends JFrame {
 		gamepanel = new JPanel();
 		gamepanel.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
 //		gamepanel.setBackground(Color.RED);
-		gamepanel.setSize(800, 600);
-		gametext = new JTextArea(8, 40);
-		gamepanel.add(gametext);
+		gamepanel.setPreferredSize(new Dimension(800, 600));
+		gamepanel.setBackground(Color.white);
+		gamepanel.setLayout(null);
+		gamepanel.addMouseListener(this);
 		
 		
 //		Mainpanel
@@ -90,5 +114,48 @@ public class GUI extends JFrame {
 	
 	public static void main(String[] args) {
 		new GUI();
+	}
+
+
+	@Override
+	public void mouseClicked(MouseEvent me) {
+		int x = me.getX();
+		int y = me.getY();
+		System.out.println("X: " + x);
+		System.out.println("Y: " + y);
+		JLabel test1 = new JLabel("test");
+		test1.setBounds(x-10, y-5, 30, 15);
+		gamepanel.add(test1);
+		mainpanel.repaint();
+	}
+
+
+	@Override
+	public void mouseEntered(MouseEvent me) {
+		
+	}
+
+
+	@Override
+	public void mouseExited(MouseEvent me) {
+		
+	}
+
+
+	@Override
+	public void mousePressed(MouseEvent me) {
+		
+	}
+
+
+	@Override
+	public void mouseReleased(MouseEvent me) {
+		
+	}
+
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		
 	}
 }
