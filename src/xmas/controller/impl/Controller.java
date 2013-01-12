@@ -31,6 +31,10 @@ public class Controller implements IController {
 		this.player = new Player("Player1");
 	}
 	
+	public boolean erstelleTower(int art, int spalte, int zeile) {
+		return gameHandler.erstelleTower(art, spalte, zeile);
+	}
+	
 	public void setSpielfeld(String groese) {
 		this.spielfeld  = new Spielfeld(groese);
 		this.gameHandler =  new GameHandler(spielfeld, player);

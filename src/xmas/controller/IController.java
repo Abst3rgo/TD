@@ -24,4 +24,6 @@ public interface IController {
 	// Set the Battelfield to a specific size
 	void setSpielfeld(String input);
 
+	boolean erstelleTower(int art, int parseInt, int zeile);
+
 }

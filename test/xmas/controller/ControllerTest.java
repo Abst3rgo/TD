@@ -38,16 +38,11 @@ public class ControllerTest extends TestCase {
 		assertEquals(0,controller.startGame());
 		controller.setPlayerLive(0);
 		assertEquals(-1,controller.startGame());
-		for(int i = 0; i <= 12; i++) {
+		for(int i = 0; i <= 4; i++) {
 			controller.startGame();
 		}
-		controller.clearArrays();
+		
 		assertEquals(1,controller.startGame());
-		StringBuffer s = null;
-		controller.mobonField(mob, tower, 3, 3, s);
-
-		
-		
 	}
 
 }
