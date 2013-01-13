@@ -16,15 +16,16 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 public class GUI extends JFrame implements MouseListener, ActionListener {
 	
 	private GUIMenubar menu;
 	private JPanel mainpanel, playerpanel, towerpanel, gamepanel, intowerpanel,
 		lowpanel;
-	private JButton nuss, lametta, kugel;
 	private JLabel towerlabel, playerlife, gametime;
 	private JRadioButton nuttower, balltower, tinseltower;
+	private JTextField displaylife;
 	
 	public GUI() {
 		
@@ -40,12 +41,17 @@ public class GUI extends JFrame implements MouseListener, ActionListener {
 		
 //		Toppanel/Playerpanel
 		playerpanel = new JPanel();
-		playerpanel.setLayout(new GridLayout(1, 2));
+		playerpanel.setLayout(new GridLayout(1, 4));
 		playerpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		playerlife = new JLabel("Life:");
-		gametime = new JLabel("Time:");
+		displaylife = new JTextField("3");
+		displaylife.setEditable(false);
+//		gametime = new JLabel("Time:");
 		playerpanel.add(playerlife);
-		playerpanel.add(gametime);
+		playerpanel.add(displaylife);
+//		playerpanel.add(gametime);
+		
+		
 		
 //		InTowerPanel
 		intowerpanel = new JPanel();
@@ -56,15 +62,6 @@ public class GUI extends JFrame implements MouseListener, ActionListener {
 		towerpanel = new JPanel();
 		towerpanel.setLayout(new GridLayout(1, 3));
 //		towerpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-	/*	nuss = new JButton("Nut");
-		nuss.addActionListener(this);
-		towerpanel.add(nuss);
-		lametta = new JButton("Tinsel");
-		lametta.addActionListener(this);
-		towerpanel.add(lametta);
-		kugel = new JButton("Ball");
-		kugel.addActionListener(this);
-		towerpanel.add(kugel); */
 		
 		nuttower = new JRadioButton("Nut");
 		balltower = new JRadioButton("Ball");
@@ -76,6 +73,7 @@ public class GUI extends JFrame implements MouseListener, ActionListener {
 		towerselect.add(tinseltower);
 		
 		towerpanel.add(nuttower);
+		nuttower.setSelected(true);
 		towerpanel.add(balltower);
 		towerpanel.add(tinseltower);
 		
