@@ -23,7 +23,7 @@ public class GUI extends JFrame implements MouseListener, ActionListener {
 	private GUIMenubar menu;
 	private JPanel mainpanel, playerpanel, towerpanel, gamepanel, intowerpanel,
 		lowpanel;
-	private JLabel towerlabel, playerlife, gametime;
+	private JLabel towerlabel, playerlife;
 	private JRadioButton nuttower, balltower, tinseltower;
 	private JTextField displaylife;
 	
@@ -44,12 +44,10 @@ public class GUI extends JFrame implements MouseListener, ActionListener {
 		playerpanel.setLayout(new GridLayout(1, 4));
 		playerpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		playerlife = new JLabel("Life:");
-		displaylife = new JTextField("3");
+		displaylife = new JTextField("3"); //player.getlife() usw.
 		displaylife.setEditable(false);
-//		gametime = new JLabel("Time:");
 		playerpanel.add(playerlife);
 		playerpanel.add(displaylife);
-//		playerpanel.add(gametime);
 		
 		
 		
@@ -89,7 +87,6 @@ public class GUI extends JFrame implements MouseListener, ActionListener {
 //		Gamepanel
 		gamepanel = new JPanel();
 		gamepanel.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
-//		gamepanel.setBackground(Color.RED);
 		gamepanel.setPreferredSize(new Dimension(800, 600));
 		gamepanel.setBackground(Color.white);
 		gamepanel.setLayout(null);
@@ -119,10 +116,28 @@ public class GUI extends JFrame implements MouseListener, ActionListener {
 	public void mouseClicked(MouseEvent me) {
 		int x = me.getX();
 		int y = me.getY();
-		System.out.println("X: " + x);
-		System.out.println("Y: " + y);
 		JLabel test1 = new JLabel("test");
 		test1.setBounds(x-10, y-5, 30, 15);
+		if (nuttower.isSelected()) {
+/*			Erzeuge neuen Tower
+			
+			gamepanel.add(tower);
+			mainpanel.repaint();
+			
+			*/
+		} else if (tinseltower.isSelected()) {
+			/* erzeuge neuen tower
+			 * 
+			 * gamepanel.add(tower);
+			 * mainpanel.repaint();
+			 */
+		} else if (balltower.isSelected()) {
+			/* erzeuge neuen tower
+			 * 
+			 * gamepanel.add(tower);
+			 * mainpanel.repaint();
+			 */
+		}
 		gamepanel.add(test1);
 		mainpanel.repaint();
 	}

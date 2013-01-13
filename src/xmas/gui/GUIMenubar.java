@@ -46,6 +46,8 @@ public class GUIMenubar extends JMenuBar implements ActionListener {
 		
 		if(source == closeItem) {
 			System.exit(0);
+		} else if (source == newGameItem) {
+			new GUI();
 		}
 	}
 
