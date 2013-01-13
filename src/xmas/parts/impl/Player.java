@@ -1,6 +1,8 @@
 package xmas.parts.impl;
 
-public class Player {
+import xmas.parts.IPlayer;
+
+public class Player implements IPlayer {
 	
 	private int anzleben = 30;
 	private String name = "";
