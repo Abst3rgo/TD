@@ -11,14 +11,13 @@ import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
-public class GUI extends JFrame implements MouseListener, ActionListener {
+public class GUI extends JFrame implements MouseListener {
 	
 	private GUIMenubar menu;
 	private JPanel mainpanel, playerpanel, towerpanel, gamepanel, intowerpanel,
@@ -167,8 +166,4 @@ public class GUI extends JFrame implements MouseListener, ActionListener {
 	}
 
 
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		
-	}
 }
