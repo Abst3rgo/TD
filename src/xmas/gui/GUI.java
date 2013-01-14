@@ -8,9 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
+import javax.imageio.ImageIO;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -20,14 +25,16 @@ import javax.swing.JTextField;
 public class GUI extends JFrame implements MouseListener {
 	
 	private GUIMenubar menu;
-	private JPanel mainpanel, playerpanel, towerpanel, gamepanel, intowerpanel,
-		lowpanel;
+	private JPanel mainpanel, playerpanel, towerpanel;
+	private static JPanel gamepanel;
+	private JPanel intowerpanel;
+	private JPanel lowpanel;
 	private JLabel towerlabel, playerlife;
 	private JRadioButton nuttower, balltower, tinseltower;
 	private JTextField displaylife;
 	
 	public GUI() {
-		
+				
 //		Mainwindow
 		setTitle("X-Mas Defense");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -62,17 +69,17 @@ public class GUI extends JFrame implements MouseListener {
 		
 		nuttower = new JRadioButton("Nut");
 		balltower = new JRadioButton("Ball");
-		tinseltower = new JRadioButton("Tinsel");
+//		tinseltower = new JRadioButton("Tinsel");
 		ButtonGroup towerselect = new ButtonGroup();
 		
 		towerselect.add(nuttower);
 		towerselect.add(balltower);
-		towerselect.add(tinseltower);
+//		towerselect.add(tinseltower);
 		
 		towerpanel.add(nuttower);
 		nuttower.setSelected(true);
 		towerpanel.add(balltower);
-		towerpanel.add(tinseltower);
+//		towerpanel.add(tinseltower);
 		
 		
 //		Lowpanel
@@ -108,6 +115,15 @@ public class GUI extends JFrame implements MouseListener {
 	
 	public static void main(String[] args) {
 		new GUI();
+		
+//		Number = refresh in milliseconds
+		javax.swing.Timer t = new javax.swing.Timer(25, new ActionListener() {
+
+			public void actionPerformed( ActionEvent e ) {
+			    gamepanel.repaint();
+			}
+			});
+			t.start();
 	}
 
 
@@ -115,30 +131,40 @@ public class GUI extends JFrame implements MouseListener {
 	public void mouseClicked(MouseEvent me) {
 		int x = me.getX();
 		int y = me.getY();
-		JLabel test1 = new JLabel("test");
-		test1.setBounds(x-10, y-5, 30, 15);
+		
+//		load Images
+		BufferedImage nutimage = null;
+		try {
+			nutimage = ImageIO.read(new File("images/palmfinal.gif"));
+		} catch (IOException e) { }
+		
+		BufferedImage ballimage = null;
+		try {
+			ballimage = ImageIO.read(new File("images/xmastreefinal.png"));
+		} catch (IOException e) { }
+		
 		if (nuttower.isSelected()) {
-/*			Erzeuge neuen Tower
+//		Erzeuge neuen Tower
 			
-			gamepanel.add(tower);
+			JLabel nutlabel = new JLabel(new ImageIcon(nutimage));
+			nutlabel.setBounds(x-20, y-20, 40, 40);
+			gamepanel.add(nutlabel);
 			mainpanel.repaint();
 			
-			*/
-		} else if (tinseltower.isSelected()) {
-			/* erzeuge neuen tower
+
+	/*	}  else if (tinseltower.isSelected()) {
+			* erzeuge neuen tower
 			 * 
 			 * gamepanel.add(tower);
 			 * mainpanel.repaint();
 			 */
 		} else if (balltower.isSelected()) {
-			/* erzeuge neuen tower
-			 * 
-			 * gamepanel.add(tower);
-			 * mainpanel.repaint();
-			 */
+			
+			JLabel balllabel = new JLabel(new ImageIcon(ballimage));
+			balllabel.setBounds(x-20, y-20, 40, 40);
+			gamepanel.add(balllabel);
+			mainpanel.repaint();
 		}
-		gamepanel.add(test1);
-		mainpanel.repaint();
 	}
 
 
