@@ -1,7 +1,6 @@
 package xmas.controller.impl;
 
 
-import xmas.application.Timer;
 import xmas.controller.IController;
 import xmas.parts.impl.GameHandler;
 
@@ -77,6 +76,7 @@ public class Controller implements IController {
 		// Wenn Welle vorüber ?
 		if(gameHandler.waveOver()){
 			timer.resetTimer();
+			timer.startTimer();
 			return 1;
 		}
 		

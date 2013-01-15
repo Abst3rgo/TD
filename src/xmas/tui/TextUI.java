@@ -15,6 +15,10 @@ public class TextUI {
 	private int y;
 	private int x;
 	
+	int art = 0;
+	int spalte = 0;
+	int zeile  = 0;
+	
 	
 	private StringBuffer buffer = new StringBuffer();
 	private String newLine = System.getProperty("line.separator");
@@ -65,71 +69,23 @@ public class TextUI {
 			printTui(controller.getSpielfeld());
 				
 	}
-	
-/*
-	// WICHTIG !!!!!!!!!!
-	// Schleife die bis zum verlassen durchläuft
-	public boolean iterate() {
-		boolean quit = false;
-		// User input and Tower set // Modus 1
-		if(!mode2) {
-			quit = handleinput();
-			if(!quit) {
-				logger.info( newLine + controller.getSpielfeld());
-			}
-			if(timeOut) {
-				mode2 = true;
-			}
-		}
-		// Create and Move Mobs // Modus 2
-		if(!quit && mode2) {
-			time = 10;
-			timeOut = false;
-			
-			// Wenn Welle vorüber gehe zu Modus 1 zurück
-			int erg = controller.startGame();
-			logger.info( newLine + controller.getGameMessage());
-			logger.info( newLine + controller.getSpielfeld());
-			if(erg == 1) {
-				mode2 = false;
-			}
-			else if( erg == -1) {
-				quit = true;
-				logger.info( newLine + "VERLOREN !!!!");
-			}
-		}
-		return quit;
-	}
-	
-	*/
-
 
 	public void printInstuktion(int i) {
 		if(i == 0) {
 			printTui("Wählen einen Palmentower aus ... " +
-					newLine + "Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
+					newLine + "Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = u.a ");
 		}
 		else if(i == 1) {
-			printTui("Wähle die Zeile für den Palmentower ... " +
+			printTui("Wähle die Spalte für den Palmentower ... " +
 				newLine + "Zahl von 2 bis " + (y-2));
 		}
 		else {
-			printTui("Wähle Spalte für den Palmentower ... " +
+			printTui("Wähle Zeile für den Palmentower ... " +
 					newLine + " Zahl von 2 bis " + (x-2));
 		}
 	}
 
-
-	public void printTui(String ausgabe) {
-		logger.info(newLine + ausgabe);
-	}
-
-
 	public boolean handleInput(String input, int index) {
-		
-		int art = 0;
-		int spalte = 0;
-		int zeile  = 0;
 		
 		// erster Durchgang wähle Towerart
 		if(index == 0) {
@@ -156,33 +112,26 @@ public class TextUI {
 		}
 		
 		// dritter Durchgang wähel Zeile
-		else if(index == 2) {
+		else {
 			zeile = Integer.parseInt(input);
 			if ( zeile < 2 && zeile > x) {
 				return true;
 			}
 			
-			controller.erstelleTower(art, spalte, zeile);
-			printTui(controller.getSpielfeld());
-		}
-		else {
-			printTui("Fehler");
+			createTower();
 		}
 		return false;
 	}
-	
-	/*
-	public boolean quitOrFailure(String input, int index) {
-		// if Q is pressed Game quits
-		if(input.equalsIgnoreCase("q")) {
-			logger.info( newLine + "!!! Spiel wird beendet !!!");
-			return true;
-		} else {
-			logger.info( newLine + "!!! Falsche Eingabe. Bitte erneut setzen");
-			iterate(int i, String input)
-			return false;	
-		}	
+
+	private void createTower() {
+		if(!controller.erstelleTower(art, spalte, zeile)) {
+			printTui("Tower konnte nicht gesetz werden ! ");
+		}
+		printTui(controller.getSpielfeld());
 	}
-	*/
+	
+	public void printTui(String ausgabe) {
+		logger.info(newLine + ausgabe);
+	}
 
 }

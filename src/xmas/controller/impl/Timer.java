@@ -1,9 +1,9 @@
-package xmas.application;
+package xmas.controller.impl;
 
 public class Timer {
 	
 	private Thread timer;
-	private int time = 5;
+	private int time = 10;
 	private final int sleepTimeMS = 1000;
 	private boolean timeOut;
 	
@@ -15,7 +15,8 @@ public class Timer {
 	}
 	
 	public void startTimer(){
-		
+		timer = new Thread(new Time());
+		timer.start();
 	}
 	
 	public boolean timeOver() {
@@ -23,7 +24,6 @@ public class Timer {
 	}
 	
 	public void resetTimer() {
-		timer.stop();
 		time = 10;
 		this.timeOut = false;
 		System.out.println("Timer resetet: TimeOut = " + timeOut);
@@ -35,7 +35,7 @@ public class Timer {
 		
 		public void run() {
 			try {
-				while(true) {
+				while(!timeOut) {
 					if(time != 0) {
 						sleep(sleepTimeMS);
 						time--;
