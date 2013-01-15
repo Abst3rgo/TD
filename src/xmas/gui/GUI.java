@@ -21,6 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import xmas.controller.impl.Controller;
 
 public class GUI extends JFrame implements MouseListener {
 	
@@ -33,6 +34,7 @@ public class GUI extends JFrame implements MouseListener {
 	private JRadioButton nuttower, balltower, tinseltower;
 	private JTextField displaylife;
 	private JLabel[][] felder = new JLabel[20][20];
+	private int width, height;
 	
 	public GUI() {
 				
@@ -44,6 +46,9 @@ public class GUI extends JFrame implements MouseListener {
 //		Menubar
 		menu = new GUIMenubar();
 		setJMenuBar(menu);
+		
+//		width = xmas.controller.impl.Controller.getSpielfeldX();
+//		height = xmas.controller.impl.Controller.getSpielfeldY();
 		
 		
 //		Toppanel/Playerpanel
