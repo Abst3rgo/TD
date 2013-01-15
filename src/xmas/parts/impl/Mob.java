@@ -95,7 +95,7 @@ public class Mob {
 		}
 					
 		// Nach oben laufen ?
-		else if(fieldArray[y-1][(x)] == empty && !visitField[(y-1)][x]) {
+		else if(fieldArray[y-1][(x)] == empty) {
 			visitField[(y-1)][x] = true;
 			oldY = y;
 			oldX = x;
@@ -104,7 +104,7 @@ public class Mob {
 		}	
 		// unötig da Mob IMMER laufen kann
 		else {
-			// TODO FEHLER NACHEM MOBS LANGE GELAUFEN SIND ???????????
+			// TODO FEHLER NACH DEM MOBS LANGE GELAUFEN SIND ???????????
 			logger.error("\n FEHLER !!!!!!!!!!!!!!!!!!");
 			return true;
 		}
@@ -118,6 +118,10 @@ public class Mob {
 			return true;
 		}
 		return false;
+	}
+
+	public double getSpeed() {
+		return 0;
 	}
 	
 } // End Class

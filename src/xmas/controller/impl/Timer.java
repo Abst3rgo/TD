@@ -26,7 +26,6 @@ public class Timer {
 	public void resetTimer() {
 		time = 10;
 		this.timeOut = false;
-		System.out.println("Timer resetet: TimeOut = " + timeOut);
 	}
 	
 	// -------------------------Timer Thread Inner Class----------------------------

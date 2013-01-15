@@ -1,6 +1,5 @@
 package xmas.parts.impl;
 
-import java.util.Arrays;
 import java.util.Random;
 
 import xmas.parts.IGameHandler;
@@ -33,14 +32,6 @@ public class GameHandler implements IGameHandler {
 		this.spielfeld = spielfeld;
 		this.player = player;
 		towerArray = new Tower[(spielfeld.getY()-3)*(spielfeld.getX()-3)];
-	}
-	
-	//------------------------------------Get/Set/... -------------------------------
-	
-	public void clearArrays() {
-		Arrays.fill(mobArray,null);
-		Arrays.fill(towerArray,null);
-		
 	}
 	
 	
@@ -147,7 +138,7 @@ public class GameHandler implements IGameHandler {
 			mob = new MobRentier(spielfeld.getStartY(), spielfeld.getStartX());
 			mobArray[mobNummer++] = mob;
 			break;
-	}
+		}
 		
 	}
 

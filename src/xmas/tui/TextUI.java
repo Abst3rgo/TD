@@ -89,13 +89,13 @@ public class TextUI {
 		
 		// erster Durchgang wähle Towerart
 		if(index == 0) {
-			if(input.equals("K") || input.equals("k")) {
+			if(input.equalsIgnoreCase("k")) {
 				art = 0;
 			}
-			else if(input.equals("L") || input.equals("l")) {
+			else if(input.equalsIgnoreCase("l")) {
 				art = 1;
 			}
-			else if(input.equals("c") || input.equals("C")) {
+			else if(input.equalsIgnoreCase("c")) {
 				art = 2;
 			} 
 			else {
@@ -106,7 +106,7 @@ public class TextUI {
 		// zweiter Durchgang wähle Spalte
 		else if(index == 1) {
 			spalte = Integer.parseInt(input);
-			if ( spalte < 2 && spalte > y) {
+			if ( spalte < 2 || spalte > y) {
 				return true;
 			}
 		}
@@ -114,7 +114,7 @@ public class TextUI {
 		// dritter Durchgang wähel Zeile
 		else {
 			zeile = Integer.parseInt(input);
-			if ( zeile < 2 && zeile > x) {
+			if ( zeile < 2 || zeile > x) {
 				return true;
 			}
 			

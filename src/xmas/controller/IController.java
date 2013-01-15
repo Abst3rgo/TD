@@ -9,10 +9,10 @@ public interface IController {
 	// Returns the width of the Battelfield
 	int getSpielfeldX();
 
-	// Returns a Message for the User
+	// Returns a Message for the User // TUI
 	String getStartMessage();
 	
-	// Returns important Informations for the User
+	// Returns important Informations for the User // TUI 
 	String getGameMessage();
 
 	// Retruns a String that includes the Battelfield for the Tui
@@ -24,8 +24,10 @@ public interface IController {
 	// Set the Battelfield to a specific size
 	void setSpielfeld(String input);
 
-	boolean erstelleTower(int art, int parseInt, int zeile);
+	// erstellt Tower auf der Art auf den vorgegebenen Feldern
+	boolean erstelleTower(int art, int spalte, int zeile);
 	
+	// Retruns true wenn 30 Sec rum und Mobs losslaufen 
 	boolean timeOver();
 
 

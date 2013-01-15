@@ -22,7 +22,9 @@ public class MobTest extends TestCase {
 		assertEquals(null, mob.getSymbol());
 		assertEquals(null, mob.getArt());
 		assertEquals(0, mob.getHealth());
+		assertEquals(0.0, mob.getSpeed());
 		mob.setHealth(0);
+		
 		// If Branch
 		assertEquals(true, mob.mobHit(2, 2));
 		assertEquals(false, mob.mobHit(3, 4));

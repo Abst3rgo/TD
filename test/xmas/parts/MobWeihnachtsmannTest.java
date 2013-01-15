@@ -14,7 +14,7 @@ public class MobWeihnachtsmannTest extends TestCase {
 	
 	public void testGetValue() {
 		// GetMehtode
-		assertEquals(100, mob.getHealth());
+		assertEquals(50, mob.getHealth());
 		assertEquals(1.0, mob.getSpeed());
 		assertEquals("&&", mob.getSymbol());
 		// SetMehtode

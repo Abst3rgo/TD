@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import org.apache.log4j.PropertyConfigurator;
 
+import xmas.gui.GUI;
 import xmas.tui.TextUI;
 
 import com.google.inject.Guice;
@@ -26,6 +27,8 @@ public final class Xmas {
 		Injector injector = Guice.createInjector(new XmasModule());
 		
 		TextUI tui = injector.getInstance(TextUI.class);
+		
+		//GUI gui = new GUI();
 		
 		
 		@SuppressWarnings("resource")
