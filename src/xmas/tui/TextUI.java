@@ -15,9 +15,9 @@ public class TextUI {
 	private int y;
 	private int x;
 	
-	int art = 0;
-	int spalte = 0;
-	int zeile  = 0;
+	private int art = 0;
+	private int spalte = 0;
+	private int zeile  = 0;
 	
 	
 	private StringBuffer buffer = new StringBuffer();

@@ -20,7 +20,7 @@ public class GameHandler implements IGameHandler {
 	private Tower[] towerArray;
 	private int numberTower = 0;
 	
-	private static final int delayTimeMS = 1000;
+	private final static int delayTimeMS = 1000;
 	
 	
 	

@@ -233,9 +233,7 @@ public class Spielfeld implements ISpielfeld {
 	
 
 	private boolean reachEnd(int y, int x) {
-		if(fieldArray[y+1][x].equals("En") 
-				/*|| fieldArray[y-1][x].equals("En") || fieldArray[y][x+1].equals("En") || fieldArray[y][x-1].equals("En")*/
-				) {
+		if(fieldArray[y+1][x].equals("En")) {
 			return true;
 		}
 		return false;
