@@ -11,7 +11,7 @@ import junit.framework.TestCase;
 
 public class GameHandlerTest extends TestCase {
 	
-	IGameHandler gameHandler;
+	GameHandler gameHandler;
 	Mob mob;
 	IPlayer player;
 	Spielfeld spielfeld;

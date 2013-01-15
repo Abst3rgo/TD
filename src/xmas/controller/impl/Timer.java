@@ -4,7 +4,7 @@ public class Timer {
 	
 	private Thread timer;
 	private int time = 10;
-	private final static int sleepTimeMS = 1000;
+	private static final int sleepTimeMS = 1000;
 	private boolean timeOut;
 	
 	// --------------------------Konstuktor Get/Set---------------------------
