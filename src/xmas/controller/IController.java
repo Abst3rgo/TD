@@ -29,6 +29,9 @@ public interface IController {
 	
 	// Retruns true wenn 30 Sec rum und Mobs losslaufen 
 	boolean timeOver();
+	
+	// Return the Array of the Field for the GUI
+	String[][] getSpielfeldArray();
 
 
 }

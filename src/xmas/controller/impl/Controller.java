@@ -67,6 +67,10 @@ public class Controller implements IController {
 	public void setPlayerLive(int life) {
 		player.setLive(life);
 	}
+	
+	public String[][] getSpielfeldArray() {
+		return spielfeld.getfieldArray();
+	}
 
 	
 	// Return: -1 = SpielerTod / 0 = Spiel geht weiter / 1 = Welle vorüber
@@ -102,6 +106,8 @@ public class Controller implements IController {
 
 		return 0;
 	}
+
+	
 	
 	
 	
