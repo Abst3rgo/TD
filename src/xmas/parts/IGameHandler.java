@@ -30,5 +30,8 @@ public interface IGameHandler {
 	// Ceck if a spezific Mob is on a Field that a Tower can reach
 	public void mobonField(Mob mob, Tower tower, int tY, int tX, StringBuffer s);
 	
+	// Check mob health == 0 and delete him from array
+	public void killMob(Mob mob, StringBuffer s );
+	
 
 }

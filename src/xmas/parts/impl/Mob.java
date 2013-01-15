@@ -1,6 +1,5 @@
 package xmas.parts.impl;
 
-import org.apache.log4j.Logger;
 
 public class Mob {
 
@@ -10,8 +9,6 @@ public class Mob {
 	private int oldX = 0;
 	private int oldY = 0;
 	private boolean[][] visitField;
-	
-	private Logger logger = Logger.getLogger("xmas.parts.impl.Mob");
 
 	
 	public Mob(int y, int x) {
@@ -95,20 +92,13 @@ public class Mob {
 		}
 					
 		// Nach oben laufen ?
-		else if(fieldArray[y-1][(x)] == empty) {
+		else {
 			visitField[(y-1)][x] = true;
 			oldY = y;
 			oldX = x;
 			y--;
 			return false;
 		}	
-		// unötig da Mob IMMER laufen kann
-		else {
-			// TODO FEHLER NACH DEM MOBS LANGE GELAUFEN SIND ???????????
-			logger.error("\n FEHLER !!!!!!!!!!!!!!!!!!");
-			return true;
-		}
-		
 	}
 
 	public boolean zielEreicht(String[][] fieldArray) {

@@ -12,7 +12,7 @@ public class GameHandler implements IGameHandler {
 	private ISpielfeld spielfeld;
 	private IPlayer player;
 	
-	private int anzahlMobs = 2;
+	private int anzahlMobs = 3;
 	private Mob[] mobArray;
 	private int mobNummer = 0;
 	private int indexMob = 0;
@@ -177,19 +177,21 @@ public class GameHandler implements IGameHandler {
 							mobonField(mob, tower, tower.getRangeFieldY()[i] , tower.getRangeFieldX()[i], s );
 						}
 						
-						
-						// Mob null setzen 
-						if(mob.getHealth() <= 0) {
-							s.append(indexMob + "ter Mob " + mob.getSymbol() + "Tod !!!!!" + "\n");
-							spielfeld.setFieldEmpty(mob.getY(), mob.getX());
-							mobArray[indexMob] = null;
-						}
+						killMob(mob, s);
 					}
 					indexMob++;
 				}	
 			}
 		}
 		return s.toString();
+	}
+	
+	public void killMob(Mob mob, StringBuffer s) {
+		if(mob.getHealth() <= 0) {
+			s.append(indexMob + "ter Mob " + mob.getSymbol() + "Tod !!!!!" + "\n");
+			spielfeld.setFieldEmpty(mob.getY(), mob.getX());
+			mobArray[indexMob] = null;
+		}
 	}
 			
 			

@@ -33,11 +33,15 @@ public class GameHandlerTest extends TestCase {
 	public void testGetValue() {
 		
 		gameHandler.createSpezMob(8);
+		gameHandler.createSpezMob(5);
 		gameHandler.createSpezMob(1);
-		//gameHandler.createSpezMob(5);
 		
 		gameHandler.mobonField(mob, tower, 2, 3, s);
 		gameHandler.mobonField(mob, tower, 2, 2, s);
+		
+		mob.setHealth(0);
+		gameHandler.killMob(mob, s);
+		
 		
 	
 		
