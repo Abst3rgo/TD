@@ -50,6 +50,8 @@ public class GUI extends JFrame implements MouseListener {
 		playerpanel = new JPanel();
 		playerpanel.setLayout(new GridLayout(1, 4));
 		playerpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+		
+//		Life/Leben
 		playerlife = new JLabel("Life:");
 		displaylife = new JTextField("3"); //TODO player.getlife() usw.
 		displaylife.setEditable(false);
@@ -58,16 +60,15 @@ public class GUI extends JFrame implements MouseListener {
 		
 		
 		
-//		InTowerPanel
+//		Select TowerPanel/Auswahl Tower
 		intowerpanel = new JPanel();
 		towerlabel = new JLabel("Select Tower:");
 		intowerpanel.add(towerlabel);
 		
-//		Towerpanel
+//		Towerpanel/Auswahl Tower
 		towerpanel = new JPanel();
 		towerpanel.setLayout(new GridLayout(1, 3));
-//		towerpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
-		
+//		TowerButtonGroup/Gruppe von Tower
 		nuttower = new JRadioButton("Nut");
 		balltower = new JRadioButton("Ball");
 //		tinseltower = new JRadioButton("Tinsel");
@@ -83,7 +84,7 @@ public class GUI extends JFrame implements MouseListener {
 //		towerpanel.add(tinseltower);
 		
 		
-//		Lowpanel
+//		Lowpanel/unteres Panel
 		lowpanel = new JPanel();
 		lowpanel.setLayout(new GridLayout(2, 1));
 		lowpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -91,13 +92,14 @@ public class GUI extends JFrame implements MouseListener {
 		lowpanel.add(towerpanel);
 		
 		
-//		Gamepanel
+//		Gamepanel/Spielfeld
 		gamepanel = new JPanel();
 		gamepanel.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
 		gamepanel.setPreferredSize(new Dimension(800, 800));
 		gamepanel.setBackground(Color.white);
 		gamepanel.setLayout(new GridLayout(20, 20));
-		
+	
+//		Schachbrett mit Jlabels
 		for (int x = 0; x < 20; x++) {
 			for (int y = 0; y < 20; y++) {
 				felder[x][y] = new JLabel();
@@ -106,6 +108,7 @@ public class GUI extends JFrame implements MouseListener {
 				gamepanel.add(felder[x][y]);
 			}
 		}
+//		Start+End
 		felder[0][10].setText("Start");
 		felder[19][10].setText("End");
 		
@@ -126,8 +129,8 @@ public class GUI extends JFrame implements MouseListener {
 	public static void main(String[] args) {
 		new GUI();
 		
-//		Number = refresh in milliseconds
-		javax.swing.Timer t = new javax.swing.Timer(25, new ActionListener() {
+//		Spielfeld zeichnet sich pro Sekunde 1 mal neu
+		javax.swing.Timer t = new javax.swing.Timer(1000, new ActionListener() {
 
 			public void actionPerformed( ActionEvent e ) {
 			    gamepanel.repaint();
@@ -160,16 +163,19 @@ public class GUI extends JFrame implements MouseListener {
 
 		JLabel label = (JLabel) me.getSource();
 		
+//		Icon für NussTower als JLabelIcon
 		BufferedImage nutimage = null;
 		try {
 			nutimage = ImageIO.read(new File("images/palmfinal.gif"));
 		} catch (IOException e) { System.exit(0); }
 		
+//		Icon für Kugeltower als JLabelIcon
 		BufferedImage ballimage = null;
 		try {
 			ballimage = ImageIO.read(new File("images/xmastreefinal.png"));
 		} catch (IOException e) { System.exit(0); }
 		
+//		schaut welches JLabel ausgewählt wurde und setzt das Icon für das Label
 		for (int x = 0; x < 20; x++) {
 			for (int y = 0; y < 20; y++) {
 				if (felder[x][y] == label && nuttower.isSelected()) {
