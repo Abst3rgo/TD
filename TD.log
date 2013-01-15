@@ -359,3 +359,2614 @@ INFO main xmas.tui -
 INFO main xmas.tui - 
 Wählen einen Palmentower aus ... 
 Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+3  ## mt .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+3  ## ^^ .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+Fehler
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+Fehler
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+K| ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+K| ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+K| ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## ** .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## ** .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## ** .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## ** .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## ** .. .. .. .. ## 
+6  ## ^^ .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## ** .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## ^^ .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## ^^ .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## ** .. .. .. .. ## 
+6  ## ^^ .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## ** .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## ** .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## ** .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+K| ## mt .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## mt .. .. .. .. ## 
+4  ## mt .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## mt .. .. .. .. ## 
+5  ## mt .. .. .. .. ## 
+6  ## ^^ .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## mt .. .. .. .. ## 
+6  ## mt .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## mt .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+K| ## mt .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## ^^ .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## mt .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## mt .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## mt .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## mt .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Welle vorüber !
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+K| ## mt .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## mt .. .. .. .. ## 
+4  ## mt .. .. .. .. ## 
+5  ## ** .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## mt .. .. .. .. ## 
+5  ## mt .. .. .. .. ## 
+6  ## ** .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## mt .. .. .. .. ## 
+6  ## mt .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## mt .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Welle vorüber !
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## mt .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## mt .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## mt .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## ** .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## ** .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Welle vorüber !
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## ^^ .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Welle vorüber !
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ^^ .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## ^^ .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## ^^ .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## ^^ .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## ^^ .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Welle vorüber !
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+K| ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## && .. .. .. .. ## 
+4  ## ** .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## ** .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## && .. .. .. .. ## 
+6  ## ** .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## && .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Welle vorüber !
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Wähle die Zeile für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Spalte für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+K| ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q 
+INFO main xmas.tui - 
+Spiel Beendet !!!!

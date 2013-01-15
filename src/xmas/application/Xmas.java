@@ -1,5 +1,7 @@
 package xmas.application;
 
+import java.util.Scanner;
+
 import org.apache.log4j.PropertyConfigurator;
 
 import xmas.tui.TextUI;
@@ -9,9 +11,13 @@ import com.google.inject.Injector;
 
 public final class Xmas {
 	
+	
 	private Xmas() {
 		
 	}
+
+	
+	//------------------------------------------Main Mehtode Start Programm-----------------------------
 	
 	public static void main(String[] args) {
 		
@@ -21,13 +27,34 @@ public final class Xmas {
 		
 		TextUI tui = injector.getInstance(TextUI.class);
 		
+		
+		@SuppressWarnings("resource")
+		Scanner scanner = new Scanner(System.in);
+		
 		// StartMessage
-		tui.printMenue();
-		// Dauerschleife
+		tui.printStartMenue();
+		tui.setStartMenue(scanner.next());
+		
+		
+		// Dauerschleife die bei Ablauf der Zeit vom Setzen auf den Spielen Modus wechselt
 		boolean quit = false;
+		
 		while (!quit) {
-		    quit = tui.iterate();
+			
+			if(!tui.timeOver()) {
+				for(int i = 0; i < 3; i++) {
+					tui.printInstuktion(i);
+					quit = tui.handleInput(scanner.next(), i);
+					if(quit) {
+						break;
+					}
+				}
+			} 
+			else {
+				tui.iterate();
+			}
 		}
+		tui.printTui("Spiel Beendet !!!!");
 	}
 }
 

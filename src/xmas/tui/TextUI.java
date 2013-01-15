@@ -1,6 +1,5 @@
 package xmas.tui;
 
-import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
@@ -15,66 +14,59 @@ public class TextUI {
 	private IController controller;
 	private int y;
 	private int x;
-	private boolean mode2 = false;
-	private Thread timer = new Thread(new Timer());
-	private Scanner scanner;
-	private String input = "";
 	
 	
+	private StringBuffer buffer = new StringBuffer();
 	private String newLine = System.getProperty("line.separator");
 	private Logger logger = Logger.getLogger("xmas.tui");
 	
-	private int time = 3;
-	private static final int sleepTimeMS = 1000;
-	private boolean timeOut;
-	
-	public class Timer extends Thread {
-		
-		public void run() {
-			try {
-				while(true) {
-					if(time != 0) {
-						sleep(sleepTimeMS);
-						time--;
-					} else {
-						timeOut = true;
-					}
-				}
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-			}
-		}
-	}
 
 	//Konstruktor
 	@Inject
 	public TextUI(IController controller) {
 		this.controller = controller;
-		scanner = new Scanner(System.in);
+	}
+	
+	public boolean timeOver() {
+		return controller.timeOver();
 	}
 	
 
 	//Beim Start Test und Spielfeld ausgeben
-	public void printMenue() {
-		logger.info(newLine + controller.getStartMessage() + 
+	public void printStartMenue() {
+		buffer.append(controller.getStartMessage() + 
 				
 		// Spielfeld einstellen
 				newLine + "Spielfeldgröße wählen : " +
 				newLine + "1 = klein " +
 				newLine + "2 = mittel" +
 				newLine + "3 = groß");
-		input = scanner.next();
-		timer.start();
-		// TODO Fehlerbehandlung
+		
+		printTui(buffer.toString());
+	}
+	
+	public void setStartMenue(String input) {
+		// TODO Thread auslagern
+		
+		
+		// TODO Fehlerbehandlung von input
 		controller.setSpielfeld(input);
 		y = (controller.getSpielfeldY());
 		x = (controller.getSpielfeldX());
-		logger.info( newLine + controller.getSpielfeld());
-		
-		
+		printTui(controller.getSpielfeld());
 	}
 	
-
+	public void iterate() {
+		// Bedinungen
+			if(controller.startGame() == 1) {
+				printTui("Welle vorüber !");
+			}
+			printTui(controller.getGameMessage());
+			printTui(controller.getSpielfeld());
+				
+	}
+	
+/*
 	// WICHTIG !!!!!!!!!!
 	// Schleife die bis zum verlassen durchläuft
 	public boolean iterate() {
@@ -108,80 +100,89 @@ public class TextUI {
 		}
 		return quit;
 	}
+	
+	*/
 
-	// Verarbeitete Eingabe und verlässt gegenbenfalls Schleife
-	public boolean handleinput() {
+
+	public void printInstuktion(int i) {
+		if(i == 0) {
+			printTui("Wählen einen Palmentower aus ... " +
+					newLine + "Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
+		}
+		else if(i == 1) {
+			printTui("Wähle die Zeile für den Palmentower ... " +
+				newLine + "Zahl von 2 bis " + (y-2));
+		}
+		else {
+			printTui("Wähle Spalte für den Palmentower ... " +
+					newLine + " Zahl von 2 bis " + (x-2));
+		}
+	}
+
+
+	public void printTui(String ausgabe) {
+		logger.info(newLine + ausgabe);
+	}
+
+
+	public boolean handleInput(String input, int index) {
 		
 		int art = 0;
+		int spalte = 0;
+		int zeile  = 0;
 		
-		logger.info( newLine + "Wählen einen Palmentower aus ... " +
-				newLine + "Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = q ");
-		input = scanner.next();
-		if(input.equals("K") || input.equals("k")) {
-			art = 0;
+		// erster Durchgang wähle Towerart
+		if(index == 0) {
+			if(input.equals("K") || input.equals("k")) {
+				art = 0;
+			}
+			else if(input.equals("L") || input.equals("l")) {
+				art = 1;
+			}
+			else if(input.equals("c") || input.equals("C")) {
+				art = 2;
+			} 
+			else {
+				return true;
+			}
 		}
-		else if(input.equals("L") || input.equals("l")) {
-			art = 1;
-		}
-		else if(input.equals("c") || input.equals("C")) {
-			art = 2;
-		} else {
-			return quitOrFailure(input);
-		}
-
-		if(picPosition(art)) {
-			return true;
+		
+		// zweiter Durchgang wähle Spalte
+		else if(index == 1) {
+			spalte = Integer.parseInt(input);
+			if ( spalte < 2 && spalte > y) {
+				return true;
+			}
 		}
 		
-		return false;
-	}
-
-		
-	private boolean picPosition(int art) {
-		
-		boolean create = false;
-		int zeile = 0;
-		
-		logger.info( newLine + "Wähle die Zeile für den Palmentower ... " +
-				newLine + "Zahl von 2 bis " + (y-2) + " | Quit = q");
-		input = scanner.next();
-		// Prüfe ob richtige Eingabe
-		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < y) {
+		// dritter Durchgang wähel Zeile
+		else if(index == 2) {
 			zeile = Integer.parseInt(input);
-		} else {
-			return quitOrFailure(input);
-		}
-		
-		
-		
-		logger.info( newLine + "Wähle Spalte für den Palmentower ... " +
-				newLine + " Zahl von 2 bis " + (x-2) + " | Quit = q");
-		input = scanner.next();
-		if(2 <= Integer.parseInt(input) && Integer.parseInt(input) < x) {
+			if ( zeile < 2 && zeile > x) {
+				return true;
+			}
 			
-			create = controller.erstelleTower(art, Integer.parseInt(input), zeile);
-		} else {
-			return quitOrFailure(input);
+			controller.erstelleTower(art, spalte, zeile);
+			printTui(controller.getSpielfeld());
 		}
-		if(create) {
-			logger.info( newLine + "Tower erstellt !!!");
-		} else {
-			logger.info( newLine + "Tower nicht erstellt");
+		else {
+			printTui("Fehler");
 		}
 		return false;
-
 	}
 	
-	
-	public boolean quitOrFailure(String input) {
+	/*
+	public boolean quitOrFailure(String input, int index) {
 		// if Q is pressed Game quits
 		if(input.equalsIgnoreCase("q")) {
 			logger.info( newLine + "!!! Spiel wird beendet !!!");
 			return true;
 		} else {
 			logger.info( newLine + "!!! Falsche Eingabe. Bitte erneut setzen");
-			handleinput();
+			iterate(int i, String input)
 			return false;	
 		}	
 	}
+	*/
+
 }

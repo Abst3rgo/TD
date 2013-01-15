@@ -7,14 +7,13 @@ import org.apache.log4j.PropertyConfigurator;
 
 
 import xmas.controller.impl.Controller;
-import xmas.tui.TextUI.Timer;
 import junit.framework.TestCase;
 
 public class TextUITest extends TestCase {
 	
 	TextUI tui;
 	Controller controller;
-	Timer time;
+	//Timer time;
 	Thread timer;
 	
 	static Logger logger = Logger.getLogger(TextUITest.class);
@@ -22,7 +21,7 @@ public class TextUITest extends TestCase {
 	
 	public void setUp() {
 		tui = new TextUI(controller);
-		timer = new Thread(time);
+		//timer = new Thread(time);
 		PropertyConfigurator.configure("log4j.properties");
 	}
 

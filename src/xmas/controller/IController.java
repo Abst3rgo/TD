@@ -25,5 +25,8 @@ public interface IController {
 	void setSpielfeld(String input);
 
 	boolean erstelleTower(int art, int parseInt, int zeile);
+	
+	boolean timeOver();
+
 
 }

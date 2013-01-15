@@ -1,6 +1,7 @@
 package xmas.controller.impl;
 
 
+import xmas.application.Timer;
 import xmas.controller.IController;
 import xmas.parts.impl.GameHandler;
 
@@ -16,19 +17,21 @@ public class Controller implements IController {
 	private IPlayer player;
 	private ISpielfeld spielfeld;
 	private IGameHandler gameHandler;
+	private Timer timer;
 
 	
 	private String message = "";
 	
 	
-	
-	
-	
-	
 	//--------------------------Getter und Setter Methoden ------------------------
 	
 	public Controller() {
+		timer = new Timer();
 		this.player = new Player("Player1");
+	}
+	
+	public boolean timeOver() {
+		return timer.timeOver();
 	}
 	
 	public boolean erstelleTower(int art, int spalte, int zeile) {
@@ -73,6 +76,7 @@ public class Controller implements IController {
 		
 		// Wenn Welle vorüber ?
 		if(gameHandler.waveOver()){
+			timer.resetTimer();
 			return 1;
 		}
 		
