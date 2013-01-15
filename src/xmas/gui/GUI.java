@@ -32,6 +32,7 @@ public class GUI extends JFrame implements MouseListener {
 	private JLabel towerlabel, playerlife;
 	private JRadioButton nuttower, balltower, tinseltower;
 	private JTextField displaylife;
+	private JLabel[][] felder = new JLabel[20][20];
 	
 	public GUI() {
 				
@@ -50,7 +51,7 @@ public class GUI extends JFrame implements MouseListener {
 		playerpanel.setLayout(new GridLayout(1, 4));
 		playerpanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		playerlife = new JLabel("Life:");
-		displaylife = new JTextField("3"); //player.getlife() usw.
+		displaylife = new JTextField("3"); //TODO player.getlife() usw.
 		displaylife.setEditable(false);
 		playerpanel.add(playerlife);
 		playerpanel.add(displaylife);
@@ -93,11 +94,20 @@ public class GUI extends JFrame implements MouseListener {
 //		Gamepanel
 		gamepanel = new JPanel();
 		gamepanel.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
-		gamepanel.setPreferredSize(new Dimension(800, 600));
+		gamepanel.setPreferredSize(new Dimension(800, 800));
 		gamepanel.setBackground(Color.white);
-		gamepanel.setLayout(null);
-		gamepanel.addMouseListener(this);
+		gamepanel.setLayout(new GridLayout(20, 20));
 		
+		for (int x = 0; x < 20; x++) {
+			for (int y = 0; y < 20; y++) {
+				felder[x][y] = new JLabel();
+				felder[x][y].addMouseListener(this);
+				felder[x][y].setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+				gamepanel.add(felder[x][y]);
+			}
+		}
+		felder[0][10].setText("Start");
+		felder[19][10].setText("End");
 		
 //		Mainpanel
 		mainpanel = new JPanel();
@@ -129,42 +139,7 @@ public class GUI extends JFrame implements MouseListener {
 
 	@Override
 	public void mouseClicked(MouseEvent me) {
-		int x = me.getX();
-		int y = me.getY();
 		
-//		load Images
-		BufferedImage nutimage = null;
-		try {
-			nutimage = ImageIO.read(new File("images/palmfinal.gif"));
-		} catch (IOException e) { }
-		
-		BufferedImage ballimage = null;
-		try {
-			ballimage = ImageIO.read(new File("images/xmastreefinal.png"));
-		} catch (IOException e) { }
-		
-		if (nuttower.isSelected()) {
-//		Erzeuge neuen Tower
-			
-			JLabel nutlabel = new JLabel(new ImageIcon(nutimage));
-			nutlabel.setBounds(x-20, y-20, 40, 40);
-			gamepanel.add(nutlabel);
-			mainpanel.repaint();
-			
-
-	/*	}  else if (tinseltower.isSelected()) {
-			* erzeuge neuen tower
-			 * 
-			 * gamepanel.add(tower);
-			 * mainpanel.repaint();
-			 */
-		} else if (balltower.isSelected()) {
-			
-			JLabel balllabel = new JLabel(new ImageIcon(ballimage));
-			balllabel.setBounds(x-20, y-20, 40, 40);
-			gamepanel.add(balllabel);
-			mainpanel.repaint();
-		}
 	}
 
 
@@ -182,6 +157,37 @@ public class GUI extends JFrame implements MouseListener {
 
 	@Override
 	public void mousePressed(MouseEvent me) {
+
+		JLabel label = (JLabel) me.getSource();
+		
+		BufferedImage nutimage = null;
+		try {
+			nutimage = ImageIO.read(new File("images/palmfinal.gif"));
+		} catch (IOException e) { System.exit(0); }
+		
+		BufferedImage ballimage = null;
+		try {
+			ballimage = ImageIO.read(new File("images/xmastreefinal.png"));
+		} catch (IOException e) { System.exit(0); }
+		
+		for (int x = 0; x < 20; x++) {
+			for (int y = 0; y < 20; y++) {
+				if (felder[x][y] == label && nuttower.isSelected()) {
+					
+//					TODO erstelleTower(int art, x, y);
+					label.setIcon(new ImageIcon(nutimage));
+					mainpanel.repaint();
+					
+				} else if (felder[x][y] == label && balltower.isSelected()) {
+					
+//					TODO erstelleTower(int art, x, y);
+					label.setIcon(new ImageIcon(ballimage));
+					mainpanel.repaint();
+					
+				}
+			}
+		}
+		
 		
 	}
 
