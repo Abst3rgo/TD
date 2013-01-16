@@ -35,6 +35,7 @@ public class GUI extends JFrame implements MouseListener {
 	private JTextField displaylife;
 	private JLabel[][] felder = new JLabel[24][24];
 	private int width, height;
+	private String[][] fieldarray;
 	
 	public GUI() {
 				
@@ -135,7 +136,10 @@ public class GUI extends JFrame implements MouseListener {
 	
 	public static void main(String[] args) {
 		new GUI();
+		
+//	TODO	Controller.startGame();
 //	TODO	xmas.controller.impl.Controller.setSpielFeld("3");
+//	TODO	fieldarray = xmas.parts.impl.Spielfeld.getfieldArray();
 		
 //		Spielfeld zeichnet sich pro Sekunde 1 mal neu
 		javax.swing.Timer t = new javax.swing.Timer(1000, new ActionListener() {
