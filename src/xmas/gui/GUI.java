@@ -21,7 +21,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-import xmas.controller.impl.Controller;
+import xmas.controller.impl.*;
 
 public class GUI extends JFrame implements MouseListener {
 	
@@ -33,7 +33,7 @@ public class GUI extends JFrame implements MouseListener {
 	private JLabel towerlabel, playerlife;
 	private JRadioButton nuttower, balltower, tinseltower;
 	private JTextField displaylife;
-	private JLabel[][] felder = new JLabel[20][20];
+	private JLabel[][] felder = new JLabel[24][24];
 	private int width, height;
 	
 	public GUI() {
@@ -46,7 +46,9 @@ public class GUI extends JFrame implements MouseListener {
 //		Menubar
 		menu = new GUIMenubar();
 		setJMenuBar(menu);
-		
+
+		width = 24;
+		height = 24;
 //		width = xmas.controller.impl.Controller.getSpielfeldX();
 //		height = xmas.controller.impl.Controller.getSpielfeldY();
 		
@@ -102,11 +104,11 @@ public class GUI extends JFrame implements MouseListener {
 		gamepanel.setBorder(BorderFactory.createEmptyBorder(0, 10, 0, 10));
 		gamepanel.setPreferredSize(new Dimension(800, 800));
 		gamepanel.setBackground(Color.white);
-		gamepanel.setLayout(new GridLayout(20, 20));
+		gamepanel.setLayout(new GridLayout(width, height));
 	
 //		Schachbrett mit Jlabels
-		for (int x = 0; x < 20; x++) {
-			for (int y = 0; y < 20; y++) {
+		for (int x = 0; x < width; x++) {
+			for (int y = 0; y < height; y++) {
 				felder[x][y] = new JLabel();
 				felder[x][y].addMouseListener(this);
 				felder[x][y].setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
@@ -114,8 +116,8 @@ public class GUI extends JFrame implements MouseListener {
 			}
 		}
 //		Start+End
-		felder[0][10].setText("Start");
-		felder[19][10].setText("End");
+//		felder[0][10].setText("Start");
+//		felder[19][10].setText("End");
 		
 //		Mainpanel
 		mainpanel = new JPanel();
@@ -133,6 +135,7 @@ public class GUI extends JFrame implements MouseListener {
 	
 	public static void main(String[] args) {
 		new GUI();
+//	TODO	xmas.controller.impl.Controller.setSpielFeld("3");
 		
 //		Spielfeld zeichnet sich pro Sekunde 1 mal neu
 		javax.swing.Timer t = new javax.swing.Timer(1000, new ActionListener() {

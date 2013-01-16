@@ -4396,3 +4396,197 @@ INFO main xmas.tui -
 7  ## En ## ## ## ## ## 
 
 
+INFO main xmas.tui - 
+Willkommen bei Xmas Tower Defence !
+Spielfeldgröße wählen : 
+1 = klein 
+2 = mittel
+3 = groß
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## .. .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = u.a 
+INFO main xmas.tui - 
+Wähle die Spalte für den Palmentower ... 
+Zahl von 2 bis 6
+INFO main xmas.tui - 
+Wähle Zeile für den Palmentower ... 
+ Zahl von 2 bis 6
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## St ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## ** .. .. .. .. ## 
+3  ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Mob **Getroffen !!
+Leben vor dem Treffer = 15
+Leben nach dem Treffer = -5
+0ter Mob **Tod !!!!!
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## && .. .. .. .. ## 
+3  ## ** .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Mob **Getroffen !!
+Leben vor dem Treffer = 15
+Leben nach dem Treffer = -5
+1ter Mob **Tod !!!!!
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## && .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Mob &&Getroffen !!
+Leben vor dem Treffer = 50
+Leben nach dem Treffer = 30
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## && .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. && .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Mob &&Getroffen !!
+Leben vor dem Treffer = 30
+Leben nach dem Treffer = 10
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| && .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. && .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Mob &&Getroffen !!
+Leben vor dem Treffer = 10
+Leben nach dem Treffer = -10
+2ter Mob &&Tod !!!!!
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Welle vorüber !
+INFO main xmas.tui - 
+Mob &&Getroffen !!
+Leben vor dem Treffer = 10
+Leben nach dem Treffer = -10
+2ter Mob &&Tod !!!!!
+
+INFO main xmas.tui - 
+0  1  2  3  4  5  6  7  
+1  ## .. ## ## ## ## ## 
+2  ## .. .. .. .. .. ## 
+3  ## .. .. .. .. .. ## 
+4  ## .. .. .. .. .. ## 
+5  ## C| .. .. .. .. ## 
+6  ## .. .. .. .. .. ## 
+7  ## En ## ## ## ## ## 
+
+
+INFO main xmas.tui - 
+Wählen einen Palmentower aus ... 
+Kokusnuss = K  / Lammeta = L  / Christkugeln = C | Quit = u.a 

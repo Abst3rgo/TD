@@ -30,8 +30,8 @@ public class GUIMenubar extends JMenuBar implements ActionListener {
 		newGameItem.setMnemonic(KeyEvent.VK_N);
 		
 //		SubMenu Size
-		submenuSize = new JMenu("Select Size");
-		submenuSize.setMnemonic(KeyEvent.VK_S);
+//		submenuSize = new JMenu("Select Size");
+//		submenuSize.setMnemonic(KeyEvent.VK_S);
 		
 //		add In-Menuelements
 //		close.add(submenuSize);
