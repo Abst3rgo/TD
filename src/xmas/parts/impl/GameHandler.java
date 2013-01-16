@@ -20,7 +20,7 @@ public class GameHandler implements IGameHandler {
 	private Tower[] towerArray;
 	private int numberTower = 0;
 	
-	private static final int delayTimeMS = 1000;
+	private static final int DELAYTIMEMS = 1000;
 	
 	
 	
@@ -42,7 +42,7 @@ public class GameHandler implements IGameHandler {
 		// Delay for Mobspawn
 				try {
 				    Thread.currentThread();
-					Thread.sleep(delayTimeMS);
+					Thread.sleep(DELAYTIMEMS);
 				} catch(Exception e){}
 		
 	}

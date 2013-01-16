@@ -24,11 +24,6 @@ public interface IGameHandler {
 	// Returns a String that tells wihch Mobs are hit by a Tower
 	String towershot();
 	
-	// Ceck if a spezific Mob is on a Field that a Tower can reach
-	//void mobonField(Mob mob, Tower tower, int tY, int tX, StringBuffer s);
-	
-	// Check mob health == 0 and delete him from array
-	//void killMob(Mob mob, StringBuffer s );
 	
 
 }

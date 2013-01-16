@@ -4,7 +4,7 @@ public class Timer {
 	
 	private Thread timer;
 	private int time = 10;
-	private static final int sleepTimeMS = 1000;
+	private static final int SLEEPTIMEMS = 1000;
 	private boolean timeOut;
 	
 	// --------------------------Konstuktor Get/Set---------------------------
@@ -36,7 +36,7 @@ public class Timer {
 			try {
 				while(!timeOut) {
 					if(time != 0) {
-						sleep(sleepTimeMS);
+						sleep(SLEEPTIMEMS);
 						time--;
 					} else {
 						timeOut = true;
